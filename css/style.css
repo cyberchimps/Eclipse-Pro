@@ -4,7 +4,7 @@
 
 body {color:#ccc;background: url(../images/bgimg.png);}
 *, html, body{padding:0;border:0;margin:0;}
-body, div, p, input, textarea{font-size:14px;}
+body, div, p, input, textarea{font-size:14px;font-family: Helvetica, Arial;font-weight:400;}
 h1, h2, h3, h4, h5, h6{font-weight:normal;}
 p{margin: 0 0 10px 0;clear: both;}
 a{color:#555;text-decoration:none}
@@ -88,7 +88,16 @@ color:#fff;
 
 /* Fonts  */
 
-.meta {color: #e6e6e6;font-size: 12px;font-weight: 500;padding-bottom: 10px;margin-top: 45px;padding-right:20px;text-align:center;}
+.meta {
+	color: #e6e6e6;
+	font-family: Helvetica, Arial;
+	font-weight:400;
+	font-size: 13px;
+	padding-bottom: 10px;
+	margin-top: 45px;
+	padding-right:20px;
+	text-align:center;
+}
 
 .meta a{color: #e6e6e6;text-decoration:none;}
 
@@ -347,12 +356,15 @@ a:hover {color: #aaa;}
 
 .meta ul{list-style: none;margin-left:0px;}
 
-.more-link a{
-	color: #000;
+a.more-link {
+	color: #fff;
+	font-size:14px;
+	font-family: Helvetica, Arial;
+	font-weight:600;
 }
 
-.more-link a:hover{
-	color: #555;
+a.more-link:hover{
+	color: #eee;
 }
 
 /* Posts Navigation */
@@ -734,9 +746,11 @@ h6 {
 /* Custom Font Styles */
 
 .posts_title a{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 26px;
 	color: #fff;
 	text-decoration: none;
-	font-weight: 600;
+	font-weight: 400;
 	margin-bottom: 10px;
 }
 
