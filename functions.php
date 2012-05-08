@@ -153,7 +153,7 @@ function new_excerpt_length($length) {
     	}
     	
     	elseif ($custom_excerpt == 'recent') {
-    		$length = '25';
+    		$length = '15';
     	}
     	else {
     		$length = $options->get($themeslug.'_excerpt_length');
