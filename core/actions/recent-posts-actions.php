@@ -4,7 +4,7 @@ add_action( 'response_recent_posts_element', 'response_recent_posts_element_cont
 
 function response_recent_posts_element_content() {
 
-	global $wp_query, $custom_excerpt;
+	global $wp_query, $custom_excerpt, $post;
 	$custom_excerpt = 'recent';
 	$args = array_merge( $wp_query->query, array( 'showposts' => 4, 'ignore_sticky_posts' => 1  ));
 	query_posts( $args );

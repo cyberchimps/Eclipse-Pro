@@ -72,7 +72,7 @@ function response_post_content() {
 			<?php endif; ?>
 			
 			<!--Begin @response pagination hook-->
-			<?php bu_custom_pagination(); ?>
+			<?php ec_custom_pagination(); ?>
 			<!--End @response pagination loop hook-->
 		
 		</div><!--end row-->

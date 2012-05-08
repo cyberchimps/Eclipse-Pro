@@ -1,6 +1,6 @@
 <?php
 /**
-* Footer template used by Business.
+* Footer template used by Eclipse.
 *
 * Authors: Tyler Cunningham, Trent Lapinski
 * Copyright: © 2012
@@ -11,8 +11,8 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business.
-* @since 3.0
+* @package Eclipse.
+* @since 1.0
 */
 
 global $options, $themeslug;
@@ -25,9 +25,9 @@ global $options, $themeslug;
      	<div class="container">
      		<div class="row">
     	
-	<!-- Begin @business footer hook content-->
-		<?php business_footer(); ?>
-	<!-- End @business footer hook content-->
+	<!-- Begin @response footer hook content-->
+		<?php response_footer(); ?>
+	<!-- End @response footer hook content-->
 	
 	<?php endif;?>
 	
@@ -42,9 +42,9 @@ global $options, $themeslug;
 		<div id="afterfooterwrap">
 		<div class="container">
 		<div class="row">	
-		<!-- Begin @business afterfooter hook content-->
-			<?php business_secondary_footer(); ?>
-		<!-- End @business afterfooter hook content-->
+		<!-- Begin @response afterfooter hook content-->
+			<?php response_secondary_footer(); ?>
+		<!-- End @response afterfooter hook content-->
 		</div>  <!--end afterfooterwrap-->	
 	</div> <!--end afterfooter-->	
 		</div> 	
