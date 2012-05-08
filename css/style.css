@@ -2,7 +2,7 @@
 
 /* Reset and Design Constant Styles */
 
-body {color:#222;background: url(../images/bgimg.png);}
+body {color:#ccc;background: url(../images/bgimg.png);}
 *, html, body{padding:0;border:0;margin:0;}
 body, div, p, input, textarea{font-size:14px;}
 h1, h2, h3, h4, h5, h6{font-weight:normal;}
@@ -76,7 +76,7 @@ color:#fff;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 	box-shadow:inset 0 0 2px #ccc;
-	background: #fff;
+	background: transparent;
 	margin-bottom: 15px;
 }
 
@@ -88,9 +88,9 @@ color:#fff;
 
 /* Fonts  */
 
-.meta {color: #ccc;font-size: 12px;font-weight: 500;padding-bottom: 10px;margin-top: 4px;}
+.meta {color: #e6e6e6;font-size: 12px;font-weight: 500;padding-bottom: 10px;margin-top: 4px;}
 
-.meta a{color: #888;text-decoration:none;}
+.meta a{color: #e6e6e6;text-decoration:none;}
 
 .meta a:hover{color: #aaa;}
 
@@ -114,7 +114,7 @@ a:hover {color: #5ca9d6;}
 
 /* General  */
 
-a {color: #fff;text-decoration:underline}
+a {color: #fff;}
 
 a:hover {color: #aaa;}
 
@@ -309,7 +309,7 @@ a:hover {color: #aaa;}
 /* Post Container Styling  */
 
 .post_container {
-	background: #fff;
+	background: transparent;
 	margin-bottom: 40px;
 }
 
@@ -386,15 +386,20 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 /* Sidebar  */
 
 .widget-container {
-	color: #222;
+	color: #ccc;
 	font-size: 13px;
 	margin-bottom: 40px;
-	background: #fff;
+	background: transparent;
 }
 
-.widget-container li {list-style: none;list-style-type:circle;list-style-position: inside;}
+.widget-container p{
+	color: #ccc;
+	font-size: 13px;
+}
 
-.textwidget {padding-top: 10px;}
+.widget-container li {list-style: none;list-style-type: none;list-style-position: inside;}
+
+.textwidget {padding-top: 10px;font-size: 13px;}
 
 #sidebar, #sidebar_left, #sidebar_right {margin-top: 40px;}
 
@@ -406,7 +411,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 #sidebar240 .widget-container th {padding-right: 18px}
 
-.widget-title{font-size:16px;font-weight:600;color:#555;padding-bottom: 2px;}
+.widget-title{font-size:16px;font-weight:600;color:#e1e1e1;padding-bottom: 2px;}
 .widget-container ul{margin-left: 0px;}
 
 /* Blog and Post Styles */
