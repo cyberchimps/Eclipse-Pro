@@ -1,6 +1,6 @@
 <?php 
 /**
-* Single template used by Business.
+* Single template used by Eclipse.
 *
 * Authors: Tyler Cunningham, Trent Lapinski
 * Copyright: © 2012
@@ -11,7 +11,7 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business.
+* @package Eclipse.
 * @since 3.0
 */
 	global $options, $themeslug, $post; // call globals
@@ -23,11 +23,11 @@ get_header(); ?>
 <div class="container">
 	<div class="row">
 	<!--Begin @Core post area-->
-		<?php business_post(); ?>
+		<?php response_post(); ?>
 	<!--End @Core post area-->
 	
 	</div>
-<?php if ($options->get($themeslug.'_single_breadcrumbs') == "1") { business_breadcrumbs();}?>
+<?php if ($options->get($themeslug.'_single_breadcrumbs') == "1") { response_breadcrumbs();}?>
 </div><!--end container-->
 
 <?php get_footer(); ?>

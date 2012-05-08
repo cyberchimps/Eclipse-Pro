@@ -1,6 +1,6 @@
 <?php
 /**
-* Theme functions used by Business.
+* Theme functions used by Eclipse.
 *
 * Authors: Tyler Cunningham, Trent Lapinski
 * Copyright: © 2012
@@ -11,24 +11,24 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business.
-* @since 3.0
+* @package Eclipse.
+* @since 1.0
 */
 
 /**
 * Define global theme functions.
 */ 
-	$themename = 'business';
-	$themenamefull = 'Business Pro';
-	$themeslug = 'bu';
+	$themename = 'eclipse';
+	$themenamefull = 'Eclipse Pro';
+	$themeslug = 'ec';
 	$root = get_template_directory_uri(); 
-	$pagedocs = 'http://cyberchimps.com/question/using-the-business-pro-page-options/';
-	$sliderdocs = 'http://cyberchimps.com/question/business-pro-content-slider/';
+	$pagedocs = 'http://cyberchimps.com/question/using-the-eclipse-pro-page-options/';
+	$sliderdocs = 'http://cyberchimps.com/question/eclipse-pro-content-slider/';
 
 /**
 * Basic theme setup.
 */ 
-function bu_theme_setup() {
+function ec_theme_setup() {
 	global $content_width;
 	if ( ! isset( $content_width ) ) $content_width = 608; //Set content width
 	
@@ -42,13 +42,13 @@ function bu_theme_setup() {
 	add_theme_support('automatic-feed-links');
 	add_editor_style();
 }
-add_action( 'after_setup_theme', 'bu_theme_setup' );
+add_action( 'after_setup_theme', 'ec_theme_setup' );
 
 /**
 * Redirect user to theme options page after activation.
 */ 
 if ( is_admin() && isset($_GET['activated'] ) && $pagenow =="themes.php" ) {
-	wp_redirect( 'themes.php?page=business' );
+	wp_redirect( 'themes.php?page=eclipse' );
 }
 
 /**
@@ -57,7 +57,7 @@ if ( is_admin() && isset($_GET['activated'] ) && $pagenow =="themes.php" ) {
 function admin_link() {
 	global $wp_admin_bar;
 
-	$wp_admin_bar->add_menu( array( 'id' => 'Business', 'title' => 'Business Pro Options', 'href' => admin_url('themes.php?page=business')  ) ); 
+	$wp_admin_bar->add_menu( array( 'id' => 'eclipse', 'title' => 'Eclipse Pro Options', 'href' => admin_url('themes.php?page=eclipse')  ) ); 
 }
 add_action( 'admin_bar_menu', 'admin_link', 113 );
 
@@ -78,7 +78,7 @@ function custom_gallery_post_format( $content ) {
 		}
 		?>	
 			<div class="row">
-			<div class="three columns"><?php business_post_byline(); ?></div>
+			<div class="three columns"><?php response_post_byline(); ?></div>
 				<div class="entry nine columns">
 					<?php if ($options->get($themeslug.'_post_formats') == '1') : ?>
 						<div class="postformats"><!--begin format icon-->
@@ -108,11 +108,11 @@ function custom_gallery_post_format( $content ) {
 				<?php endif;?>
 				
 				<!--Begin @Core link pages hook-->
-					<?php business_link_pages(); ?>
+					<?php response_link_pages(); ?>
 				<!--End @Core link pages hook-->
 			
 				<!--Begin @Core post edit link hook-->
-					<?php business_edit_link(); ?>
+					<?php response_edit_link(); ?>
 				<!--End @Core post edit link hook-->
 				</div><!--end entry-->
 			</div><!--end row-->
@@ -121,7 +121,7 @@ function custom_gallery_post_format( $content ) {
 		$content = ob_get_clean();	
 		return $content; 
 }
-add_filter('business_post_formats_gallery_content', 'custom_gallery_post_format' ); 
+add_filter('response_post_formats_gallery_content', 'custom_gallery_post_format' ); 
 	
 /**
 * Set custom post excerpt link text based on theme option.
@@ -317,8 +317,8 @@ add_action( 'save_post', 'custom_taxonomy_default', 100, 2 );
 /**
 * Edit columns for portfolio post type.
 */ 
-add_filter('manage_edit-bu_portfolio_columns', 'portfolio_edit_columns');
-add_action('manage_bu_portfolio_posts_custom_column',  'portfolio_columns_display', 10, 2);
+add_filter('manage_edit-ec_portfolio_columns', 'portfolio_edit_columns');
+add_action('manage_ec_portfolio_posts_custom_column',  'portfolio_columns_display', 10, 2);
 
 function portfolio_edit_columns($portfolio_columns){
     $portfolio_columns = array(
@@ -361,8 +361,8 @@ function portfolio_columns_display($portfolio_columns, $post_id){
 /**
 * Edit columns for slider post type.
 */ 
-add_filter('manage_edit-bu_custom_slides_columns', 'slider_edit_columns');
-add_action('manage_bu_custom_slides_posts_custom_column',  'slides_columns_display', 10, 2);
+add_filter('manage_edit-ec_custom_slides_columns', 'slider_edit_columns');
+add_action('manage_ec_custom_slides_posts_custom_column',  'slides_columns_display', 10, 2);
 
 function slider_edit_columns($portfolio_columns){
     $portfolio_columns = array(
@@ -407,8 +407,8 @@ function slides_columns_display($portfolio_columns, $post_id){
 /**
 * Edit columns for slider post type.
 */ 
-add_filter('manage_edit-bu_carousel_columns', 'carousel_edit_columns');
-add_action('manage_bu_carousel_posts_custom_column',  'carousel_columns_display', 10, 2);
+add_filter('manage_edit-ec_carousel_columns', 'carousel_edit_columns');
+add_action('manage_ec_carousel_posts_custom_column',  'carousel_columns_display', 10, 2);
 
 function carousel_edit_columns($portfolio_columns){
     $portfolio_columns = array(
@@ -474,7 +474,7 @@ function google_analytics() {
 }
 add_action('wp_head', 'google_analytics');
 
-function business_lazy_load() {
+function eclipse_lazy_load() {
 	global $root;
     $placeholder = "$root/images/grey.gif";
     echo <<<EOF
@@ -488,7 +488,7 @@ function business_lazy_load() {
 </script>
 EOF;
 }
-add_action('wp_head', 'business_lazy_load');
+add_action('wp_head', 'eclipse_lazy_load');
 	
 /**
 * Register custom menus for header, footer.
@@ -590,7 +590,7 @@ function ifp_widgets_init() {
 }
 add_action ('widgets_init', 'ifp_widgets_init');
 
-function bu_custom_pagination($pages = '', $range = 4)
+function ec_custom_pagination($pages = '', $range = 4)
 {
      $showitems = ($range * 2)+1;  
  
@@ -610,8 +610,8 @@ function bu_custom_pagination($pages = '', $range = 4)
      if(1 != $pages)
      {
          echo '<div class="pagination"><span>'.__( 'Page', 'core' ).' '.$paged.' of '.$pages.'</span>';
-         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo '<a href="'.get_pagenum_link(1).'">'.__( '&laquo; First', 'business' ).'</a>';
-         if($paged > 1 && $showitems < $pages) echo '<a href="'.get_pagenum_link($paged - 1).'">'.__( '&lsaquo; Previous', 'business' ).'</a>';
+         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo '<a href="'.get_pagenum_link(1).'">'.__( '&laquo; First', 'response' ).'</a>';
+         if($paged > 1 && $showitems < $pages) echo '<a href="'.get_pagenum_link($paged - 1).'">'.__( '&lsaquo; Previous', 'response' ).'</a>';
  
          for ($i=1; $i <= $pages; $i++)
          {
@@ -621,13 +621,13 @@ function bu_custom_pagination($pages = '', $range = 4)
              }
          }
  
-         if ($paged < $pages && $showitems < $pages) echo '<a href="'.get_pagenum_link($paged + 1).'"">'.__( 'Next &rsaquo;', 'business').'</a>';
-         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo '<a href="'.get_pagenum_link($pages).'">'.__( 'Last &raquo;', 'business' ).'</a>';
+         if ($paged < $pages && $showitems < $pages) echo '<a href="'.get_pagenum_link($paged + 1).'"">'.__( 'Next &rsaquo;', 'response').'</a>';
+         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo '<a href="'.get_pagenum_link($pages).'">'.__( 'Last &raquo;', 'response' ).'</a>';
          echo "</div>\n";
      }
 }
 /**
-* Initialize business Core Framework and Pro Extension.
+* Initialize response Core Framework and Pro Extension.
 */ 
 require_once ( get_template_directory() . '/core/core-init.php' );
 require_once ( get_template_directory() . '/core/pro/pro-init.php' );

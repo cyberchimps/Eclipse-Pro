@@ -1,6 +1,6 @@
 <?php
 /**
-* Comments template used by Business.
+* Comments template used by Eclipse.
 *
 * Authors: Tyler Cunningham, Trent Lapinski
 * Copyright: © 2012
@@ -11,20 +11,20 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business.
-* @since 3.0
+* @package Eclipse.
+* @since `.0
 */
 
 ?>
 
-<!-- Begin @business business_before_comments hook content-->
-	<?php business_before_comments(); ?>
-<!-- Begin @business business_before_comments hook content-->
+<!-- Begin @response response_before_comments hook content-->
+	<?php response_before_comments(); ?>
+<!-- Begin @response response_before_comments hook content-->
 
-<!-- Begin @business business_comments hook content-->
-	<?php business_comments(); ?>
-<!-- Begin @business business_comments hook content-->
+<!-- Begin @response response_comments hook content-->
+	<?php response_comments(); ?>
+<!-- Begin @response response_comments hook content-->
 
-<!-- Begin @business business_after_comments hook content-->
-	<?php business_after_comments(); ?>
-<!-- Begin @business business_after_comments hook content-->
+<!-- Begin @response response_after_comments hook content-->
+	<?php response_after_comments(); ?>
+<!-- Begin @response response_after_comments hook content-->

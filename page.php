@@ -1,6 +1,6 @@
 <?php 
 /**
-* Page template used by Business.
+* Page template used by Eclipse.
 *
 * Authors: Tyler Cunningham, Trent Lapinski
 * Copyright: © 2012
@@ -11,8 +11,8 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business.
-* @since 3.0
+* @package Eclipse.
+* @since 1.0
 */
 
 /* Header call. */
@@ -31,7 +31,7 @@
 /* End define global variables. */
 
 	foreach(explode(",", $page_section_order) as $key) {
-		$fn = 'business_' . $key;
+		$fn = 'response_' . $key;
 		if(function_exists($fn)) {
 			call_user_func_array($fn, array());
 		}

@@ -1,6 +1,6 @@
 <?php
 /**
-* Header template used by Business.
+* Header template used by Eclipse.
 *
 * Authors: Tyler Cunningham, Trent Lapinski
 * Copyright: © 2012
@@ -11,8 +11,8 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business.
-* @since 3.0
+* @package Eclipse.
+* @since 1.0
 */
 
 	global $options, $themeslug, $post; // call globals

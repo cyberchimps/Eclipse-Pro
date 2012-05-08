@@ -1,6 +1,6 @@
 <?php 
 /**
-* Header template used by Business.
+* Header template used by Eclipse.
 *
 * Authors: Tyler Cunningham, Trent Lapinski
 * Copyright: © 2012
@@ -11,8 +11,8 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business.
-* @since 3.0
+* @package Eclipse.
+* @since 1.0
 */
 
 /* Call globals. */	
@@ -23,20 +23,20 @@
 	
 ?>
 
-	<?php business_head_tag(); ?>
+	<?php response_head_tag(); ?>
 	
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?> <!-- wp_enqueue_script( 'comment-reply' );-->
 <?php wp_head(); ?> <!-- wp_head();-->
 	
 </head><!-- closing head tag-->
 
-<!-- Begin @business after_head_tag hook content-->
-	<?php business_after_head_tag(); ?>
-<!-- End @business after_head_tag hook content-->
+<!-- Begin @response after_head_tag hook content-->
+	<?php response_after_head_tag(); ?>
+<!-- End @response after_head_tag hook content-->
 	
-<!-- Begin @business before_header hook  content-->
-	<?php business_before_header(); ?> 
-<!-- End @business before_header hook content -->
+<!-- Begin @response before_header hook  content-->
+	<?php response_before_header(); ?> 
+<!-- End @response before_header hook content -->
 			
 <header>		
 	<?php
@@ -48,6 +48,6 @@
 	?>
 </header>
 
-<!-- Begin @business after_header hook -->
-	<?php business_after_header(); ?> 
-<!-- End @business after_header hook -->
+<!-- Begin @response after_header hook -->
+	<?php response_after_header(); ?> 
+<!-- End @response after_header hook -->
