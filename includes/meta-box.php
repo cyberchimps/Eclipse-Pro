@@ -93,6 +93,7 @@ function initialize_the_meta_boxes() {
 					'breadcrumbs' => 'Breadcrumbs',
 					'page_slider' => 'Content Slider',
 					'portfolio_element' => 'Portfolio',
+					'recent_posts_element' => 'Recent Posts',
 					'callout_section' => 'Callout',
 					'twitterbar_section' => 'Twitter Bar',
 					'product_element' => 'Product',
