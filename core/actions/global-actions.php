@@ -58,7 +58,14 @@ function response_loop_content($content) {
 		$format = get_post_format();
 	} ?>
 	<?php ob_start(); ?>
-			<?php
+			
+			<!--Call @response Meta hook-->
+			<div class="row">
+			<div class="byline three columns"><?php response_post_byline(); ?></div>
+				<div class="entry nine columns">
+					<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+					
+					<?php
 				if ( has_post_thumbnail() && $featured_images == '1' ) {
  		 			echo '<div class="featured-image">';
  		 			echo '<a href="' . get_permalink($post->ID) . '" >';
@@ -67,11 +74,6 @@ function response_loop_content($content) {
   					echo '</div>';
 				}
 			?>	
-			<!--Call @response Meta hook-->
-			<div class="row">
-			<div class="byline three columns"><?php response_post_byline(); ?></div>
-				<div class="entry nine columns">
-					<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 					<?php 
 						if ($excerpts == '1' && !is_single() ) {
 						the_excerpt();
