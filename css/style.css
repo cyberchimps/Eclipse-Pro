@@ -755,7 +755,7 @@ h1.description, h1.sitename {margin-bottom: 0px;}
 
 .sitename {
 	font-size: 34px;
-	font-weight: bold;
+	font-weight: 600;
 	margin-top: 20px;
 	line-height: 40px;
 }

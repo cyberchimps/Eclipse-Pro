@@ -135,11 +135,12 @@ div.orbit-wrapper {
 }
 
 #callout_text {
-	font-size: 18px;
-	font-weight: 400;
+	font-size: 25px;
+	font-weight: 300;
 	color: #fff;
 	padding: 25px 0px 20px 0px;
 	text-align: center;
+	border-bottom: 2px solid #3d3d3d;
 }
 
 
