@@ -1,6 +1,6 @@
 <?php
 /**
-* Portfolio element actions used by Business Pro.
+* Portfolio element actions used by response Pro.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -11,16 +11,16 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business Pro
-* @since 3.0
+* @package response Pro
+* @since 1.0
 */
 
 /**
-* business Portfolio Section actions
+* response Portfolio Section actions
 */
-add_action( 'business_portfolio_element', 'business_portfolio_element_content' );
+add_action( 'response_portfolio_element', 'response_portfolio_element_content' );
 	
-function business_portfolio_element_content() {	
+function response_portfolio_element_content() {	
 	global $options, $post, $themeslug, $root, $wp_query;
 	$tmp_query = $wp_query; 
 	$image = get_post_meta($post->ID, 'portfolio_image' , true);

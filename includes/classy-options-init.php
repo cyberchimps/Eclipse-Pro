@@ -1,6 +1,6 @@
 <?php
 /**
-* Initializes the Business Pro Theme Options
+* Initializes the response Pro Theme Options
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -11,8 +11,8 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business Pro
-* @since 3.0
+* @package response Pro
+* @since 1.0
 */
 
 require( get_template_directory() . '/core/classy-options/classy-options-framework/classy-options-framework.php');
@@ -51,23 +51,23 @@ $terms2 = get_terms('category', 'hide_empty=0');
 
 $options
 	->section("Welcome")
-		->info("<h1>Business Pro 3</h1>
+		->info("<h1>response Pro 3</h1>
 		
-<p><strong>Business Pro Professional Responsive WordPress Theme</strong></p>
+<p><strong>response Pro Professional Responsive WordPress Theme</strong></p>
 
-<p>Business Pro 3 from CyberChimps WordPress Themes is a Professional Responsive WordPress Theme perfect for any business on any device. It gives your company the tools to turn WordPress into a modern Drag and Drop Content Management System (CMS).</p>
+<p>response Pro 3 from CyberChimps WordPress Themes is a Professional Responsive WordPress Theme perfect for any response on any device. It gives your company the tools to turn WordPress into a modern Drag and Drop Content Management System (CMS).</p>
 
 <p>To get started simply work your way through the menus to the left, select your options, add your content, and always remember to hit save after making any changes.</p>
 
-<p>The Content Feature Slider options are under the Business Pro Page Options which are available below the Page content entry area in WP-Admin when you edit a page. This way you can configure each page individually. You will also find the Drag & Drop Page Elements editor within the Business Pro Page Options as well.</p>
+<p>The Content Feature Slider options are under the response Pro Page Options which are available below the Page content entry area in WP-Admin when you edit a page. This way you can configure each page individually. You will also find the Drag & Drop Page Elements editor within the response Pro Page Options as well.</p>
 
 <p>If you are using the Content Feature Slider, Image Carousel, or Portfolio on a Page you can edit your slides from the Content Slides menu available in the WP-Admin menu to the far left. Look for the CyberChimps logo.</p>
 
-<p>We tried to make Business Pro as easy to use as possible, but if you still need help please read the <a href='http://cyberchimps.com/businesspro/docs/' target='_blank'>documentation</a>, and visit our <a href='http://cyberchimps.com/forum/pro/' target='_blank'>support forum</a>.</p>
+<p>We tried to make response Pro as easy to use as possible, but if you still need help please read the <a href='http://cyberchimps.com/responsepro/docs/' target='_blank'>documentation</a>, and visit our <a href='http://cyberchimps.com/forum/pro/' target='_blank'>support forum</a>.</p>
 
-<p>Thank you for using Business Pro.</p>
+<p>Thank you for using response Pro.</p>
 
-<p><strong>A Professional Business WordPress Theme</strong></p>
+<p><strong>A Professional response WordPress Theme</strong></p>
 ")
 	->section("Design")
 		->open_outersection()
@@ -95,7 +95,7 @@ $options
 			->close_outersection()
 	->section("Header")
 		->open_outersection()
-			->section_order("header_section_order", "Drag & Drop Elements", array('options' => array("business_logo_menu" => "Logo + Menu", "business_description_icons" => "Description + Icons"), 'default' => 'business_logo_menu'))
+			->section_order("header_section_order", "Drag & Drop Elements", array('options' => array("response_logo_menu" => "Logo + Menu", "response_description_icons" => "Description + Icons"), 'default' => 'response_logo_menu'))
 		->close_outersection()
 			->subsection("Header Options")
 			->checkbox($themeslug."_custom_logo", "Custom Logo" , array('default' => true))
@@ -133,10 +133,10 @@ $options
 			->textarea($themeslug."_ga_code", "Google Analytics Code")
 		->subsection_end()
 		->section("Front Page")
-		->info("<p>The front-page template has been removed in favor of being able to use either a traditional static page or the blog page as the homepage.<br/><br/> For more information  visit our updated documentation page <a href='http://cyberchimps.com/question/using-the-front-page-and-posts-page-in-business-pro/' target='_blank'>here.</a></p>")		
+		->info("<p>The front-page template has been removed in favor of being able to use either a traditional static page or the blog page as the homepage.<br/><br/> For more information  visit our updated documentation page <a href='http://cyberchimps.com/question/using-the-front-page-and-posts-page-in-response-pro/' target='_blank'>here.</a></p>")		
 		->section("Blog")
 		->open_outersection()
-			->section_order($themeslug."_blog_section_order", "Drag & Drop Elements", array('options' => array("business_post" => "Post Page", "business_page_slider" => "Content Slider","business_callout_section" => "Callout Section", "business_twitterbar_section" => "Twitter Bar", "business_index_carousel_section" => "Carousel", "business_portfolio_element" => "Portfolio", "business_product_element" => "Product","business_box_section" => "Boxes", "business_recent_posts_element" => "Recent Posts"), "default" => 'business_post'))
+			->section_order($themeslug."_blog_section_order", "Drag & Drop Elements", array('options' => array("response_post" => "Post Page", "response_page_slider" => "Content Slider","response_callout_section" => "Callout Section", "response_twitterbar_section" => "Twitter Bar", "response_index_carousel_section" => "Carousel", "response_portfolio_element" => "Portfolio", "response_product_element" => "Product","response_box_section" => "Boxes", "response_recent_posts_element" => "Recent Posts"), "default" => 'response_post'))
 		->close_outersection()
 		->subsection("Blog Options")
 			->images($themeslug."_blog_sidebar", "Sidebar Options", array( 'options' => array("none" => TEMPLATE_URL . '/images/options/none.png',"two-right" => TEMPLATE_URL . '/images/options/tworight.png', "right-left" => TEMPLATE_URL . '/images/options/rightleft.png', "left" => TEMPLATE_URL . '/images/options/left.png',  "right" => TEMPLATE_URL . '/images/options/right.png'), 'default' => 'right'))

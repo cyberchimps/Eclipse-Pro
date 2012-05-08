@@ -1,6 +1,6 @@
 <?php
 /**
-* Footer actions used by Business Pro
+* Footer actions used by response Pro
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -11,8 +11,8 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business Pro
-* @since 3.0
+* @package response Pro
+* @since 1.0
 */
 
 
@@ -20,9 +20,9 @@
 /**
 * Adds the CyberChimps Pro credit link.
 *
-* @since 3.0
+* @since 1.0
 */
-function business_pro_secondary_footer_credit() { 
+function response_pro_secondary_footer_credit() { 
 	global $options, $themeslug; //call globals
 	
 	if ($options->get($themeslug.'_hide_link') == "1") {?>

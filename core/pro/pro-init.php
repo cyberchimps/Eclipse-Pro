@@ -1,6 +1,6 @@
 <?php
 /**
-* CyberChimps Business Pro Core Init
+* CyberChimps Response Pro Core Init
 *
 * Authors: Tyler Cunningham
 * Copyright: © 2011

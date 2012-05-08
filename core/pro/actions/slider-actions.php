@@ -1,6 +1,6 @@
 <?php
 /**
-* Slider element actions used by Business Pro
+* Slider element actions used by response Pro
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -19,12 +19,12 @@
 * Extend slider actions
 */
 
-add_action ('business_page_slider', 'business_slider_content' );
+add_action ('response_page_slider', 'response_slider_content' );
 
 /**
 * Extend slider functions
 */
-function business_slider_content() {
+function response_slider_content() {
 
 /* Call globals. */	
 

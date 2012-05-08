@@ -1,6 +1,6 @@
 <?php
 /**
-* Carousel section actions used by Business Pro
+* Carousel section actions used by response Pro
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -11,14 +11,14 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business Pro
-* @since 3.0
+* @package response Pro
+* @since 1.0
 */
 
-add_action( 'business_index_carousel_section', 'business_carousel_section_content' );
-add_action( 'business_carousel_section', 'business_carousel_section_content' );
+add_action( 'response_index_carousel_section', 'response_carousel_section_content' );
+add_action( 'response_carousel_section', 'response_carousel_section_content' );
 
-function business_carousel_section_content() {
+function response_carousel_section_content() {
 
 /* Call globals. */	
 

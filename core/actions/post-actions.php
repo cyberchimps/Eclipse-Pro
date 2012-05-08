@@ -1,6 +1,6 @@
 <?php
 /**
-* Index actions used by Business.
+* Index actions used by response.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -11,33 +11,33 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business
-* @since 3.0
+* @package response
+* @since 1.0
 */
 
 /**
-* Business post actions
+* response post actions
 */
 
-add_action( 'business_post', 'business_post_content');
+add_action( 'response_post', 'response_post_content');
 
 /**
 * Index content
 *
 * @since 1.0
 */
-function business_post_content() { 
+function response_post_content() { 
 
 	global $options, $themeslug, $post, $sidebar, $content_grid; // call globals ?>
 	
-	<!--Begin @business sidebar init-->
-		<?php business_sidebar_init(); ?>
-	<!--End @business sidebar init-->
+	<!--Begin @response sidebar init-->
+		<?php response_sidebar_init(); ?>
+	<!--End @response sidebar init-->
 	<div class="container">
 	<div class="row">
-	<!--Begin @business before content sidebar hook-->
-		<?php business_before_content_sidebar(); ?>
-	<!--End @business before content sidebar hook-->
+	<!--Begin @response before content sidebar hook-->
+		<?php response_before_content_sidebar(); ?>
+	<!--End @response before content sidebar hook-->
 
 		<div id="content" class="<?php echo $content_grid; ?>">
 		
@@ -46,17 +46,17 @@ function business_post_content() {
 			<div class="post_container">
 				<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 		
-				<!--Begin @business index loop hook-->
-					<?php business_loop(); ?>
-				<!--End @business index loop hook-->
+				<!--Begin @response index loop hook-->
+					<?php response_loop(); ?>
+				<!--End @response index loop hook-->
 							
 				</div><!--end post_class-->
 			</div><!--end post container-->
 			
 			<?php if (is_single() && $options->get($themeslug.'_post_pagination') == "1") : ?>
-				<!--Begin @business post pagination hook-->
-					<?php business_post_pagination(); ?>
-				<!--End @business post pagination hook-->			
+				<!--Begin @response post pagination hook-->
+					<?php response_post_pagination(); ?>
+				<!--End @response post pagination hook-->			
 				<?php endif;?>
 			
 			<?php if (is_single()):?>
@@ -71,15 +71,15 @@ function business_post_content() {
 
 			<?php endif; ?>
 			
-			<!--Begin @business pagination hook-->
+			<!--Begin @response pagination hook-->
 			<?php bu_custom_pagination(); ?>
-			<!--End @business pagination loop hook-->
+			<!--End @response pagination loop hook-->
 		
 		</div><!--end row-->
 		
-	<!--Begin @business after content sidebar hook-->
-		<?php business_after_content_sidebar(); ?>
-	<!--End @business after content sidebar hook-->
+	<!--Begin @response after content sidebar hook-->
+		<?php response_after_content_sidebar(); ?>
+	<!--End @response after content sidebar hook-->
 	</div><!--end container-->
 
 </div>

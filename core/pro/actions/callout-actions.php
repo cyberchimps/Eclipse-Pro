@@ -1,6 +1,6 @@
 <?php
 /**
-* Callout section actions used by Business Pro.
+* Callout section actions used by response Pro.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -11,21 +11,21 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business Pro
-* @since 3.0
+* @package response Pro
+* @since 1.0
 */
 
 /**
 * Pro callout actions
 */
-add_action ( 'business_callout_section', 'business_callout_section_content' );
+add_action ( 'response_callout_section', 'response_callout_section_content' );
 
 /**
 * Retrieves the Callout Section options and sets up the HTML
 *
-* @since 3.0
+* @since 1.0
 */
-function business_callout_section_content() {
+function response_callout_section_content() {
 
 	global $options, $themeslug, $post, $wp_query; //call globals
 	$root = get_template_directory_uri();  
@@ -58,7 +58,7 @@ function business_callout_section_content() {
 /* Define Callout text. */	
 
 	if ($text == '') {
-		$callouttext = '<div style="margin-bottom:10px; font-size:20px;"><i>"Business Pro from CyberChimps WordPress Themes is a Professional Responsive WordPress Theme perfect for any business on any device."</i><br /></div> Learn more about <a href="http://cyberchimps.com/businesspro">Business Pro</a>.';
+		$callouttext = '<div style="margin-bottom:10px; font-size:20px;"><i>"response Pro from CyberChimps WordPress Themes is a Professional Responsive WordPress Theme perfect for any response on any device."</i><br /></div> Learn more about <a href="http://cyberchimps.com/responsepro">response Pro</a>.';
 	}
 	else {
 		$callouttext = $text;

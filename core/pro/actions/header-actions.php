@@ -1,6 +1,6 @@
 <?php
 /**
-* Header section actions used by Business Pro.
+* Header section actions used by response Pro.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -11,24 +11,24 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business Pro
-* @since 3.0
+* @package response Pro
+* @since 1.0
 */
 
-remove_action( 'business_after_head_tag', 'business_font' );
-add_action( 'business_after_head_tag', 'business_pro_font' );
+remove_action( 'response_after_head_tag', 'response_font' );
+add_action( 'response_after_head_tag', 'response_pro_font' );
 
 /**
 * Establishes the Pro theme font family.
 *
-* @since 3.0
+* @since 1.0
 */
-function business_pro_font() {
+function response_pro_font() {
 	global $themeslug, $options; //Call global variables
-	$family = apply_filters( 'business_default_font_family', 'Helvetica, serif' );
+	$family = apply_filters( 'response_default_font_family', 'Helvetica, serif' );
 	
 	if ($options->get($themeslug.'_font') == "" AND $options->get($themeslug.'_custom_font') == "") {
-		$font = apply_filters( 'business_default_font', 'Arial' );
+		$font = apply_filters( 'response_default_font', 'Arial' );
 	}		
 	elseif ($options->get($themeslug.'_custom_font') != "" && $options->get($themeslug.'_font') == 'custom') {
 		$font = $options->get($themeslug.'_custom_font');	

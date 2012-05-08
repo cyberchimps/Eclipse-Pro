@@ -1,6 +1,6 @@
 <?php
 /**
-* Global actions used by Business.
+* Global actions used by response.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -11,27 +11,27 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business
-* @since 3.0
+* @package response
+* @since 1.0
 */
 
 /**
-* Business global actions
+* response global actions
 */
 
-add_action( 'business_loop', 'business_loop_content' );
-add_action( 'business_post_byline', 'business_post_byline_content' );
-add_action( 'business_edit_link', 'business_edit_link_content' );
-add_action( 'business_post_tags', 'business_post_tags_content' );
-add_action( 'business_post_bar', 'business_post_bar_content' );
-add_action( 'business_fb_like_plus_one', 'business_fb_like_plus_one_content' );
+add_action( 'response_loop', 'response_loop_content' );
+add_action( 'response_post_byline', 'response_post_byline_content' );
+add_action( 'response_edit_link', 'response_edit_link_content' );
+add_action( 'response_post_tags', 'response_post_tags_content' );
+add_action( 'response_post_bar', 'response_post_bar_content' );
+add_action( 'response_fb_like_plus_one', 'response_fb_like_plus_one_content' );
 
 /**
 * Check for post format type, apply filter based on post format name for easy modification.
 *
-* @since 3.0
+* @since 1.0
 */
-function business_loop_content($content) { 
+function response_loop_content($content) { 
 
 	global $options, $themeslug, $post; //call globals
 	
@@ -67,9 +67,9 @@ function business_loop_content($content) {
   					echo '</div>';
 				}
 			?>	
-			<!--Call @business Meta hook-->
+			<!--Call @response Meta hook-->
 			<div class="row">
-			<div class="byline three columns"><?php business_post_byline(); ?></div>
+			<div class="byline three columns"><?php response_post_byline(); ?></div>
 				<div class="entry nine columns">
 					<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 					<?php 
@@ -77,22 +77,22 @@ function business_loop_content($content) {
 						the_excerpt();
 						}
 						else {
-							the_content(__('Read more...', 'business'));
+							the_content(__('Read more...', 'response'));
 						}
 					 ?>
-				<!--Begin @business link pages hook-->
-					<?php business_link_pages(); ?>
-				<!--End @business link pages hook-->
+				<!--Begin @response link pages hook-->
+					<?php response_link_pages(); ?>
+				<!--End @response link pages hook-->
 			
-				<!--Begin @business post edit link hook-->
-					<?php business_edit_link(); ?>
-				<!--End @business post edit link hook-->
+				<!--Begin @response post edit link hook-->
+					<?php response_edit_link(); ?>
+				<!--End @response post edit link hook-->
 				</div><!--end entry-->
 			</div><!--end row-->
 			<?php	
 		
 		$content = ob_get_clean();
-		$content = apply_filters( 'business_post_formats_'.$format.'_content', $content );
+		$content = apply_filters( 'response_post_formats_'.$format.'_content', $content );
 	
 		echo $content; 
 }
@@ -100,9 +100,9 @@ function business_loop_content($content) {
 /**
 * Sets the post byline information (author, date, category). 
 *
-* @since 3.0
+* @since 1.0
 */
-function business_post_byline_content() {
+function response_post_byline_content() {
 	global $options, $themeslug; //call globals.  
 	if (is_single()) {
 		$hidden = $options->get($themeslug.'_single_hide_byline'); 
@@ -121,11 +121,11 @@ function business_post_byline_content() {
 	<?php endif; ?>
 	<div class="meta">
 	<ul>
-		<li class="metadate"><?php if (($hidden[$themeslug.'_hide_date']) != '0'):?><?php printf( __( '', 'business' )); ?><a href="<?php the_permalink() ?>"><?php echo get_the_date(); ?></a><?php endif;?></li>
-		<li class="metaauthor"><?php if (($hidden[$themeslug.'_hide_author']) != '0'):?><?php printf( __( '', 'business' )); ?><?php the_author_posts_link(); ?><?php endif;?></li>
-		<li class="metacomments"><?php if (($hidden[$themeslug.'_hide_comments']) != '0'):?><?php comments_popup_link( __('No Comments', 'business' ), __('1 Comment', 'business' ), __('% Comments' , 'business' )); //need a filer here ?><?php endif;?></li>
-		<li class="metacat"><?php if (($hidden[$themeslug.'_hide_categories']) != '0'):?><?php printf( __( '', 'business' )); ?> <?php the_category(', ') ?><?php endif;?></li>
-		<li class="metatags"><?php business_post_tags(); ?></li>
+		<li class="metadate"><?php if (($hidden[$themeslug.'_hide_date']) != '0'):?><?php printf( __( '', 'response' )); ?><a href="<?php the_permalink() ?>"><?php echo get_the_date(); ?></a><?php endif;?></li>
+		<li class="metaauthor"><?php if (($hidden[$themeslug.'_hide_author']) != '0'):?><?php printf( __( '', 'response' )); ?><?php the_author_posts_link(); ?><?php endif;?></li>
+		<li class="metacomments"><?php if (($hidden[$themeslug.'_hide_comments']) != '0'):?><?php comments_popup_link( __('No Comments', 'response' ), __('1 Comment', 'response' ), __('% Comments' , 'response' )); //need a filer here ?><?php endif;?></li>
+		<li class="metacat"><?php if (($hidden[$themeslug.'_hide_categories']) != '0'):?><?php printf( __( '', 'response' )); ?> <?php the_category(', ') ?><?php endif;?></li>
+		<li class="metatags"><?php response_post_tags(); ?></li>
 	</ul>
 	</div> <?php
 }
@@ -133,18 +133,18 @@ function business_post_byline_content() {
 /**
 * Sets up the WP edit link
 *
-* @since 3.0
+* @since 1.0
 */
-function business_edit_link_content() {
+function response_edit_link_content() {
 	edit_post_link('Edit', '<p>', '</p>');
 }
 
 /**
 * Sets up the tag area
 *
-* @since 3.0
+* @since 1.0
 */
-function business_post_tags_content() {
+function response_post_tags_content() {
 	global $options, $themeslug; 
 	if (is_single()) {
 		$hidden = $options->get($themeslug.'_single_hide_byline'); 

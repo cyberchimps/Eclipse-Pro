@@ -1,6 +1,6 @@
 <?php
 /**
-* Sidebar actions used by Business.
+* Sidebar actions used by response.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -11,24 +11,24 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business
-* @since 3.0
+* @package response
+* @since 1.0
 */
 
 /**
-* business sidebar actions
+* response sidebar actions
 */
-add_action( 'business_sidebar_init', 'business_sidebar_init_content' );
-add_action( 'business_before_content_sidebar', 'business_before_content_sidebar_markup' );
-add_action( 'business_after_content_sidebar', 'business_after_content_sidebar_markup' );
+add_action( 'response_sidebar_init', 'response_sidebar_init_content' );
+add_action( 'response_before_content_sidebar', 'response_before_content_sidebar_markup' );
+add_action( 'response_after_content_sidebar', 'response_after_content_sidebar_markup' );
 
 
 /**
 * Set sidebar and grid variables.
 *
-* @since 3.0
+* @since 1.0
 */
-function business_sidebar_init_content() {
+function response_sidebar_init_content() {
 
 	global $options, $themeslug, $post, $sidebar, $content_grid;
 	
@@ -65,9 +65,9 @@ function business_sidebar_init_content() {
 /**
 * Before entry sidebar
 *
-* @since 3.0
+* @since 1.0
 */
-function business_before_content_sidebar_markup() { 
+function response_before_content_sidebar_markup() { 
 	global $options, $themeslug, $post, $sidebar; // call globals ?>
 				
 	<?php if ($sidebar == 'right-left' OR $sidebar == "2"): ?>
@@ -86,9 +86,9 @@ function business_before_content_sidebar_markup() {
 /**
 * After entry sidebar
 *
-* @since 3.0
+* @since 1.0
 */
-function business_after_content_sidebar_markup() {
+function response_after_content_sidebar_markup() {
 	global $options, $themeslug, $post, $sidebar; // call globals ?>
 	
 	<?php if ($sidebar == 'right' OR $sidebar == '0' OR $sidebar == '' ): ?>

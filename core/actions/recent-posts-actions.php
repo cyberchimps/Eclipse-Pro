@@ -1,8 +1,8 @@
 <?php
 
-add_action( 'business_recent_posts_element', 'business_recent_posts_element_content' );
+add_action( 'response_recent_posts_element', 'response_recent_posts_element_content' );
 
-function business_recent_posts_element_content() {
+function response_recent_posts_element_content() {
 
 	global $wp_query, $custom_excerpt;
 	$custom_excerpt = 'recent';
@@ -19,7 +19,7 @@ function business_recent_posts_element_content() {
 		<div id="recent-posts-container" class="three columns">
 		
 			<h5 style="font-size: 14px; color: white;"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
-			<h6 style="color:white; font-size: 11px;"><?php the_time( 'd/m/y');?> - <?php the_category(', ') ?> - <?php comments_popup_link( __('No Comments', 'business' ), __('1 Comment', 'business' ), __('% Comments' , 'business' )); //need a filer here ?></h6>
+			<h6 style="color:white; font-size: 11px;"><?php the_time( 'd/m/y');?> - <?php the_category(', ') ?> - <?php comments_popup_link( __('No Comments', 'response' ), __('1 Comment', 'response' ), __('% Comments' , 'response' )); //need a filer here ?></h6>
 			<?php
 				if ( has_post_thumbnail()) {
  		 			echo '<div class="recent-posts-image">';

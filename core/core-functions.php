@@ -1,6 +1,6 @@
 <?php
 /**
-* CyberChimps Business Core Functions
+* CyberChimps response Core Functions
 *
 * Authors: Tyler Cunningham
 * Copyright: © 2012
@@ -11,17 +11,17 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package business
-* @since 3.0
+* @package response
+* @since 1.0
 */
 
 /**
-* Establishes 'business' as the textdomain, sets $locale and file path
+* Establishes 'response' as the textdomain, sets $locale and file path
 *
-* @since 3.0
+* @since 1.0
 */
-function business_text_domain() {
-	load_theme_textdomain( 'business', TEMPLATEPATH . '/core/languages' );
+function response_text_domain() {
+	load_theme_textdomain( 'response', TEMPLATEPATH . '/core/languages' );
 
 	    $locale = get_locale();
 	    $locale_file = TEMPLATEPATH . "/core/languages/$locale.php";
@@ -30,12 +30,12 @@ function business_text_domain() {
 		
 		return;    
 }
-add_action('after_setup_theme', 'business_text_domain');
+add_action('after_setup_theme', 'response_text_domain');
 
 /**
 * Load jQuery and register additional scripts.
 */ 
-function business_scripts() {
+function response_scripts() {
 	global $options, $themeslug;
 	if ( !is_admin() ) {
 	wp_enqueue_script('jquery');
@@ -71,14 +71,14 @@ function business_scripts() {
 		wp_enqueue_script ('lazyload');
 	}
 }
-add_action('wp_enqueue_scripts', 'business_scripts');	
+add_action('wp_enqueue_scripts', 'response_scripts');	
 
 /**
 * Truncate next/previous post link text for post pagination.
 *
-* @since 3.0
+* @since 1.0
 */
-function business_shorten_linktext($linkstring,$link) {
+function response_shorten_linktext($linkstring,$link) {
 	$characters = 33;
 	preg_match('/<a.*?>(.*?)<\/a>/is',$linkstring,$matches);
 	$displayedTitle = $matches[1];
@@ -90,15 +90,15 @@ function shorten_with_ellipsis($inputstring,$characters) {
   return (strlen($inputstring) >= $characters) ? substr($inputstring,0,($characters-3)) . '...' : $inputstring;
 }
 
-add_filter('previous_post_link','business_shorten_linktext',10,2);
-add_filter('next_post_link','business_shorten_linktext',10,2);
+add_filter('previous_post_link','response_shorten_linktext',10,2);
+add_filter('next_post_link','response_shorten_linktext',10,2);
 
 /**
 * Comment function
 *
-* @since 3.0
+* @since 1.0
 */
-function business_comment($comment, $args, $depth) {
+function response_comment($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
      <div id="comment-<?php comment_ID(); ?>">
@@ -126,9 +126,9 @@ function business_comment($comment, $args, $depth) {
 /**
 * Breadcrumbs function
 *
-* @since 3.0
+* @since 1.0
 */
-function business_breadcrumbs() {
+function response_breadcrumbs() {
   global $root;
   
   $delimiter = "<img src='$root/images/breadcrumb-arrow.png'>";

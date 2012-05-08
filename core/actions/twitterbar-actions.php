@@ -1,6 +1,6 @@
 <?php
 /**
-* Twitterbar actions used by Business.
+* Twitterbar actions used by response.
 *
 * Authors: Benjamin Mueller, Tyler Cunningham
 * Copyright: © 2012
@@ -11,20 +11,19 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business
-* @since 3.0
-* @last modified 3.0.5
+* @package response
+* @since 1.0
 */
 
 /**
-* Business Twitterbar actions
+* response Twitterbar actions
 */
-add_action( 'business_twitterbar_section', 'business_twitterbar_section_content' );
+add_action( 'response_twitterbar_section', 'response_twitterbar_section_content' );
 
 /**
 * Retrieves the Twitterbar options
 */
-function business_twitterbar_section_content() {
+function response_twitterbar_section_content() {
 	global $options, $themeslug, $post; //call globals
 
 	if ( is_page() ) {
@@ -44,15 +43,15 @@ function business_twitterbar_section_content() {
 	}
 
 	if ( $handle ) {
-		business_display_latest_tweets( $handle, $show_replies );
+		response_display_latest_tweets( $handle, $show_replies );
 	}
 }
 
 /**
 * Display the latest tweets from Twitter
 */
-function business_display_latest_tweets( $username, $show_replies = 0 ) {
-	$latest_tweet = business_get_latest_tweets( $username, $show_replies );
+function response_display_latest_tweets( $username, $show_replies = 0 ) {
+	$latest_tweet = response_get_latest_tweets( $username, $show_replies );
 ?>
 	<div class="row">
 		<div id="twitterbar" class="twelve columns"><!--id="twitterbar"-->
@@ -76,10 +75,10 @@ function business_display_latest_tweets( $username, $show_replies = 0 ) {
 /**
 * Get the latest tweets from Twitter
 */
-function business_get_latest_tweets( $username, $show_replies = 0 ) {
+function response_get_latest_tweets( $username, $show_replies = 0 ) {
 	if ( $username ) :
 		// Check to see if Latest Tweet is Saved in Transient and settings have not changed
-		$cached_latest_tweet = get_transient('business_latest_tweet');
+		$cached_latest_tweet = get_transient('response_latest_tweet');
 		if ($cached_latest_tweet !== false && ($cached_latest_tweet['show_replies'] == $show_replies) && ($cached_latest_tweet['username'] == $username) ) return $cached_latest_tweet['latest_tweet'];
 
 		// Latest Tweet not set create it now
@@ -92,7 +91,7 @@ function business_get_latest_tweets( $username, $show_replies = 0 ) {
 		}
 
 		// Set the transient cache value
-		set_transient('business_latest_tweet', array('username' => $username, 'show_replies' => $show_replies, 'latest_tweet' => $latest_tweet), apply_filters('business_latest_tweets_cache_time', 3600));
+		set_transient('response_latest_tweet', array('username' => $username, 'show_replies' => $show_replies, 'latest_tweet' => $latest_tweet), apply_filters('response_latest_tweets_cache_time', 3600));
 		
 		return $latest_tweet;
 	else :

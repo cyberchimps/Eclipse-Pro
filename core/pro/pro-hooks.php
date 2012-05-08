@@ -1,6 +1,6 @@
 <?php
 /**
-* Hook wrappers used by Business Pro.
+* Hook wrappers used by response Pro.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -11,44 +11,44 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business Pro
-* @since 3.0
+* @package response Pro
+* @since 1.0
 */
 
 /** 
 * Box Section
 */
-function business_box_section() {
-	do_action ('business_box_section');
+function response_box_section() {
+	do_action ('response_box_section');
 }
 
 /** 
 * Callout Section
 */
-function business_callout_section() {
-	do_action ('business_callout_section');
+function response_callout_section() {
+	do_action ('response_callout_section');
 }
 
 /** 
 * Carousel Section
 */
-function business_index_carousel_section() {
-	do_action ('business_index_carousel_section');
+function response_index_carousel_section() {
+	do_action ('response_index_carousel_section');
 }
 
-function business_carousel_section() {
-	do_action ('business_carousel_section');
+function response_carousel_section() {
+	do_action ('response_carousel_section');
 }
 
 /** 
 * Entry 
 */
-function business_pro_before_entry() {
-	do_action('business_pro_before_entry');
+function response_pro_before_entry() {
+	do_action('response_pro_before_entry');
 }
 
-function business_pro_entry() {
-	do_action('business_pro_entry');
+function response_pro_entry() {
+	do_action('response_pro_entry');
 }
 
 /** 
@@ -58,31 +58,31 @@ function business_pro_entry() {
 /** 
 * Portfolio
 */
-function business_portfolio_element() {
-	do_action('business_portfolio_element');
+function response_portfolio_element() {
+	do_action('response_portfolio_element');
 }
 
 /** 
 * Product
 */
-function business_product_element() {
-	do_action('business_product_element');
+function response_product_element() {
+	do_action('response_product_element');
 }
 
 /** 
 * Slider
 */
-function business_blog_slider() {
-	do_action ('business_blog_slider');
+function response_blog_slider() {
+	do_action ('response_blog_slider');
 }
-function business_blog_content_slider() {
-	do_action ('business_blog_content_slider');
+function response_blog_content_slider() {
+	do_action ('response_blog_content_slider');
 }
-function business_page_slider() {
-	do_action ('business_page_slider');
+function response_page_slider() {
+	do_action ('response_page_slider');
 }
-function business_page_content_slider() {
-	do_action ('business_page_content_slider');
+function response_page_content_slider() {
+	do_action ('response_page_content_slider');
 }
 
 /**

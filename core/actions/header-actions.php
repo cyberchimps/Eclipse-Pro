@@ -1,6 +1,6 @@
 <?php
 /**
-* Header actions used by Business. 
+* Header actions used by response. 
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -11,40 +11,40 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business
-* @since 3.0
+* @package response
+* @since 1.0
 */
 
 /**
-* business header actions
+* response header actions
 */
-add_action( 'business_after_head_tag', 'business_font' );
-add_action( 'business_head_tag', 'business_html_attributes' );
-add_action( 'business_head_tag', 'business_meta_tags' );
-add_action( 'business_head_tag', 'business_title_tag' );
-add_action( 'business_head_tag', 'business_link_rel' );
+add_action( 'response_after_head_tag', 'response_font' );
+add_action( 'response_head_tag', 'response_html_attributes' );
+add_action( 'response_head_tag', 'response_meta_tags' );
+add_action( 'response_head_tag', 'response_title_tag' );
+add_action( 'response_head_tag', 'response_link_rel' );
 
-add_action( 'business_header_sitename', 'business_header_sitename_content');
-add_action( 'business_header_site_description', 'business_header_site_description_content' );
-add_action( 'business_header_social_icons', 'business_header_social_icons_content' );
+add_action( 'response_header_sitename', 'response_header_sitename_content');
+add_action( 'response_header_site_description', 'response_header_site_description_content' );
+add_action( 'response_header_social_icons', 'response_header_social_icons_content' );
 
-add_action( 'business_logo_menu', 'business_logo_menu_content');
-add_action( 'business_description_icons', 'business_description_icons_content');
+add_action( 'response_logo_menu', 'response_logo_menu_content');
+add_action( 'response_description_icons', 'response_description_icons_content');
 
-add_action( 'business_navigation', 'business_nav' );
-add_action( 'business_404_content', 'business_404_content_handler' );
+add_action( 'response_navigation', 'response_nav' );
+add_action( 'response_404_content', 'response_404_content_handler' );
 
 /**
 * Establishes the theme font family.
 *
-* @since 3.0
+* @since 1.0
 */
-function business_font() {
+function response_font() {
 	global $themeslug, $options; //Call global variables
-	$family = apply_filters( 'business_default_font_family', 'Helvetica, serif' );
+	$family = apply_filters( 'response_default_font_family', 'Helvetica, serif' );
 	
 	if ($options->get($themeslug.'_font') == "" ) {
-		$font = apply_filters( 'business_default_font', 'Arial' );
+		$font = apply_filters( 'response_default_font', 'Arial' );
 	}		
 	else {
 		$font = $options->get($themeslug.'_font'); 
@@ -56,9 +56,9 @@ function business_font() {
 /**
 * Establishes the theme HTML attributes
 *
-* @since 3.0
+* @since 1.0
 */
-function business_html_attributes() { ?>
+function response_html_attributes() { ?>
 <!doctype html>
 <!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
@@ -72,9 +72,9 @@ function business_html_attributes() { ?>
 /**
 * Establishes the theme META tags (including SEO options)
 *
-* @since 3.0
+* @since 1.0
 */
-function business_meta_tags() { ?>
+function response_meta_tags() { ?>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <?php
 	global $themeslug, $options, $post; //Call global variables
 	if(!$post) return; // in case of 404 page or something
@@ -113,9 +113,9 @@ function business_meta_tags() { ?>
 /**
 * Establishes the theme title tags.
 *
-* @since 3.0
+* @since 1.0
 */
-function business_title_tag() {
+function response_title_tag() {
 	global $options, $themeslug, $query, $post; 
 	$blogtitle = ($options->get($themeslug.'_home_title'));
 	if (!is_404()) {
@@ -172,9 +172,9 @@ function business_title_tag() {
 /**
 * Sets the header link rel attributes
 *
-* @since 3.0
+* @since 1.0
 */
-function business_link_rel() {
+function response_link_rel() {
 	global $themeslug, $options; //Call global variables
 	$favicon = $options->get($themeslug.'_favicon'); //Calls the favicon URL from the theme options 
 	
@@ -220,9 +220,9 @@ function business_link_rel() {
 /**
 * Header left content (sitename or logo)
 *
-* @since 3.0
+* @since 1.0
 */
-function business_header_sitename_content() {
+function response_header_sitename_content() {
 	global $themeslug, $options; //Call global variables
 	$logo = $options->get($themeslug.'_logo'); //Calls the logo URL from the theme options
 
@@ -239,7 +239,7 @@ if ($options->get($themeslug.'_custom_logo') == '1') { ?>
 }
 
 
-function business_header_site_description_content() {
+function response_header_site_description_content() {
 	global $themeslug, $options; ?>
 	
 	<div id="description">
@@ -250,9 +250,9 @@ function business_header_site_description_content() {
 /**
 * Description/Icons
 *
-* @since 3.0
+* @since 1.0
 */
-function business_description_icons_content() {
+function response_description_icons_content() {
 ?>
 
 <div id="subheader">
@@ -262,7 +262,7 @@ function business_description_icons_content() {
 			<div class="five columns">
 				
 			<!-- Begin @Core header description hook -->
-				<?php business_header_site_description(); ?> 
+				<?php response_header_site_description(); ?> 
 			<!-- End @Core header description hook -->
 			
 				
@@ -271,7 +271,7 @@ function business_description_icons_content() {
 			<div class="seven columns">
 			
 			<!-- Begin @Core header social icon hook -->
-				<?php business_header_social_icons(); ?> 
+				<?php response_header_social_icons(); ?> 
 			<!-- End @Core header contact social icon hook -->	
 						
 			</div>	
@@ -286,9 +286,9 @@ function business_description_icons_content() {
 /**
 * Logo/Menu
 *
-* @since 3.0
+* @since 1.0
 */
-function business_logo_menu_content() {
+function response_logo_menu_content() {
 ?>
 
 <div id="header">
@@ -298,7 +298,7 @@ function business_logo_menu_content() {
 			<div class="five columns"">
 				
 				<!-- Begin @Core header sitename hook -->
-					<?php business_header_sitename(); ?> 
+					<?php response_header_sitename(); ?> 
 				<!-- End @Core header sitename hook -->
 			
 			</div>	
@@ -324,9 +324,9 @@ function business_logo_menu_content() {
 /**
 * Social icons
 *
-* @since 3.0
+* @since 1.0
 */
-function business_header_social_icons_content() { 
+function response_header_social_icons_content() { 
 	global $options, $themeslug; //call globals
 	
 	$facebook		= $options->get($themeslug.'_facebook');

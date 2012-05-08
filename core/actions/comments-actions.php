@@ -1,6 +1,6 @@
 <?php
 /**
-* Comments actions used by Business.
+* Comments actions used by response.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -11,28 +11,28 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business
-* @since 3.0
+* @package response
+* @since 1.0
 */
 
 /**
-* Business comments actions
+* response comments actions
 */
-add_action( 'business_comments', 'business_comments_password_required' );
-add_action( 'business_comments', 'business_comments_loop' );
+add_action( 'response_comments', 'response_comments_password_required' );
+add_action( 'response_comments', 'response_comments_loop' );
 
 /**
 * Checks if password is required to comment, sets a filter for text that displays.
 *
-* @since 3.0
+* @since 1.0
 */
-function business_comments_password_required() {
+function response_comments_password_required() {
 	
 	global $post;
 	
-	$password_text = apply_filters( 'business_password_required_text', 'This post is password protected. Enter the password to view comments.');
+	$password_text = apply_filters( 'response_password_required_text', 'This post is password protected. Enter the password to view comments.');
 	if ( post_password_required() ) { 
-		printf( __( $password_text, 'business' )); 
+		printf( __( $password_text, 'response' )); 
 		return;
 	}
 }
@@ -40,13 +40,13 @@ function business_comments_password_required() {
 /**
 * Runs through the comments "loop"
 *
-* @since 3.0
+* @since 1.0
 */
-function business_comments_loop() { 
+function response_comments_loop() { 
 	global $post; ?>
 <?php if ( have_comments() ) : ?>
 	<div class="comments_container">
-		<h2 class="commentsh2"><?php comments_number( __('No Responses', 'business' ), __( 'One Response', 'business' ), __('% Responses', 'business' ));?></h2>
+		<h2 class="commentsh2"><?php comments_number( __('No Responses', 'response' ), __( 'One Response', 'response' ), __('% Responses', 'response' ));?></h2>
 
 		<div class="navigation">
 			<div class="next-posts"><?php previous_comments_link() ?></div>
@@ -54,7 +54,7 @@ function business_comments_loop() {
 		</div>
 
 		<ol class="commentlist">
-			<?php wp_list_comments('callback=business_comment'); ?>
+			<?php wp_list_comments('callback=response_comment'); ?>
 		</ol>
 
 		<div class="navigation">
@@ -86,7 +86,7 @@ function business_comments_loop() {
 	</div>
 
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-		<p><?php printf (__( 'You must be', 'business' )); ?><a href="<?php echo wp_login_url( get_permalink() ); ?>"> <?php printf( __( 'logged in', 'business' ), '</a>', __('to post a comment.', 'business' )); ?></p>
+		<p><?php printf (__( 'You must be', 'response' )); ?><a href="<?php echo wp_login_url( get_permalink() ); ?>"> <?php printf( __( 'logged in', 'response' ), '</a>', __('to post a comment.', 'response' )); ?></p>
 	<?php else : ?>
 	
 	<?php comment_form(); ?>

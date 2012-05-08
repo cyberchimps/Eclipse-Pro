@@ -1,6 +1,6 @@
 <?php
 /**
-* Functions related to the Business Theme Options.
+* Functions related to the response Theme Options.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2011
@@ -11,11 +11,11 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business
-* @since 3.0
+* @package response
+* @since 1.0
 */
 
-function business_content_layout() {
+function response_content_layout() {
 	global $options, $themeslug, $post;
 	
 	if (is_single()) {
@@ -58,7 +58,7 @@ function business_content_layout() {
 	}
 
 }
-add_action( 'wp_head', 'business_content_Layout' );
+add_action( 'wp_head', 'response_content_Layout' );
 
 /* Site Title Color */
 

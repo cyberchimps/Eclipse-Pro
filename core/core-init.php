@@ -1,9 +1,9 @@
 <?php
 /**
-* Initializes the CyberChimps Synapse Core Framework
+* Initializes the CyberChimps Response Core Framework
 *
 * Author: Tyler Cunningham
-* Copyright: © 2011
+* Copyright: © 2012
 * {@link http://cyberchimps.com/ CyberChimps LLC}
 *
 * Released under the terms of the GNU General Public License.
@@ -11,7 +11,7 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Synapse
+* @package Response
 * @since 1.0
 */
 
@@ -44,9 +44,6 @@ require_once ( get_template_directory() . '/core/metabox/meta-box-class.php' );
 
 //CyberChimps Themes Page
 require_once ( get_template_directory() . '/core/classy-options/options-themes.php' );
-
-//Widgets
-//require_once ( get_template_directory() . '/core/widgets/tabbed-widget.php' );
 
 /**
 * End

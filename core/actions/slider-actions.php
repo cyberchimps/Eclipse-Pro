@@ -1,6 +1,6 @@
 <?php
 /**
-* Slider actions used by Business.
+* Slider actions used by response.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -11,20 +11,20 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package Business
-* @since 3.0
+* @package response
+* @since 1.0
 */
 
 /**
-* Business slider actions
+* response slider actions
 */
 
-add_action ('business_blog_slider_lite', 'business_blog_slider_lite_content' );
+add_action ('response_blog_slider_lite', 'response_blog_slider_lite_content' );
 
 /**
 * Lite slider functions
 */
-function business_blog_slider_lite_content() {
+function response_blog_slider_lite_content() {
 
 /* Call globals. */	
 
