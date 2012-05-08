@@ -128,11 +128,15 @@ add_filter('business_post_formats_gallery_content', 'custom_gallery_post_format'
 */ 
 function new_excerpt_more($more) {
 
-	global $themename, $themeslug, $options, $post;
+	global $themename, $themeslug, $options, $custom_excerpt, $post;
     
     	if ($options->get($themeslug.'_excerpt_link_text') == '') {
-    		$linktext = 'Continue Reading...';
+    		$linktext = 'Continue Reading';
    		}
+   		
+   		elseif ($custom_excerpt == 'recent') {
+    		$linktext = 'Continue Reading';
+    	}
     	else {
     		$linktext = $options->get($themeslug.'_excerpt_link_text');
    		}
