@@ -146,10 +146,14 @@ add_filter('excerpt_more', 'new_excerpt_more');
 */ 
 function new_excerpt_length($length) {
 
-	global $themename, $themeslug, $options;
+	global $themename, $themeslug, $custom_excerpt, $options;
 	
 		if ($options->get($themeslug.'_excerpt_length') == '') {
     		$length = '55';
+    	}
+    	
+    	elseif ($custom_excerpt == 'recent') {
+    		$length = '25';
     	}
     	else {
     		$length = $options->get($themeslug.'_excerpt_length');

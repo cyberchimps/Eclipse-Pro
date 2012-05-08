@@ -35,6 +35,11 @@ jQuery(document).ready(function($){
    		$(this).fadeTo("fast", 1.0); 
 	});
 	
+	$(".recent-posts-image img").hover(function(){
+		$(this).fadeTo("fast", 0.75); 
+	},function(){
+   		$(this).fadeTo("fast", 1.0); 
+	});
 });
 
 jQuery(document).ready(function($) {
