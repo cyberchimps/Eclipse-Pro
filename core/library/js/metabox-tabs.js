@@ -46,7 +46,7 @@ jQuery(document).ready(function($) {
 	$("#subsection-Portfolio-Element > h4").click();
 	$("#subsection-Page-Options > h4").click();
 	var page_subsection_map = {
-		page_slider: "subsection-Business-Pro-Slider-Options",
+		page_slider: "subsection-response-Pro-Slider-Options",
 		callout_section: "subsection-Callout-Options",
 		carousel_section: "subsection-Carousel-Options",
 		product_element: "subsection-Carousel-Options",
