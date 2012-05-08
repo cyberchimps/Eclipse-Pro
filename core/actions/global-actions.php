@@ -77,7 +77,7 @@ function response_loop_content($content) {
 						the_excerpt();
 						}
 						else {
-							the_content(__('Read more...', 'response'));
+							the_content(__('Continue Reading', 'response'));
 						}
 					 ?>
 				<!--Begin @response link pages hook-->
