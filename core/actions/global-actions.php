@@ -71,11 +71,6 @@ function business_loop_content($content) {
 			<div class="row">
 			<div class="byline three columns"><?php business_post_byline(); ?></div>
 				<div class="entry nine columns">
-					<?php if ($post_formats != '0') : ?>
-						<div class="postformats"><!--begin format icon-->
-							<img src="<?php echo get_template_directory_uri(); ?>/images/formats/<?php echo $format ;?>.png" alt="formats" />
-						</div><!--end format-icon-->
-					<?php endif; ?>
 					<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 					<?php 
 						if ($excerpts == '1' && !is_single() ) {
@@ -119,6 +114,11 @@ function business_post_byline_content() {
 		$hidden = $options->get($themeslug.'_hide_byline'); 
 	}?>
 	
+	<?php if ($post_formats != '0') : ?>
+		<div class="postformats"><!--begin format icon-->
+			<img src="<?php echo get_template_directory_uri(); ?>/images/formats/<?php echo $format ;?>.png" alt="formats" />
+		</div><!--end format-icon-->
+	<?php endif; ?>
 	<div class="meta">
 	<ul>
 		<li class="metadate"><?php if (($hidden[$themeslug.'_hide_date']) != '0'):?><?php printf( __( '', 'business' )); ?><a href="<?php the_permalink() ?>"><?php echo get_the_date(); ?></a><?php endif;?></li>
