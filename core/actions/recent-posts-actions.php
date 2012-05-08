@@ -8,15 +8,19 @@ function business_recent_posts_element_content() {
 	$args = array_merge( $wp_query->query, array( 'showposts' => 4 ) );
 	query_posts( $args );
 ?>
+<div class="container">
 <div class="row">
-	<div id="recent_posts_wrap" class="twelve columns">
+	<h3>Recent Blog Posts</h3>
+	<div id="recent_posts_wrap">
+	
+
 	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
 		<div class="three columns">
 		
-			<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-	
+			<h5><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
+			<?php the_time( 'd/m/y');?>
 			<?php
 				if ( has_post_thumbnail()) {
  		 			echo '<div class="featured-image">';
@@ -41,7 +45,7 @@ function business_recent_posts_element_content() {
 	
 	</div>
 </div>
-
+</div>
 
 <?php
 wp_reset_query();
