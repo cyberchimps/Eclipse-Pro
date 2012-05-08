@@ -72,17 +72,14 @@ function initialize_the_meta_boxes() {
 	$mb = new Chimps_Metabox('slides', 'Custom Feature Slides', array('pages' => array($themeslug.'_custom_slides')));
 	$mb
 		->tab("Custom Slide Options")
-			->select('slider_type', 'Select Slide Type', '', array('options' => array('Text and Media', 'Media Only', 'Text Only')) )
-			->select('slider_text_align', 'Slide Layout', '', array('options' => array('Text Left - Image Right', 'Image Right - Text Left')) )	
-			->textarea('slider_caption', 'Slide Text', '')
-			->select('slider_media_type', 'Media Type', '', array('options' => array('Image', 'Video')) )
-			->single_image('slider_image', 'Slide Image', '')
-			->text('slider_url', 'Image Link', '')	
-			->textarea('slider_video', 'Slider Media Embed', '')
+			->text('slider_caption', 'Custom Slide Caption', '')
+			->text('slider_url', 'Custom Slide Link', '')
+			->single_image('slider_image', 'Custom Slide Image', '')
+			->checkbox('slider_hidetitle', 'Slide Title Bar', '', array('std' => 'on'))
+			->single_image('slider_custom_thumb', 'Custom Thumbnail', '')
 			->sliderhelp('', 'Need Help?', '')
-			->reorder('reorder_id', 'Reorder', 'Reorder Desc' )
+			->reorder('reorder_id', 'Reorder Name', 'Reorder Desc' )
 		->end();
-
 	$mb = new Chimps_Metabox('pages', $themenamefull.' Page Options', array('pages' => array('page')));
 	$mb
 		->tab("Page Options")
