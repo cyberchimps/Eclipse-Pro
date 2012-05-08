@@ -1,3 +1,17 @@
+/*============================*/
+/*===== Recent Posts Styles ======*/
+/*============================*/
+.recent-posts-image {margin-top:8px; margin-bottom: 8px;}
+#recent-posts-container.three.columns {width: 22.4%; margin-left: 3.55%; margin-right:0%;}
+#recent-posts-container.columns:first-child {margin-left: 0%;}
+#recent-posts-container p {font-size: 11px;}
+
+#recent-posts-container a {color: white;}
+#recent-posts-container a:hover {color: #DDD;}
+
+/*============================*/
+/*===== Product Styles ======*/
+/*============================*/
 #product_text {color: white; padding: 20px 0 20px 0;}
 .product_text_wrap {}
 #product_text.six.columns {margin-left: 1%;}
