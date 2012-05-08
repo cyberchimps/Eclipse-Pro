@@ -483,6 +483,9 @@ function business_description_icons() {
 	do_action('business_description_icons');
 }
 
+function business_recent_posts_element() {
+	do_action('business_recent_posts_element');
+}
 
 /**
 * End
