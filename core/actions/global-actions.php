@@ -106,12 +106,21 @@ function response_post_byline_content() {
 	global $options, $themeslug; //call globals.  
 	if (is_single()) {
 		$hidden = $options->get($themeslug.'_single_hide_byline'); 
+		 $post_formats = $options->get($themeslug.'_single_post_formats');
 	}
 	elseif (is_archive()) {
 		$hidden = $options->get($themeslug.'_archive_hide_byline'); 
+		 $post_formats = $options->get($themeslug.'_archive_post_formats');
 	}
 	else {
 		$hidden = $options->get($themeslug.'_hide_byline'); 
+		$post_formats = $options->get($themeslug.'_post_formats');
+	}
+	if (get_post_format() == '') {
+		$format = "default";
+	}
+	else {
+		$format = get_post_format();
 	}?>
 	
 	<?php if ($post_formats != '0') : ?>
