@@ -20,68 +20,68 @@ msgstr ""
 "X-Textdomain-Support: yes"
 
 #: core/actions/archive-actions.php:36
-#@ core
+#@ response
 msgid "Archive for the &#8216;"
 msgstr "Arhiva za &#8216;"
 
 #: core/actions/archive-actions.php:36
-#@ core
+#@ response
 msgid "&#8217; Category:"
 msgstr "&#8217; Kategorija:"
 
 #: core/actions/archive-actions.php:39
-#@ core
+#@ response
 msgid "Posts Tagged &#8216;"
 msgstr "Članaka označeno &#8216;"
 
 #: core/actions/archive-actions.php:39
-#@ core
+#@ response
 msgid "&#8217;:"
 msgstr "&#8217;:"
 
 #: core/actions/archive-actions.php:42
 #: core/actions/archive-actions.php:45
-#@ core
+#@ response
 msgid "Archive for"
 msgstr "Arhiva za"
 
 #: core/actions/archive-actions.php:48
-#@ core
+#@ response
 msgid "Archive for:"
 msgstr "Arhiva za:"
 
 #: core/actions/archive-actions.php:51
-#@ core
+#@ response
 msgid "Author Archive:"
 msgstr "Autor arhive:"
 
 #: core/actions/archive-actions.php:54
-#@ core
+#@ response
 msgid "Blog Archives:"
 msgstr "Blog arhive:"
 
 #: core/actions/comments-actions.php:49
-#@ core
+#@ response
 msgid "No Responses"
 msgstr "Nema odgovora"
 
 #: core/actions/comments-actions.php:49
-#@ core
+#@ response
 msgid "One Response"
 msgstr "Jedan odgovor"
 
 #: core/actions/comments-actions.php:49
-#@ core
+#@ response
 msgid "% Responses"
 msgstr "% odgovora"
 
 #: core/actions/comments-actions.php:88
-#@ core
+#@ response
 msgid "You must be"
 msgstr "Moraš biti"
 
 #: core/actions/comments-actions.php:88
-#@ core
+#@ response
 msgid "logged in"
 msgstr "prijavljen"
 
@@ -91,19 +91,19 @@ msgid "to post a comment."
 msgstr "da bi dodao komentar"
 
 #: core/actions/footer-actions.php:39
-#@ core
+#@ response
 msgid "Recent Posts"
 msgstr "Posljednji članci"
 
 #: core/actions/footer-actions.php:46
 #: sidebar.php:26
-#@ core
+#@ response
 #@ ifeature
 msgid "Archives"
 msgstr "Arhive"
 
 #: core/actions/footer-actions.php:53
-#@ core
+#@ response
 msgid "Links"
 msgstr "Poveznice"
 
@@ -111,73 +111,73 @@ msgstr "Poveznice"
 #: core/actions/footer-actions.php:64
 #: sidebar.php:40
 #: sidebar.php:44
-#@ core
+#@ response
 msgid "WordPress"
 msgstr "WordPress"
 
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
-#@ core
+#@ response
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
-#@ core
+#@ response
 msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
 msgstr "Powered by WordPress, state-of-the-art semantic personal publishing platform."
 
 #: core/actions/global-actions.php:43
-#@ core
+#@ response
 msgid "Published on"
 msgstr "Publicirano"
 
 #: core/actions/global-actions.php:44
-#@ core
+#@ response
 msgid "by"
 msgstr "od"
 
 #: core/actions/global-actions.php:45
-#@ core
+#@ response
 msgid "in"
 msgstr "u"
 
 #: core/actions/global-actions.php:70
-#@ core
+#@ response
 msgid "No Comments &#187;"
 msgstr "Nema komentara &#187;"
 
 #: core/actions/global-actions.php:70
-#@ core
+#@ response
 msgid "1 Comment &#187;"
 msgstr "1 komentar &#187;"
 
 #: core/actions/global-actions.php:70
-#@ core
+#@ response
 msgid "% Comments &#187;"
 msgstr "% komentara &#187;"
 
 #: sidebar.php:19
-#@ core
+#@ response
 msgid "Pages"
 msgstr "Stranice"
 
 #: sidebar.php:33
-#@ core
+#@ response
 msgid "Categories"
 msgstr "Kategorije"
 
 #: sidebar.php:50
-#@ core
+#@ response
 msgid "Subscribe"
 msgstr "Pretplati se"
 
 #: sidebar.php:52
-#@ core
+#@ response
 msgid "Entries (RSS)"
 msgstr "Članaka (RSS)"
 
 #: sidebar.php:53
-#@ core
+#@ response
 msgid "Comments (RSS)"
 msgstr "Komentara (RSS)"

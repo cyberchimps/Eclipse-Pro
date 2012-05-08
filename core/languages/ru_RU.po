@@ -16,68 +16,68 @@ msgstr ""
 "Language-Team: \n"
 "X-Poedit-SearchPath-0: .\n"
 
-#@ business
+#@ response
 #: core/actions/archive-actions.php:36
 msgid "Archive for the &#8216;"
 msgstr "Архив для &#8216;"
 
-#@ business
+#@ response
 #: core/actions/archive-actions.php:36
 msgid "&#8217; Category:"
 msgstr "&#8217; Категория:"
 
-#@ business
+#@ response
 #: core/actions/archive-actions.php:39
 msgid "Posts Tagged &#8216;"
 msgstr "Записи с меткой &#8216;"
 
-#@ business
+#@ response
 #: core/actions/archive-actions.php:39
 msgid "&#8217;:"
 msgstr "&#8217;:"
 
-#@ business
+#@ response
 #: core/actions/archive-actions.php:42
 #: core/actions/archive-actions.php:45
 msgid "Archive for"
 msgstr "Архив для"
 
-#@ business
+#@ response
 #: core/actions/archive-actions.php:48
 msgid "Archive for:"
 msgstr "Архив для:"
 
-#@ business
+#@ response
 #: core/actions/archive-actions.php:51
 msgid "Author Archive:"
 msgstr "Автор Архива:"
 
-#@ business
+#@ response
 #: core/actions/archive-actions.php:54
 msgid "Blog Archives:"
 msgstr "Архив блога:"
 
-#@ business
+#@ response
 #: core/actions/comments-actions.php:49
 msgid "No Responses"
 msgstr "Без ответа"
 
-#@ business
+#@ response
 #: core/actions/comments-actions.php:49
 msgid "One Response"
 msgstr "Один ответ"
 
-#@ business
+#@ response
 #: core/actions/comments-actions.php:49
 msgid "% Responses"
 msgstr "% ответа"
 
-#@ business
+#@ response
 #: core/actions/comments-actions.php:88
 msgid "You must be"
 msgstr "Вы должны"
 
-#@ business
+#@ response
 #: core/actions/comments-actions.php:88
 msgid "logged in"
 msgstr "Залогиненный "
@@ -87,24 +87,24 @@ msgstr "Залогиненный "
 msgid "to post a comment."
 msgstr "Разместить коментарий"
 
-#@ business
+#@ response
 #: core/actions/footer-actions.php:39
 msgid "Recent Posts"
 msgstr "Последние посты"
 
-#@ business
+#@ response
 #@ ifeature
 #: core/actions/footer-actions.php:46
 #: sidebar.php:26
 msgid "Archives"
 msgstr "Архивы"
 
-#@ business
+#@ response
 #: core/actions/footer-actions.php:53
 msgid "Links"
 msgstr "Ссылки"
 
-#@ business
+#@ response
 #@ ifeature
 #: core/actions/footer-actions.php:60
 #: core/actions/footer-actions.php:64
@@ -113,103 +113,103 @@ msgstr "Ссылки"
 msgid "WordPress"
 msgstr "WordPress"
 
-#@ business
+#@ response
 #@ ifeature
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
-#@ business
+#@ response
 #@ ifeature
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
 msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
 msgstr "Работает на WordPress, произведении искусства семантической платформы публикаций"
 
-#@ business
+#@ response
 #: core/actions/footer-actions.php:38
 msgid "Footer Widgets"
 msgstr "Фиджет Footer"
 
-#@ business
+#@ response
 #: core/actions/global-actions.php:86
 msgid "Read more…"
 msgstr "Читать дальше..."
 
-#@ business
+#@ response
 #: core/actions/global-actions.php:128
 msgid "No Comments"
 msgstr "Нет комментариев"
 
-#@ business
+#@ response
 #: core/actions/global-actions.php:128
 msgid "1 Comment"
 msgstr "1 коментарий"
 
-#@ business
+#@ response
 #: core/actions/global-actions.php:128
 msgid "% Comments"
 msgstr "% коментариев"
 
-#@ business
+#@ response
 #: core/actions/global-actions.php:187
 msgid "Tags: "
 msgstr "Теги:"
 
-#@ business
+#@ response
 #@ default
 #: core/actions/pagination-actions.php:49
 #: core/core-functions.php:241
 msgid "Page"
 msgstr "Страница"
 
-#@ business
+#@ response
 #: core/actions/pagination-actions.php:50
 msgid "&laquo; First"
 msgstr "&laquo;  Первый"
 
-#@ business
+#@ response
 #: core/actions/pagination-actions.php:51
 msgid "&lsaquo; Previous"
 msgstr "&lsaquo; Предыдущий"
 
-#@ business
+#@ response
 #: core/actions/pagination-actions.php:61
 msgid "Next &rsaquo;"
 msgstr "Следующий  &rsaquo;"
 
-#@ business
+#@ response
 #: core/actions/pagination-actions.php:62
 msgid "Last &raquo;"
 msgstr "Последний &raquo;"
 
-#@ business
+#@ response
 #: core/actions/pagination-actions.php:99
 msgid "Pages:"
 msgstr "Страницы:"
 
-#@ business
+#@ response
 #: sidebar.php:19
 msgid "Pages"
 msgstr "Страницы"
 
-#@ business
+#@ response
 #: sidebar.php:33
 msgid "Categories"
 msgstr "Категории"
 
-#@ business
+#@ response
 #: sidebar.php:50
 msgid "Subscribe"
 msgstr "Подписаться"
 
-#@ business
+#@ response
 #: sidebar.php:52
 msgid "Entries (RSS)"
 msgstr "Новости (RSS)"
 
-#@ business
+#@ response
 #: sidebar.php:53
 msgid "Comments (RSS)"
 msgstr "Комментарии (RSS)"

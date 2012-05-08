@@ -1,187 +1,258 @@
 #Copyright (C) 2012
 msgid ""
 msgstr ""
-"Project-Id-Version: Core 1.0\n"
+"Project-Id-Version: Core 1.0 \n"
 "Report-Msgid-Bugs-To: http://cyberchimps.com/forum\n"
-"POT-Creation-Date: 10-17-11\n"
+"POT-Creation-Date: 10-17-11 \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
-"X-Textdomain-Support: yes\n"
-"PO-Revision-Date: \n"
-"Last-Translator: boutreux <boutreux@gmail.com>\n"
-"Language-Team: \n"
-"X-Poedit-Language: French\n"
-"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
 
-# @ response
 #: core/actions/archive-actions.php:36
+#@ response
 msgid "Archive for the &#8216;"
-msgstr "Archives pour &#8216;"
+msgstr ""
 
-# @ response
 #: core/actions/archive-actions.php:36
+#@ response
 msgid "&#8217; Category:"
-msgstr "&#8217; Catégorie:"
+msgstr ""
 
-# @ response
 #: core/actions/archive-actions.php:39
+#@ response
 msgid "Posts Tagged &#8216;"
-msgstr "Articles marqués &#8216;"
+msgstr ""
 
-# @ response
 #: core/actions/archive-actions.php:39
+#@ response
 msgid "&#8217;:"
 msgstr ""
 
-# @ response
 #: core/actions/archive-actions.php:42
 #: core/actions/archive-actions.php:45
+#@ response
 msgid "Archive for"
-msgstr "Archive pour"
+msgstr ""
 
-# @ response
 #: core/actions/archive-actions.php:48
+#@ response
 msgid "Archive for:"
-msgstr "Archive pour:"
+msgstr ""
 
-# @ response
 #: core/actions/archive-actions.php:51
+#@ response
 msgid "Author Archive:"
-msgstr "Archive de l'auteur:"
+msgstr ""
 
-# @ response
 #: core/actions/archive-actions.php:54
+#@ response
 msgid "Blog Archives:"
-msgstr "Archives du blog:"
+msgstr ""
 
-# @ response
 #: core/actions/comments-actions.php:49
+#@ response
 msgid "No Responses"
-msgstr "Aucune réponse"
+msgstr ""
 
-# @ response
 #: core/actions/comments-actions.php:49
+#@ response
 msgid "One Response"
-msgstr "Une réponse"
+msgstr ""
 
-# @ response
 #: core/actions/comments-actions.php:49
+#@ response
 msgid "% Responses"
-msgstr "% réponses"
+msgstr ""
 
-# @ response
 #: core/actions/comments-actions.php:88
+#@ response
 msgid "You must be"
-msgstr "Vous devez être"
+msgstr ""
 
-# @ response
 #: core/actions/comments-actions.php:88
+#@ response
 msgid "logged in"
-msgstr "connecté"
+msgstr ""
 
-# @ response
 #: core/actions/comments-actions.php:88
+#@ ifeture
 msgid "to post a comment."
-msgstr "pour laisser un commentaire"
+msgstr ""
 
-# @ response
 #: core/actions/footer-actions.php:39
+#@ response
 msgid "Recent Posts"
-msgstr "Articles récents"
+msgstr ""
 
-# @ response
-# @ response
 #: core/actions/footer-actions.php:46
 #: sidebar.php:26
+#@ response
+#@ response
 msgid "Archives"
 msgstr ""
 
-# @ response
 #: core/actions/footer-actions.php:53
+#@ response
 msgid "Links"
-msgstr "Liens"
+msgstr ""
 
-# @ response
 #: core/actions/footer-actions.php:60
 #: core/actions/footer-actions.php:64
 #: sidebar.php:40
 #: sidebar.php:44
+#@ response
+#@ response
 msgid "WordPress"
 msgstr ""
 
-# @ response
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
+#@ response
+#@ response
 msgid "http://wordpress.org/"
 msgstr ""
 
-# @ response
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
+#@ response
+#@ response
 msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
-msgstr "Site publié avec Wordpress"
+msgstr ""
 
-# @ response
 #: core/actions/global-actions.php:43
+#@ response
 msgid "Published on"
-msgstr "Publié le"
+msgstr ""
 
-# @ response
 #: core/actions/global-actions.php:44
+#@ response
 msgid "by"
-msgstr "par"
+msgstr ""
 
-# @ response
 #: core/actions/global-actions.php:45
+#@ response
 msgid "in"
-msgstr "dans"
+msgstr ""
 
-# @ response
 #: core/actions/global-actions.php:70
+#@ response
 msgid "No Comments &#187;"
-msgstr "Aucun commentaire &#187;"
+msgstr ""
 
-# @ response
 #: core/actions/global-actions.php:70
+#@ response
 msgid "1 Comment &#187;"
-msgstr "Un commentaire &#187;"
+msgstr ""
 
-# @ response
 #: core/actions/global-actions.php:70
+#@ response
 msgid "% Comments &#187;"
-msgstr "% commentaires &#187;"
+msgstr ""
 
-# @ response
+#: core/actions/global-actions.php:187
+#@ response
+msgid "Tags: "
+msgstr ""
+
+#: searchform.php:15
+#@ response
+msgid "Search"
+msgstr ""
+
 #: core/actions/index-actions.php:276
+#@ default
 msgid "Page"
 msgstr ""
 
-# @ response
+#: functions.php:82
+#, php-format
+#@ default
+msgid "<cite class=\"fn\">%s</cite> <span class=\"says\"></span>"
+msgstr ""
+
+#: functions.php:85
+#@ default
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:89
+#, php-format
+#@ default
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions.php:89
+#@ default
+msgid "(Edit)"
+msgstr ""
+
+#: core/actions/pagination-actions.php:49
+#@ response
+msgid "of"
+msgstr ""
+
+#: core/actions/pagination-actions.php:49
+#: core/core-functions.php:230
+#@ response
+#@ default
+msgid "Page"
+msgstr ""
+
+#: core/actions/pagination-actions.php:50
+#@ response
+msgid "&laquo; First"
+msgstr ""
+
+#: core/actions/pagination-actions.php:51
+#@ response
+msgid "&lsaquo; Previous"
+msgstr ""
+
+#: core/actions/pagination-actions.php:61
+#@ response
+msgid "Next &rsaquo;"
+msgstr ""
+
+#: core/actions/pagination-actions.php:62
+#@ response
+msgid "Last &raquo;"
+msgstr ""
+
+#: core/actions/pagination-actions.php:99
+#@ response
+msgid "Pages:"
+msgstr ""
+
 #: sidebar.php:19
+#@ response
 msgid "Pages"
 msgstr ""
 
-# @ response
 #: sidebar.php:33
+#@ response
 msgid "Categories"
-msgstr "Catégories"
+msgstr ""
 
-# @ response
 #: sidebar.php:50
+#@ response
 msgid "Subscribe"
-msgstr "S'abonner"
+msgstr ""
 
-# @ response
 #: sidebar.php:52
+#@ response
 msgid "Entries (RSS)"
-msgstr "Flux RSS des publications"
+msgstr ""
 
-# @ response
 #: sidebar.php:53
+#@ response
 msgid "Comments (RSS)"
-msgstr "Flux RSS des commentaires"
+msgstr ""

@@ -1,4 +1,4 @@
-#Copyright (C) 2012
+#Copyright (C) 2011 
 msgid ""
 msgstr ""
 "Project-Id-Version: Core 1.0\n"
@@ -12,26 +12,26 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Textdomain-Support: yes\n"
 "PO-Revision-Date: \n"
-"Last-Translator: boutreux <boutreux@gmail.com>\n"
+"Last-Translator: max noviello <maxnoviello@gmail.com>\n"
 "Language-Team: \n"
-"X-Poedit-Language: French\n"
+"X-Poedit-Language: Italian\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: .\n"
 
 # @ response
 #: core/actions/archive-actions.php:36
 msgid "Archive for the &#8216;"
-msgstr "Archives pour &#8216;"
+msgstr "Archivi per &#8216;"
 
 # @ response
 #: core/actions/archive-actions.php:36
 msgid "&#8217; Category:"
-msgstr "&#8217; Catégorie:"
+msgstr "&#8217; Categorie:"
 
 # @ response
 #: core/actions/archive-actions.php:39
 msgid "Posts Tagged &#8216;"
-msgstr "Articles marqués &#8216;"
+msgstr "Post Taggati &#8216;"
 
 # @ response
 #: core/actions/archive-actions.php:39
@@ -42,69 +42,69 @@ msgstr ""
 #: core/actions/archive-actions.php:42
 #: core/actions/archive-actions.php:45
 msgid "Archive for"
-msgstr "Archive pour"
+msgstr "Archivio per"
 
 # @ response
 #: core/actions/archive-actions.php:48
 msgid "Archive for:"
-msgstr "Archive pour:"
+msgstr "Archivio per:"
 
 # @ response
 #: core/actions/archive-actions.php:51
 msgid "Author Archive:"
-msgstr "Archive de l'auteur:"
+msgstr "Archivio dell'autore:"
 
 # @ response
 #: core/actions/archive-actions.php:54
 msgid "Blog Archives:"
-msgstr "Archives du blog:"
+msgstr "Archivio del blog:"
 
 # @ response
 #: core/actions/comments-actions.php:49
 msgid "No Responses"
-msgstr "Aucune réponse"
+msgstr "Nessuna Risposta"
 
 # @ response
 #: core/actions/comments-actions.php:49
 msgid "One Response"
-msgstr "Une réponse"
+msgstr "Una risposta"
 
 # @ response
 #: core/actions/comments-actions.php:49
 msgid "% Responses"
-msgstr "% réponses"
+msgstr "% Risposte"
 
 # @ response
 #: core/actions/comments-actions.php:88
 msgid "You must be"
-msgstr "Vous devez être"
+msgstr "Tu devi essere"
 
 # @ response
 #: core/actions/comments-actions.php:88
 msgid "logged in"
-msgstr "connecté"
+msgstr "loggato"
 
 # @ response
 #: core/actions/comments-actions.php:88
 msgid "to post a comment."
-msgstr "pour laisser un commentaire"
+msgstr "per scrivere un commento"
 
 # @ response
 #: core/actions/footer-actions.php:39
 msgid "Recent Posts"
-msgstr "Articles récents"
+msgstr "Articoli Recenti"
 
 # @ response
 # @ response
 #: core/actions/footer-actions.php:46
 #: sidebar.php:26
 msgid "Archives"
-msgstr ""
+msgstr "Archivi"
 
 # @ response
 #: core/actions/footer-actions.php:53
 msgid "Links"
-msgstr "Liens"
+msgstr "Links"
 
 # @ response
 #: core/actions/footer-actions.php:60
@@ -124,64 +124,64 @@ msgstr ""
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
 msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
-msgstr "Site publié avec Wordpress"
+msgstr "Powered by Wordpress"
 
 # @ response
 #: core/actions/global-actions.php:43
 msgid "Published on"
-msgstr "Publié le"
+msgstr "Pubblicato il"
 
 # @ response
 #: core/actions/global-actions.php:44
 msgid "by"
-msgstr "par"
+msgstr "da"
 
 # @ response
 #: core/actions/global-actions.php:45
 msgid "in"
-msgstr "dans"
+msgstr "in"
 
 # @ response
 #: core/actions/global-actions.php:70
 msgid "No Comments &#187;"
-msgstr "Aucun commentaire &#187;"
+msgstr "Nessun Commento &#187;"
 
 # @ response
 #: core/actions/global-actions.php:70
 msgid "1 Comment &#187;"
-msgstr "Un commentaire &#187;"
+msgstr "Un commento &#187;"
 
 # @ response
 #: core/actions/global-actions.php:70
 msgid "% Comments &#187;"
-msgstr "% commentaires &#187;"
+msgstr "% commenti &#187;"
 
 # @ response
 #: core/actions/index-actions.php:276
 msgid "Page"
-msgstr ""
+msgstr "Pagina"
 
 # @ response
 #: sidebar.php:19
 msgid "Pages"
-msgstr ""
+msgstr "Pagine"
 
 # @ response
 #: sidebar.php:33
 msgid "Categories"
-msgstr "Catégories"
+msgstr "Categorie"
 
 # @ response
 #: sidebar.php:50
 msgid "Subscribe"
-msgstr "S'abonner"
+msgstr "Iscriviti"
 
 # @ response
 #: sidebar.php:52
 msgid "Entries (RSS)"
-msgstr "Flux RSS des publications"
+msgstr "Flusso RSS delle pubblicazioni"
 
 # @ response
 #: sidebar.php:53
 msgid "Comments (RSS)"
-msgstr "Flux RSS des commentaires"
+msgstr "Commenti (RSS)"

@@ -20,68 +20,68 @@ msgstr ""
 "X-Textdomain-Support: yes"
 
 #: core/actions/archive-actions.php:36
-#@ business
+#@ response
 msgid "Archive for the &#8216;"
 msgstr "Arkiv för &#8216;"
 
 #: core/actions/archive-actions.php:36
-#@ business
+#@ response
 msgid "&#8217; Category:"
 msgstr "Arkiv för &#8216;"
 
 #: core/actions/archive-actions.php:39
-#@ business
+#@ response
 msgid "Posts Tagged &#8216;"
 msgstr "Inlägg taggade med &#8216;"
 
 #: core/actions/archive-actions.php:39
-#@ business
+#@ response
 msgid "&#8217;:"
 msgstr "&#8217;:"
 
 #: core/actions/archive-actions.php:42
 #: core/actions/archive-actions.php:45
-#@ business
+#@ response
 msgid "Archive for"
 msgstr "Arkiv för"
 
 #: core/actions/archive-actions.php:48
-#@ business
+#@ response
 msgid "Archive for:"
 msgstr "Arkiv för"
 
 #: core/actions/archive-actions.php:51
-#@ business
+#@ response
 msgid "Author Archive:"
 msgstr "Författararkiv:"
 
 #: core/actions/archive-actions.php:54
-#@ business
+#@ response
 msgid "Blog Archives:"
 msgstr "Författararkiv:"
 
 #: core/actions/comments-actions.php:49
-#@ business
+#@ response
 msgid "No Responses"
 msgstr "Inga kommentarer"
 
 #: core/actions/comments-actions.php:49
-#@ business
+#@ response
 msgid "One Response"
 msgstr "En kommentar"
 
 #: core/actions/comments-actions.php:49
-#@ business
+#@ response
 msgid "% Responses"
 msgstr ""
 
 #: core/actions/comments-actions.php:88
-#@ business
+#@ response
 msgid "You must be"
 msgstr "Du måste vara"
 
 #: core/actions/comments-actions.php:88
-#@ business
+#@ response
 msgid "logged in"
 msgstr "inloggad"
 
@@ -91,18 +91,18 @@ msgid "to post a comment."
 msgstr "för att kommentera."
 
 #: core/actions/footer-actions.php:39
-#@ business
+#@ response
 msgid "Recent Posts"
 msgstr "Nya inlägg"
 
 #: core/actions/footer-actions.php:46
 #: sidebar.php:26
-#@ business
+#@ response
 msgid "Archives"
 msgstr "Arkiv"
 
 #: core/actions/footer-actions.php:53
-#@ business
+#@ response
 msgid "Links"
 msgstr "Länkar"
 
@@ -110,120 +110,125 @@ msgstr "Länkar"
 #: core/actions/footer-actions.php:64
 #: sidebar.php:40
 #: sidebar.php:44
-#@ business
+#@ response
 msgid "WordPress"
 msgstr "WordPress"
 
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
-#@ business
+#@ response
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
-#@ business
+#@ response
 msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
 msgstr "Powered by WordPress, state-of-the-art semantic personal publishing platform."
 
 #: core/actions/global-actions.php:43
-#@ business
+#@ response
 msgid "Published on"
 msgstr "Publicerad den"
 
 #: core/actions/global-actions.php:44
-#@ business
+#@ response
 msgid "by"
 msgstr "av"
 
 #: core/actions/global-actions.php:45
-#@ business
+#@ response
 msgid "in"
 msgstr "i"
 
 #: core/actions/global-actions.php:70
-#@ business
+#@ response
 msgid "No Comments &#187;"
 msgstr "Inga kommentarer &#187;"
 
 #: core/actions/global-actions.php:70
-#@ business
+#@ response
 msgid "1 Comment &#187;"
 msgstr "En kommentar &#187;"
 
 #: core/actions/global-actions.php:70
-#@ business
+#@ response
 msgid "% Comments &#187;"
 msgstr "% kommentarer &#187;"
 
 #: core/actions/global-actions.php:86
-#@ business
+#@ response
 msgid "Read more…"
 msgstr "Läs mer…"
 
 #: core/actions/global-actions.php:187
-#@ business
+#@ response
 msgid "Tags: "
 msgstr "Taggar: "
 
 #: core/actions/pagination-actions.php:49
+#@ response
+msgid "of" 
+msgstr "av"
+
+#: core/actions/pagination-actions.php:49
 #: core/core-functions.php:241
-#@ business
+#@ response
 #@ default
 msgid "Page"
-msgstr "Page"
+msgstr "Sida"
 
 #: core/actions/pagination-actions.php:50
-#@ business
+#@ response
 msgid "&laquo; First"
 msgstr "&laquo; Första"
 
 #: core/actions/pagination-actions.php:51
-#@ business
+#@ response
 msgid "&lsaquo; Previous"
 msgstr "&lsaquo; Föregående"
 
 #: core/actions/pagination-actions.php:61
-#@ business
+#@ response
 msgid "Next &rsaquo;"
 msgstr "Nästa &rsaquo;"
 
 #: core/actions/pagination-actions.php:62
-#@ business
+#@ response
 msgid "Last &raquo;"
 msgstr "Sista &raquo;"
 
 #: core/actions/pagination-actions.php:99
-#@ business
+#@ response
 msgid "Pages:"
 msgstr "Sidor:"
 
 #: searchform.php:15
-#@ business
+#@ response
 msgid "Search"
 msgstr "Sök"
 
 #: sidebar.php:19
-#@ business
+#@ response
 msgid "Pages"
 msgstr "Sidor:"
 
 #: sidebar.php:33
-#@ business
+#@ response
 msgid "Categories"
 msgstr "Kategorier"
 
 #: sidebar.php:50
-#@ business
+#@ response
 msgid "Subscribe"
 msgstr "Prenumerera"
 
 #: sidebar.php:52
-#@ business
+#@ response
 msgid "Entries (RSS)"
 msgstr "RSS-flöde"
 
 #: sidebar.php:53
-#@ business
+#@ response
 msgid "Comments (RSS)"
 msgstr "Kommentarer (RSS)"
