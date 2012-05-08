@@ -58,7 +58,7 @@ function response_sidebar_init_content() {
 		$content_grid = 'twelve columns';
 	}
 	else {
-		$content_grid = 'eight columns';
+		$content_grid = 'nine columns';
 	}
 }
 
@@ -92,7 +92,7 @@ function response_after_content_sidebar_markup() {
 	global $options, $themeslug, $post, $sidebar; // call globals ?>
 	
 	<?php if ($sidebar == 'right' OR $sidebar == '0' OR $sidebar == '' ): ?>
-	<div id="sidebar" class="four columns">
+	<div id="sidebar" class="three columns">
 		<?php get_sidebar(); ?>
 	</div>
 	<?php endif;?>
