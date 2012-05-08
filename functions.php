@@ -123,7 +123,7 @@ add_filter('response_post_formats_gallery_content', 'custom_gallery_post_format'
 */ 
 function new_excerpt_more($more) {
 
-	global $themename, $themeslug, $options, $custom_excerpt, $post;
+	global $themename, $themeslug, $options, $custom_excerpt, $post, $root;
     
     	if ($options->get($themeslug.'_excerpt_link_text') == '') {
     		$linktext = 'Continue Reading';
@@ -136,7 +136,7 @@ function new_excerpt_more($more) {
     		$linktext = $options->get($themeslug.'_excerpt_link_text');
    		}
 
-	return '&hellip;<div class="more-link"><a href="'. get_permalink($post->ID) . '"> <br /><br /> '.$linktext.'</a></div>';
+	return '&hellip;<div class="more-link"><a href="'. get_permalink($post->ID) . '"> <br /><br /> <img src="'.$root.'/images/continue.png">    '.$linktext.'</a></div>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 

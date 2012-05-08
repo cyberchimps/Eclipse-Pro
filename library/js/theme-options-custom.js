@@ -130,7 +130,7 @@ jQuery(document).ready(function($) {
     }
   }).change();
 
-  $.each(['twitter', 'facebook', 'gplus', 'flickr', 'linkedin', 'youtube', 'googlemaps', 'email', 'rsslink'], function(i, val) {
+  $.each(['twitter', 'facebook', 'gplus', 'flickr', 'linkedin', 'pinterest', 'youtube', 'googlemaps', 'email', 'rsslink'], function(i, val) {
 	  $("#section-ec_" + val).each(function(){
 		  var $this = $(this), $next = $(this).next();
 		  $this.find(".controls").css({float: 'left', clear: 'both'});
@@ -191,7 +191,7 @@ jQuery(function($) {
 		initialize($(this).attr('id'));
 	});
 
-	$("input[name='ecsiness[ec_blog_section_order]']").change(function(){
+	$("input[name='eclipse[ec_blog_section_order]']").change(function(){
 		var show = $(this).val().split(",");
 		var map = {
 			response_page_slider: "subsection-blogslider",
@@ -212,7 +212,7 @@ jQuery(function($) {
 		});
 	}).trigger('change');
 	
-		$("input[name='response[ec_front_section_order]']").change(function(){
+		$("input[name='eclipse[ec_front_section_order]']").change(function(){
 		var show = $(this).val().split(",");
 		var map = {
 			response_page_slider: "subsection-slider",
