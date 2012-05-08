@@ -2,7 +2,7 @@
 
 /* Reset and Design Constant Styles */
 
-body {color:#222;background-color: #FFF;}
+body {color:#222;background: url(../images/bgimg.png);}
 *, html, body{padding:0;border:0;margin:0;}
 body, div, p, input, textarea{font-size:14px;}
 h1, h2, h3, h4, h5, h6{font-weight:normal;}
@@ -85,6 +85,7 @@ color:#fff;
 }
 
 #front_custom {padding: 15px 0px 15px 0px;}
+
 /* Fonts  */
 
 .meta {color: #ccc;font-size: 12px;font-weight: 500;padding-bottom: 10px;margin-top: 4px;}
@@ -111,11 +112,18 @@ color:#fff;
 
 a:hover {color: #5ca9d6;}
 
+/* General  */
+
+a {color: #555;text-decoration:underline}
+
+a:hover {color: #aaa;}
+
 /* Header  */
 
-#subheader {
-	background:url(../images/subheaderdark.png);
-
+#header {
+	border-bottom: 1px solid #333;
+	min-height: 80px;
+	background: #000;
 }
 
 #header_contact{ text-align:right;}

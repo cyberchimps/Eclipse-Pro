@@ -68,7 +68,6 @@ function business_callout_section_content() {
 
 
 ?>
-	<div class="calloutbg">
 		<div class="container">
 		<div class="row">
 			<div id="callout_text" class="twelve columns">
@@ -76,7 +75,6 @@ function business_callout_section_content() {
 			</div>
 		</div>
 		</div>
-	</div>
 
 <?php
 	

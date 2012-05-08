@@ -40,8 +40,6 @@ div.orbit-wrapper {
 }
 
 #sliderbg, #productbg {
-		border-bottom: 1px solid #E1E1E1;
-		background: #bbb url(../images/sliderbg.png);
 }
 
 /*============================*/
@@ -122,12 +120,6 @@ div.orbit-wrapper {
 /*============================*/
 /*===== Callout Section ======*/
 /*============================*/
-
-.calloutbg {
-		background: #eaeaea url(../images/calloutbg.png);
-		min-height: 80px;
-		border-bottom: 1px solid #e1e1e1;
-}
 
 #calloutwrap {
 	min-height: 80px;
