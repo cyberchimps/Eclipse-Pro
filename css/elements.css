@@ -122,9 +122,10 @@ div.orbit-wrapper {
 #twitterbar {
 	overflow: hidden;
 	margin: auto;
-	padding-top: 20px;
-	padding-bottom:20px;
-	
+	height:42px;
+	background: #000;
+	opacity: .2;
+	border-radius: 4px;
 }
 
 #twittertext {
@@ -135,26 +136,14 @@ div.orbit-wrapper {
 /*===== Callout Section ======*/
 /*============================*/
 
-#calloutwrap {
-	min-height: 80px;
-	overflow: hidden;
-	position:relative;
-	display: block;
-	margin: auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	border: 1px dotted #ccc;
-	background: #fff;
-	border-radius: 2px;
-}
-
 #callout_text {
 	font-size: 25px;
 	font-weight: 300;
 	color: #fff;
-	padding: 25px 0px 20px 0px;
+	padding: 25px 0px 45px 0px;
 	text-align: center;
 	border-bottom: 2px solid #3d3d3d;
+	line-height: 36px;
 }
 
 
@@ -202,7 +191,8 @@ div.orbit-wrapper {
 /*===== Widgitized Boxes =====*/
 /*============================*/
 
-.boxes {margin-top:20px;margin-bottom:20px;}
+.boxes {margin-top:45px;margin-bottom:20px;padding-bottom: 45px;border-bottom: 2px solid #3d3d3d;
+}
 
 #box_container {
 	min-height: 240px;
@@ -222,8 +212,8 @@ div.orbit-wrapper {
 .boxtext {
 	text-align: left;
 	color: #9a9a9a;
-	margin-bottom: 15px;
-	font-size: 14px;
+	margin-bottom: 5px;
+	font-size: 13px;
 }
 
 .box-widget-title {
@@ -231,7 +221,7 @@ div.orbit-wrapper {
 	font-size: 15px;
 	font-weight: 500;
 	text-align: left;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 }
 
 #box1 {
