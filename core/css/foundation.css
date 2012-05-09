@@ -652,15 +652,7 @@ div.orbit>a {
    ================================================== */
 
 div.timer {
-    width: 25px;
-    height: 25px;
-    position: relative;
-    cursor: pointer;
-    z-index: 1001;
-    background: #222;
-    border-radius: 3px;
-    opacity: .8;
-    top: 5px;
+ display: none;
  }
 
 span.rotator {
