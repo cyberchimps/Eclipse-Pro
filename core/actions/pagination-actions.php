@@ -67,9 +67,11 @@ function response_post_pagination_content() {
 	global $options, $themeslug, $root?>
 	
 	<?php if ($options->get($themeslug.'_post_pagination') != "0"):?>
-	<div id="post-pagination-wrap">
-		<div class="prev-posts-single"><img src="<?php echo "$root/images/previouspost.png";?>"><?php previous_post_link('%link'); ?></div> 
-		<div class="next-posts-single"><?php next_post_link('%link'); ?><img src="<?php echo "$root/images/nextpost.png";?>"></div>
+	<div id="post-pagination-container">
+		<div id="post-pagination-wrap">
+			<div class="prev-posts-single"><img src="<?php echo "$root/images/previouspost.png";?>"><?php previous_post_link('%link'); ?></div> 
+			<div class="next-posts-single"><?php next_post_link('%link'); ?><img src="<?php echo "$root/images/nextpost.png";?>"></div>
+		</div>
 	</div>
 	<?php endif; 
 }
