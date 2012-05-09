@@ -74,11 +74,20 @@ function response_portfolio_element_content() {
 	  	 $out = " <div id='gallery' class='twelve columns'>$title_output<ul>"; 
 
 	  	$i = 0;
+	  	$counter = 0;
 		$no = '50';
 
 		while (have_posts() && $i<$no) : 
 
 		the_post(); 
+		
+			if ($counter == 4) {
+				$class = 'fourth-image';
+				$counter = 0;
+			}
+			else {
+				$class = '';
+			}
 
 	    	/* Post-specific variables */	
 
@@ -88,7 +97,7 @@ function response_portfolio_element_content() {
 	     	/* Markup for portfolio */
 
 	    	$out .= "
-				<li id='portfolio_wrap' class='$number columns'>
+				<li id='portfolio_wrap' class='$number columns $class'>
 	    			<a href='$image' title='$title'><img src='$image'  alt='$title'/>
 	    				<div class='portfolio_caption'>$title</div>
 	    			</a>	
@@ -98,6 +107,7 @@ function response_portfolio_element_content() {
 	    	/* End slide markup */	
 
 	      	$i++;
+	      	$counter++;
 	      	endwhile;
 	      	$out .= "</ul></div>";	 
 	      	
