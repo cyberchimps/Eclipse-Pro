@@ -735,24 +735,23 @@ div.slider-nav {
     display: block }
 
 div.slider-nav span {
-    width: 46px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     text-indent: -9999px;
     position: absolute;
     z-index: 1000;
     top: 50%;
     margin-top: -45px;
     cursor: pointer; 
-    opacity: .7;
     }
 
 div.slider-nav span.right {
     background: url(../../images/orbit/right-arrow.png) no-repeat;
-    right: -20px; }
+    right: -28px; }
 
 div.slider-nav span.left {
     background: url(../../images/orbit/left-arrow.png) no-repeat;
-    margin-left: -20px; }
+    margin-left: -28px; }
 
 /* BULLET NAV
    ================================================== */
