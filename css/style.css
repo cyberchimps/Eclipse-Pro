@@ -706,6 +706,12 @@ ol.commentlist li.thread-alt { }
 ol.commentlist li.thread-even { }
 ol.commentlist li.thread-odd { margin-top: -10px; }
 
+li.pingback.even.thread-even.depth-1 img.triangle {margin-left: 93px !important;}
+li.pingback.odd.thread-odd.depth-1 img.triangle {margin-left: 93px !important;}
+
+li.trackback.even.thread-even.depth-1 img.triangle {margin-left: 93px !important;}
+li.trackback.odd.thread-odd.depth-1 img.triangle {margin-left: 93px !important;}
+
 form { }
 
 textarea {margin-top: 10px;padding-bottom: 10px;width: 90%;}
