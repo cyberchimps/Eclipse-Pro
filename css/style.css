@@ -697,8 +697,8 @@ ol.commentlist li.comment ul.children li.depth-3 {  margin: 0 0 10px 10px; }
 ol.commentlist li.comment ul.children li.depth-4 {  margin: 0 0 10px 10px; }
 ol.commentlist li.comment ul.children li.depth-5 { }
 ol.commentlist li.comment ul.children li.odd { }
-ol.commentlist li.even { background: #222;border: 1px solid #3D3D3D;border-radius: 4px;-moz-border-radius: 4px; }
-ol.commentlist li.odd { background: #000;border: 1px solid #3D3D3D;border-radius: 4px;-moz-border-radius: 4px; }
+ol.commentlist li.even {  }
+ol.commentlist li.odd { background-color: transparent;}
 ol.commentlist li.parent { }
 ol.commentlist li.thread-alt { }
 ol.commentlist li.thread-even { }
