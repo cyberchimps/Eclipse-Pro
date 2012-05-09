@@ -48,13 +48,13 @@ jQuery(document).ready(function($) {
 	$("#nav_menu ul").find(".sub-menu").prev().addClass("parent-menu");
 	
 	$("#nav_menu > li").hover( function() {
-		$(this).children(".sub-menu").fadeIn("slow");
+		$(this).children(".sub-menu").fadeIn("fast");
 	}, function () {
 		$(this).find(".sub-menu").hide();
 	});
 	
 	$("#nav_menu > li > .sub-menu li").hover( function() {
-		$(this).children(".sub-menu").slideDown("slow");
+		$(this).children(".sub-menu").slideDown("fast");
 	}, function () {
 	});
 });

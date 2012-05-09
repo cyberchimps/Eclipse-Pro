@@ -143,7 +143,7 @@ a:hover {color: #aaa;}
 /* Nav  */
 #nav {
     float: right;
-    margin-top: 25px;
+    margin-top: 32px;
     position: relative;
 }
 #nav ul {
@@ -225,6 +225,7 @@ a:hover {color: #aaa;}
 #nav #nav_menu > li:hover > a {
 	background: #242424;
 	opacity: .75;
+	padding: 5px;
  
 }
 #nav #nav_menu li:hover > ul {
