@@ -163,7 +163,7 @@ a:hover {color: #aaa;}
 #nav_menu > li {
 
     float: left;
-    margin: 0 7px;
+    margin: 0 13px;
 }
 #nav #nav_menu > li > .sub-menu {
     display: none;
