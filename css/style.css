@@ -85,7 +85,7 @@ color:#fff;
 
 #front_custom {padding: 15px 0px 15px 0px;}
 
-/* Fonts  */
+/* Meta  */
 
 .meta {
 	color: #e6e6e6;
@@ -102,15 +102,28 @@ color:#fff;
 
 .meta a:hover{color: #aaa;}
 
-.metadate {background: url(../images/icons/cal.png) no-repeat right center;padding-right: 25px;padding-top:1px;}
+.meta li {line-height: 24px;padding-right: 25px;} 
 
-.metaauthor {background: url(../images/icons/author.png) no-repeat right center;padding-right: 25px;padding-top:1px;}
+.metadate {
+	background: url(../images/icons/cal.png) no-repeat right center;
+}
 
-.metacomments {background: url(../images/icons/comments.png) no-repeat right center;padding-right: 25px;padding-top:1px;}
+.metacomments {
+	background: url(../images/icons/comments.png) no-repeat right center;
+}
 
-.metacat {background: url(../images/icons/cat.png) no-repeat right top;padding-right: 25px;padding-top:2px;}
+.metaauthor {
+	background: url(../images/icons/author.png) no-repeat right center;
+	padding-top: 1px;
+}
 
-.metatags {background: url(../images/icons/tags.png) no-repeat right top;padding-right: 25px;padding-top:1px;}
+.metacat {
+	background: url(../images/icons/cat.png) no-repeat right center;
+}
+
+.metatags {
+	background: url(../images/icons/tags.png) no-repeat right center;
+}
 
 .entry {}
 
