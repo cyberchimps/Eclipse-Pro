@@ -107,7 +107,7 @@ function response_comment($comment, $args, $depth) {
          <?php echo get_avatar( $comment, 72 ); ?>
       </div>
       <img class="triangle" style="margin-bottom: -30px;" src="<?php echo "$root/images/comment-triangle.png";?>">
-     <div style="background-color: #1a1a1a; margin-left: 110px; padding: 15px 15px 10px 10px; margin-top: -18px; ">
+     <div style="background-color: #1a1a1a; margin-left: 110px; padding: 15px 15px 10px 10px; margin-top: -18px; border-radius: 4px;">
      <div class="comment-meta commentmetadata">     <span class="comment_author" style="float:left"><?php printf(__('<cite class="fn">%s</cite> <span class="says"></span>'), get_comment_author_link()) ?></span><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s at %2$s', 'core' ), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)', 'core' ),'  ','') ?> | <span class="reply"> <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></span>
      </div>
       
