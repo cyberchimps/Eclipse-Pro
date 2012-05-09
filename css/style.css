@@ -645,7 +645,7 @@ li {  }
 /* Comments  */
 
 .comments_container {
-	background: #fff;
+	background: transparent;
 	margin-bottom: 15px;
 	border-top: 1px dotted #ccc;
 	padding-top: 15px;
@@ -655,8 +655,6 @@ li {  }
 	font-size: 20px;
 	font-weight: bold;
 }
-
-
 
 #comments .navigation { padding: 0 0 18px 0; }
 
@@ -682,7 +680,7 @@ ol.commentlist li.comment div.vcard img.photo { }
 ol.commentlist li.comment div.vcard span.says { }
 ol.commentlist li.comment div.commentmetadata { }
 ol.commentlist li.comment div.comment-meta { font-size: 11px; }
-ol.commentlist li.comment div.comment-meta a { color: #888; }
+ol.commentlist li.comment div.comment-meta a { color: #aaa; }
 ol.commentlist li.comment p { }
 ol.commentlist li.comment ul { }
 ol.commentlist li.comment div.reply { font-size: 11px; margin-left: 8px; }
@@ -699,8 +697,8 @@ ol.commentlist li.comment ul.children li.depth-3 {  margin: 0 0 10px 10px; }
 ol.commentlist li.comment ul.children li.depth-4 {  margin: 0 0 10px 10px; }
 ol.commentlist li.comment ul.children li.depth-5 { }
 ol.commentlist li.comment ul.children li.odd { }
-ol.commentlist li.even { background: #fafafa;border: 1px solid #ccc;border-radius: 4px;-moz-border-radius: 4px; }
-ol.commentlist li.odd { background: #fff;border: 1px solid #ccc;border-radius: 4px;-moz-border-radius: 4px; }
+ol.commentlist li.even { background: #222;border: 1px solid #333;border-radius: 4px;-moz-border-radius: 4px; }
+ol.commentlist li.odd { background: #000;border: 1px solid #333;border-radius: 4px;-moz-border-radius: 4px; }
 ol.commentlist li.parent { }
 ol.commentlist li.thread-alt { }
 ol.commentlist li.thread-even { }
@@ -710,23 +708,12 @@ form { }
 
 textarea {margin-top: 10px;padding-bottom: 10px;width: 90%;}
 
-/*
-  960 Grid System ~ Text CSS.
-  Learn more ~ http://960.gs/
-
-  Licensed under GPL and MIT.
-*/
-
-/* `Basic HTML
+/* HR
 ----------------------------------------------------------------------------------------------------*/
 
-body {
-  font: 13px/1.5 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
-}
-
 hr {
-  border: 0 #ccc solid;
-  border-top-width: 1px;
+  border: 0 #3D3D3D solid;
+  border-top-width: 2px;
   clear: both;
   height: 0;
 }
@@ -790,6 +777,7 @@ h1.description, h1.sitename {margin-bottom: 0px;}
 	font-weight: 500;
 	margin-top: 20px;
 	line-height: 40px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .sitename a{text-decoration: none;}
