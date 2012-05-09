@@ -595,7 +595,7 @@
 #orbitDemo img, #orbitDemo div { display: none; }
 #orbitDemo.orbit img, #orbitDemo.orbit div { display: block;}
 
-.slider-nav {background: url(../../images/orbit/shadow.png) no-repeat; height: 30px; margin-top: -25px;}
+.slider-nav {background: url(../../images/orbit/shadow.png) no-repeat; height: 30px; margin-top: -27px; margin-left: -10px;}
 
 @media handheld, only screen and (max-width: 767px) {
 
@@ -753,7 +753,7 @@ div.slider-nav span.right {
 
 div.slider-nav span.left {
     background: url(../../images/orbit/left-arrow.png) no-repeat;
-    margin-left: -28px; }
+    margin-left: -18px; }
 
 /* BULLET NAV
    ================================================== */
