@@ -685,7 +685,7 @@ ol.commentlist li.comment ul { }
 ol.commentlist li.comment span.reply { font-size: 13px; }
 ol.commentlist li.comment span.reply a { font-weight: bold;color:#55b8d5; }
 ol.commentlist li.comment span.reply a:hover{ color:#2aa5c8; }
-ol.commentlist li.comment ul.children { list-style: none; margin: 10px 0 0; }
+ol.commentlist li.comment ul.children { list-style: none; margin: 20px 0 0; }
 ol.commentlist li.comment ul.children li { }
 ol.commentlist li.comment ul.children li.alt { }
 ol.commentlist li.comment ul.children li.bypostauthor { }
@@ -697,12 +697,12 @@ ol.commentlist li.comment ul.children li.depth-3 {  margin: 0 0 10px 10px; }
 ol.commentlist li.comment ul.children li.depth-4 {  margin: 0 0 10px 10px; }
 ol.commentlist li.comment ul.children li.depth-5 { }
 ol.commentlist li.comment ul.children li.odd { padding: 0 }
-ol.commentlist li.even {  }
+ol.commentlist li.even { margin: 0 }
 ol.commentlist li.odd { background-color: transparent;}
 ol.commentlist li.parent { }
 ol.commentlist li.thread-alt { }
 ol.commentlist li.thread-even { }
-ol.commentlist li.thread-odd { }
+ol.commentlist li.thread-odd { margin-top: -10px; }
 
 form { }
 
