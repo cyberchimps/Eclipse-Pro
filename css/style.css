@@ -661,6 +661,8 @@ label[for="comment"] {display: block;}
 
 /* Comment lists  */
 
+.comment_author {font-weight: bold; font-size: 14px;}
+
 ol.commentlist { list-style: none; }
 ol.commentlist p { margin-left: 8px; }
 ol.commentlist li { }
@@ -678,14 +680,14 @@ ol.commentlist li.comment div.vcard img.avatar-32 { }
 ol.commentlist li.comment div.vcard img.photo { }
 ol.commentlist li.comment div.vcard span.says { }
 ol.commentlist li.comment div.commentmetadata { }
-ol.commentlist li.comment div.comment-meta { font-size: 13px;text-align: right; }
+ol.commentlist li.comment div.comment-meta { font-size: 13px;text-align: right; margin-bottom: 10px; padding-left: 8px; padding-right:2px; }
 ol.commentlist li.comment div.comment-meta a { color: #aaa; }
-ol.commentlist li.comment p { }
+ol.commentlist li.comment p { clear: none;}
 ol.commentlist li.comment ul { }
 ol.commentlist li.comment span.reply { font-size: 13px; }
 ol.commentlist li.comment span.reply a { font-weight: bold;color:#55b8d5; }
 ol.commentlist li.comment span.reply a:hover{ color:#2aa5c8; }
-ol.commentlist li.comment ul.children { list-style: none; margin: 10px 0 0; }
+ol.commentlist li.comment ul.children { list-style: none; margin: 20px 0 0; }
 ol.commentlist li.comment ul.children li { }
 ol.commentlist li.comment ul.children li.alt { }
 ol.commentlist li.comment ul.children li.bypostauthor { }
@@ -696,13 +698,13 @@ ol.commentlist li.comment ul.children li.depth-2 {  margin: 0 0 10px 10px; }
 ol.commentlist li.comment ul.children li.depth-3 {  margin: 0 0 10px 10px; }
 ol.commentlist li.comment ul.children li.depth-4 {  margin: 0 0 10px 10px; }
 ol.commentlist li.comment ul.children li.depth-5 { }
-ol.commentlist li.comment ul.children li.odd { }
-ol.commentlist li.even { background: #222;border: 1px solid #3D3D3D;border-radius: 4px;-moz-border-radius: 4px; }
-ol.commentlist li.odd { background: #000;border: 1px solid #3D3D3D;border-radius: 4px;-moz-border-radius: 4px; }
+ol.commentlist li.comment ul.children li.odd { padding: 0; margin-left: 102px; }
+ol.commentlist li.even { margin: 0 }
+ol.commentlist li.odd { background-color: transparent;}
 ol.commentlist li.parent { }
 ol.commentlist li.thread-alt { }
 ol.commentlist li.thread-even { }
-ol.commentlist li.thread-odd { }
+ol.commentlist li.thread-odd { margin-top: -10px; }
 
 form { }
 
