@@ -114,7 +114,7 @@ color:#fff;
 
 .entry {}
 
-.entry p {clear: none;}
+.entry p {clear: none;  line-height: 1.5;}
 
 .error {font-size:28px; text-align:center; }
 
