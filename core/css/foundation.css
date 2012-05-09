@@ -735,8 +735,8 @@ div.slider-nav {
     display: block }
 
 div.slider-nav span {
-    width: 55px;
-    height: 55px;
+    width: 56px;
+    height: 56px;
     text-indent: -9999px;
     position: absolute;
     z-index: 1000;
@@ -760,7 +760,7 @@ div.slider-nav span.left {
     position: absolute;
     z-index: 1000;
     list-style: none;
-    bottom: -10px;
+   	margin-top: -60px;
     left: 50%;
 	margin-left: -50px;
     padding: 0; }
