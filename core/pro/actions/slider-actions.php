@@ -122,7 +122,7 @@ function response_slider_content() {
 /* Define slider height */      
 
 	if ($sliderheight == '') {
-	    $height = '340';
+	    $height = '380';
 	}    
 
 	else {
@@ -151,9 +151,9 @@ function response_slider_content() {
 
 /* Define slider width variable */ 
 
-	$wordthumb = "h=$height&w=1020";
-	$csWidth = '1020';
-	$imgwidth = '1020';
+	$wordthumb = "h=$height&w=1140";
+	$csWidth = '1140';
+	$imgwidth = '1140';
 	$defaultimage = "$root/images/pro/sliderdefault.jpg";
 		
 /* End slider width variable */ 
