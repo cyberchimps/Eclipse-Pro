@@ -70,7 +70,7 @@ div.orbit-wrapper {
 }
 .es-carousel{
 	overflow:hidden;
-	background:#fff;
+	background: transparent;
 }
 .es-carousel ul{
 	display:none;
@@ -83,7 +83,7 @@ div.orbit-wrapper {
 .es-carousel ul li a{
 	display:block;
 	border-style:solid;
-	border-color:#444;
+	border-color:#3D3D3D;
 }
 .es-carousel ul li a img{
 	display:block;
