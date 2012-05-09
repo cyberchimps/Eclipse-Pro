@@ -70,7 +70,8 @@ function response_display_latest_tweets( $username, $show_replies = 0 ) {
 					}
 				?>
 			</div>
-		</div><!--end twitterbar--> 
+		</div><!--end twitterbar-->
+		<hr />
 	</div>	
 <?php
 }
