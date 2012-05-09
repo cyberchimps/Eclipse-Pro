@@ -214,7 +214,7 @@ a:hover {color: #aaa;}
 }
 
 #nav #nav_menu > li > a {
-	color: whitesmoke;
+	color: #CCC;
     display: inline-block;
     font-size: 16px;
     line-height: 20px;
