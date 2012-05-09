@@ -132,7 +132,7 @@ function initialize_the_meta_boxes() {
 			->select('carousel_category', 'Carousel Category', '', array('options' => $carouseloptions) )
 			->text('carousel_speed', 'Carousel Animation Speed (ms)', '', array('std' => '750'))
 		->tab("Portfolio Options")
-			->select('portfolio_row_number', 'Images per row', '', array('options' => array('Three (default)', 'Two', 'Four')) )
+			->select('portfolio_row_number', 'Images per row', '', array('options' => array('Four (default)', 'Three', 'Two')) )
 			->select('portfolio_category', 'Portfolio Category', '', array('options' => $portfoliooptions) )
 			->checkbox('portfolio_title_toggle', 'Portfolio Title', '')
 			->text('portfolio_title', 'Title', '', array('std' => 'Portfolio'))

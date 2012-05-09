@@ -173,7 +173,7 @@ $options
 			->text($themeslug."_carousel_speed", "Carousel Animation Speed (ms)", array('default' => '750'))
 		->subsection_end()
 		->subsection("Portfolio Options")
-			->select($themeslug."_portfolio_number", "Images Per Row", array( 'options' => array("key1" => "Three (default)", "key2" => "Two", "key3" => "Four")))
+			->select($themeslug."_portfolio_number", "Images Per Row", array( 'options' => array("key1" => "Four (default)", "key2" => "Three", "key3" => "Two")))
 			->select($themeslug.'_portfolio_category', 'Carousel Category', array( 'options' => $customportfolio ))
 			->checkbox($themeslug."_portfolio_title_toggle", "Portfolio Title")
 			->text($themeslug."_portfolio_title", "Title", array('default' => 'Portfolio'))
