@@ -698,7 +698,7 @@ ol.commentlist li.comment ul.children li.depth-2 {  margin: 0 0 10px 10px; }
 ol.commentlist li.comment ul.children li.depth-3 {  margin: 0 0 10px 10px; }
 ol.commentlist li.comment ul.children li.depth-4 {  margin: 0 0 10px 10px; }
 ol.commentlist li.comment ul.children li.depth-5 { }
-ol.commentlist li.comment ul.children li.odd { padding: 0; margin-left: 100px; }
+ol.commentlist li.comment ul.children li.odd { padding: 0; margin-left: 102px; }
 ol.commentlist li.even { margin: 0 }
 ol.commentlist li.odd { background-color: transparent;}
 ol.commentlist li.parent { }
