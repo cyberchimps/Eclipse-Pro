@@ -595,6 +595,8 @@
 #orbitDemo img, #orbitDemo div { display: none; }
 #orbitDemo.orbit img, #orbitDemo.orbit div { display: block;}
 
+.slider-nav {background: url(../../images/orbit/shadow.png) no-repeat; height: 30px; margin-top: -25px;}
+
 @media handheld, only screen and (max-width: 767px) {
 
     dl.nice.tabs.mobile { margin-bottom: 0px; }
@@ -760,7 +762,7 @@ div.slider-nav span.left {
     position: absolute;
     z-index: 1000;
     list-style: none;
-   	margin-top: -60px;
+   	margin-top: -40px;
     left: 50%;
 	margin-left: -50px;
     padding: 0; }

@@ -382,6 +382,7 @@ To create a Custom Slide please go to the Custom Slides tab in WP-Admin. Once yo
     $('#orbitDemo').orbit({
          animation: '$animation',
          advanceSpeed: $delay,
+         timer: false,
          captionAnimation: 'slideOpen',		// fade, slideOpen, none
          captionAnimationSpeed: 800,  
          bullets: $dots,
