@@ -174,7 +174,7 @@ $options
 		->subsection_end()
 		->subsection("Portfolio Options")
 			->select($themeslug."_portfolio_number", "Images Per Row", array( 'options' => array("key1" => "Four (default)", "key2" => "Three", "key3" => "Two")))
-			->select($themeslug.'_portfolio_category', 'Carousel Category', array( 'options' => $customportfolio ))
+			->select($themeslug.'_portfolio_category', 'Portfolio Category', array( 'options' => $customportfolio ))
 			->checkbox($themeslug."_portfolio_title_toggle", "Portfolio Title")
 			->text($themeslug."_portfolio_title", "Title", array('default' => 'Portfolio'))
 		->subsection_end()
