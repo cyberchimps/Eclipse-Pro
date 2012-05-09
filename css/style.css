@@ -678,9 +678,9 @@ ol.commentlist li.comment div.vcard img.avatar-32 { }
 ol.commentlist li.comment div.vcard img.photo { }
 ol.commentlist li.comment div.vcard span.says { }
 ol.commentlist li.comment div.commentmetadata { }
-ol.commentlist li.comment div.comment-meta { font-size: 13px;text-align: right; }
+ol.commentlist li.comment div.comment-meta { font-size: 13px;text-align: right; margin-bottom: 10px;}
 ol.commentlist li.comment div.comment-meta a { color: #aaa; }
-ol.commentlist li.comment p { }
+ol.commentlist li.comment p { clear: none;}
 ol.commentlist li.comment ul { }
 ol.commentlist li.comment span.reply { font-size: 13px; }
 ol.commentlist li.comment span.reply a { font-weight: bold;color:#55b8d5; }
