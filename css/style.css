@@ -161,7 +161,7 @@ a:hover {color: #aaa;}
 	color: whitesmoke;
 }
 #nav_menu > li {
-    padding: 0 0 20px 0;
+
     float: left;
     margin: 0 7px;
 }
@@ -169,7 +169,7 @@ a:hover {color: #aaa;}
     display: none;
 	background-color: #242424;
    
-    margin: 20px 0 0;
+   	margin-top: 5px;
     padding: 8px 0 0;
     position: absolute;
     left: 0;
@@ -186,6 +186,7 @@ a:hover {color: #aaa;}
     position: absolute;
     top: -10px;
     width: 14px;
+        display: none;
 }
 
 #nav #nav_menu > li > .children {
@@ -209,26 +210,22 @@ a:hover {color: #aaa;}
     position: absolute;
     top: -10px;
     width: 14px;
+
 }
 
 #nav #nav_menu > li > a {
-	background: #FBFBFB;
-	background: -moz-linear-gradient(center top , #FBFBFB 0%, #E4E5E5 100%) repeat scroll 0 0 transparent;
-	border-radius: 3px 3px 3px 3px;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    color: #555555;
+	color: whitesmoke;
     display: inline-block;
     font-size: 16px;
     line-height: 20px;
-    border: 1px solid #AAAAAA;
     cursor: pointer;
     padding: 5px;
     position: relative;
 }
 #nav #nav_menu > li:hover > a {
-	background: #F8F8F8;
-    border: 1px solid #666666;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	background: #242424;
+	opacity: .75;
+ 
 }
 #nav #nav_menu li:hover > ul {
 	display: block;
