@@ -590,7 +590,7 @@
 /* PUT IN YOUR SLIDER ID AND SIZE TO MAKE LOAD BEAUTIFULLY
    ================================================== */
    
-#orbitDemo { background: url(orbit/spinner.gif) no-repeat center center #3c3c3c; height: 380px !important;  }
+#orbitDemo { background: url(orbit/spinner.gif) no-repeat center center #3c3c3c; height: 430px !important;  }
 #orbitDemo.orbit { height: 380px; }
 #orbitDemo img, #orbitDemo div { display: none; }
 #orbitDemo.orbit img, #orbitDemo.orbit div { display: block;}
@@ -735,22 +735,22 @@ div.slider-nav {
     display: block }
 
 div.slider-nav span {
-    width: 39px;
+    width: 46px;
     height: 50px;
     text-indent: -9999px;
     position: absolute;
     z-index: 1000;
     top: 50%;
-    margin-top: -25px;
+    margin-top: -45px;
     cursor: pointer; }
 
 div.slider-nav span.right {
     background: url(../../images/orbit/right-arrow.png) no-repeat;
-    right: -50px; }
+    right: -20px; }
 
 div.slider-nav span.left {
     background: url(../../images/orbit/left-arrow.png) no-repeat;
-    margin-left: -50px; }
+    margin-left: -20px; }
 
 /* BULLET NAV
    ================================================== */
