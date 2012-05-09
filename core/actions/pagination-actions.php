@@ -64,10 +64,13 @@ function response_link_pages_content() {
 * @since 1.0
 */
 function response_post_pagination_content() {
-	global $options, $themeslug?>
+	global $options, $themeslug, $root?>
 	
 	<?php if ($options->get($themeslug.'_post_pagination') != "0"):?>
-	<div class="prev-posts-single"><?php previous_post_link(); ?></div> <div class="next-posts-single"><?php next_post_link(); ?></div>
+	<div id="post-pagination-wrap">
+		<div class="prev-posts-single"><img src="<?php echo "$root/images/previouspost.png";?>"><?php previous_post_link('%link'); ?></div> 
+		<div class="next-posts-single"><?php next_post_link('%link'); ?><img src="<?php echo "$root/images/nextpost.png";?>"></div>
+	</div>
 	<?php endif; 
 }
 
