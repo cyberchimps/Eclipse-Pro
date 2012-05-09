@@ -339,7 +339,7 @@ a:hover {color: #aaa;}
 
 .share a:hover img {opacity:1;}
 
-#post-pagination-container {border-top: 1px dotted #CCC; border-bottom: 1px dotted #CCC; margin-bottom: 15px;}
+#post-pagination-container {border-top: 1px solid #5C5C5C; border-bottom: 1px solid #5C5C5C; margin-bottom: 15px;}
 #post-pagination-wrap { padding-top: 20px; padding-bottom: 10px; }
 
 .next-posts-single {text-align:right;padding:5px; margin-top:-35px;}
