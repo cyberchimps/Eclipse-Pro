@@ -11,13 +11,23 @@ function response_recent_posts_element_content() {
 		$title = get_post_meta($post->ID, 'recent_posts_title' , true);;
 		$toggle = get_post_meta($post->ID, 'recent_posts_title_toggle' , true);;
 		$recent_posts_image = get_post_meta($post->ID, 'recent_posts_images_toggle' , true);;
+		$category = get_post_meta($post->ID, 'recent_posts_category' , true);
+
 	} else {
 		$title = $options->get($themeslug.'_recent_posts_title');
 		$toggle = $options->get($themeslug.'_recent_posts_title_toggle');
 		$recent_posts_image = $options->get($themeslug.'_recent_posts_images_toggle');
+		$category = $options->get($themeslug.'_recent_posts_category'); 
 	}
-		
-	$args = array_merge( $wp_query->query, array( 'showposts' => 4, 'ignore_sticky_posts' => 1  ));
+	
+	if ($category != 'all') {
+		$blogcategory = $category;
+	}
+	else {
+		$blogcategory = "";
+	}
+	
+	$args = array_merge( $wp_query->query, array( 'showposts' => 4, 'ignore_sticky_posts' => 1, 'category_name' => $blogcategory  ));
 	query_posts( $args );
 ?>
 <div class="container">
