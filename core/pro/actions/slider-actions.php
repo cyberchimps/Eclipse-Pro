@@ -354,7 +354,7 @@ To create a Custom Slide please go to the Custom Slides tab in WP-Admin. Once yo
 <!-- Apply slider CSS based on user settings -->
 
 	<style type="text/css" media="screen">
-		#orbitDemo { max-height: <?php echo $height ?>px !important; }
+		
 		#slider { width: <?php echo $csWidth ?>px; height: <?php echo $height ?>px; margin: auto; }
 	</style>
 
