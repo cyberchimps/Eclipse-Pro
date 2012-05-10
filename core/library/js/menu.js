@@ -50,7 +50,7 @@ jQuery(document).ready(function($) {
 	$('#nav_menu > li').children('.sub-menu').prev().append('<span class="main_nav_arrow"/>');
 	
 	$("#nav_menu > li").hover( function() {
-		$(this).children(".sub-menu").fadeIn("fast");
+		$(this).children(".sub-menu").show();
 	}, function () {
 		$(this).find(".sub-menu").hide();
 	});
