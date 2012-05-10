@@ -30,7 +30,7 @@ function response_recent_posts_element_content() {
 				}
 			?>	
 			
-			<h6 style="color:#9a9a9a;font-size:13px;"><?php the_excerpt(); ?></h6>
+			<?php the_excerpt(); ?>
 	
 		</div>
 	
