@@ -33,7 +33,7 @@ function response_recent_posts_element_content() {
 <div class="container">
 <div class="row">
 	<?php if ($toggle == '1' OR $toggle == 'on'): ?>
-		<h4 style="color:white; margin-top: 10px; margin-bottom:15px; font-weight: bold;"><?php echo $title; ?></h4>
+		<h4 class="recent_posts_element_title"><?php echo $title; ?></h4>
 	<?php endif; ?>
 	<div id="recent_posts_wrap">
 	
@@ -41,8 +41,8 @@ function response_recent_posts_element_content() {
 		
 		<div id="recent-posts-container" class="three columns">
 		
-			<h5 style="font-size: 15px;color: #fff;"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
-			<h6 style="color:#646464;font-size: 11px;padding-bottom: 10px;"><?php the_time( 'd/m/y');?> - <?php the_category(', ') ?> - <?php comments_popup_link( __('No Comments', 'response' ), __('1 Comment', 'response' ), __('% Comments' , 'response' )); //need a filer here ?></h6>
+			<h5 class="recent_posts_post_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
+			<h6 class="recent_posts_byline"><?php the_time( 'd/m/y');?> - <?php the_category(', ') ?> - <?php comments_popup_link( __('No Comments', 'response' ), __('1 Comment', 'response' ), __('% Comments' , 'response' )); //need a filer here ?></h6>
 			<?php
 				if ( has_post_thumbnail() && $recent_posts_image == '1' OR has_post_thumbnail() && $recent_posts_image == 'on' ) {
  		 			echo '<div class="recent-posts-image">';

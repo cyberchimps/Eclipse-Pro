@@ -9,6 +9,10 @@
 #recent-posts-container a {color: white;}
 #recent-posts-container a:hover {color: #DDD;}
 
+.recent_posts_element_title {color:white; margin-top: 10px; margin-bottom:15px; font-weight: bold;}
+.recent_posts_post_title {font-size: 15px;color: #fff;}
+.recent_posts_byline {color:#646464;font-size: 11px;padding-bottom: 10px;}
+
 /*============================*/
 /*===== Product Styles ======*/
 /*============================*/
