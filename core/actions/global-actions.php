@@ -126,11 +126,11 @@ function response_post_byline_content() {
 	}?>
 	
 	<?php if ($post_formats != '0') : ?>
-		<div class="postformats"><!--begin format icon-->
+		<div class="postformats hide-on-phones"><!--begin format icon-->
 			<img src="<?php echo get_template_directory_uri(); ?>/images/formats/<?php echo $format ;?>.png" alt="formats" />
 		</div><!--end format-icon-->
 	<?php endif; ?>
-	<div class="meta">
+	<div class="meta hide-on-phones">
 	<ul>
 		<li class="metadate"><?php if (($hidden[$themeslug.'_hide_date']) != '0'):?><?php printf( __( '', 'response' )); ?><a href="<?php the_permalink() ?>"><?php echo get_the_date(); ?></a><?php endif;?></li>
 		<li class="metacomments"><?php if (($hidden[$themeslug.'_hide_comments']) != '0'):?><?php comments_popup_link( __('No Comments', 'response' ), __('1 Comment', 'response' ), __('% Comments' , 'response' )); //need a filer here ?><?php endif;?></li>
