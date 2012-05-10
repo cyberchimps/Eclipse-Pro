@@ -257,6 +257,13 @@ a:hover {color: #aaa;}
 	color: #fff;
 }
 
+.dropdown_hover a:hover {
+	background: blue !important;
+	padding: 5px;
+	font-weight: 500;
+	color: pink;
+}
+
 #nav #nav_menu li:hover > ul {
 	display: block;
 }
