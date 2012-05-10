@@ -20,7 +20,7 @@
 */
 add_action ( 'response_footer', 'response_footer_widgets' );
 add_action ( 'response_secondary_footer', 'response_secondary_footer_credit' );
-add_action ( 'response_secondary_footer', 'response_secondary_footer_copyright' );
+//add_action ( 'response_secondary_footer', 'response_secondary_footer_copyright' );
 
 
 /**
@@ -94,7 +94,7 @@ function response_secondary_footer_credit() {
 	
 	if ($options->get($themeslug.'_hide_link') == "1") {?>
 		
-		<div id="credit" class="six columns">
+		<div id="credit" class="twelve columns">
 			<a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" alt="credit" /></a>
 		</div> 
 	

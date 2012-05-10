@@ -555,7 +555,6 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 #afterfooterwrap {
 	margin: auto;
-	padding-top: 10px;
 }
 
 #afterfootercopyright {
@@ -584,7 +583,8 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 	display: inline; 
 }
 
-#credit {z-index: 99;text-align: left; margin-bottom:8px;}
+#credit {z-index: 99;text-align: center; margin-bottom:8px;}
+#credit img {margin-bottom: -12px;}
 
 /* WordPress Styles  */
 
