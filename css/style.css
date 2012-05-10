@@ -382,6 +382,17 @@ a.more-link:hover{
 	color: #eee;
 }
 
+.more-link a {
+	color: #fff;
+	font-size:14px;
+	font-family: Helvetica, Arial;
+	font-weight:600;
+}
+
+.more-link a:hover{
+	color: #eee;
+}
+
 /* Posts Navigation */
 
 .next-posts {float: left;padding: 5px 0 5px 0; }
