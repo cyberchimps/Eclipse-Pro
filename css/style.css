@@ -181,7 +181,6 @@ a:hover {color: #aaa;}
 #nav #nav_menu > li > .sub-menu {
     display: none;
 	background-color: #242424;
-   
    	margin-top: 5px;
     padding: 8px 0 0;
     position: absolute;
@@ -236,7 +235,7 @@ a:hover {color: #aaa;}
 }
 
 #nav #nav_menu > li > a {
-	color: #CCC;
+	color: #b3b3b3;
     display: inline-block;
     font-size: 16px;
     line-height: 20px;
@@ -245,10 +244,11 @@ a:hover {color: #aaa;}
     position: relative;
 }
 #nav #nav_menu > li:hover > a {
-	background: #242424;
+	background: transparent;
 	opacity: .75;
 	padding: 5px;
- 
+	font-weight: 500;
+	color: #fff;
 }
 #nav #nav_menu li:hover > ul {
 	display: block;
