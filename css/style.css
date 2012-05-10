@@ -482,7 +482,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 }
 
 .footer-widget-title {
-	font-size:18px;color:#fff;font-weight: 400;
+	font-size:14px;color:#fff;font-weight: 600;text-transform:uppercase;
 }
 
 .footer-widgets ul{padding:5px 0px 5px 0px; margin-left: 0px;}
