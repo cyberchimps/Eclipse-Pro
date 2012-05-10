@@ -46,10 +46,12 @@ jQuery(document).ready(function($) {
 	$("#subsection-Portfolio-Element > h4").click();
 	$("#subsection-Page-Options > h4").click();
 	var page_subsection_map = {
-		page_slider: "subsection-response-Pro-Slider-Options",
+		page_slider: "subsection-Eclipse-Pro-Slider-Options",
 		callout_section: "subsection-Callout-Options",
 		carousel_section: "subsection-Carousel-Options",
 		product_element: "subsection-Carousel-Options",
+		box_section: "subsection-Box-Options",
+		recent_posts_element: "subsection-Recent_Posts-Options",
 		portfolio_element: "subsection-Portfolio-Options",
 		product_element: "subsection-Product-Options",
 		twitterbar_section: "subsection-Twitter-Options"
@@ -143,8 +145,23 @@ jQuery(document).ready(function($) {
 		} else {
 			items.hide();
 		}
+	 }).trigger('change');
+	$('#checkbox-box_title_toggle').change(function(){
+	    var items = $("tr.box_title,");
+		if($(this).is(':checked')) {
+			items.show();
+		} else {
+			items.hide();
+		}
     }).trigger('change');
-    
+    $('#checkbox-recent_posts_title_toggle').change(function(){
+	    var items = $("tr.recent_posts_title,");
+		if($(this).is(':checked')) {
+			items.show();
+		} else {
+			items.hide();
+		}
+    }).trigger('change');
         $('#checkbox-product_link_toggle').change(function(){
 	    var items = $("tr.product_link_url, tr.product_link_text");
 		if($(this).is(':checked')) {

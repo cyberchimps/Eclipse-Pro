@@ -88,7 +88,7 @@ function initialize_the_meta_boxes() {
 			->section_order('page_section_order', 'Page Elements', '', array('options' => array(
 					'page_section' => 'Page',
 					'breadcrumbs' => 'Breadcrumbs',
-					'page_slider' => 'Content Slider',
+					'page_slider' => 'Feature Slider',
 					'portfolio_element' => 'Portfolio',
 					'recent_posts_element' => 'Recent Posts',
 					'callout_section' => 'Callout',
@@ -128,6 +128,12 @@ function initialize_the_meta_boxes() {
 			->color('custom_callout_text_color', 'Custom Text Color', '')
 			->color('custom_callout_link_color', 'Custom Link Color', '')
 			->pagehelp('', 'Need help?', '')
+		->tab("Box Options")
+			->checkbox('box_title_toggle', 'Title', '')
+			->text('box_title', '', '')
+		->tab("Recent Posts Options")
+			->checkbox('recent_posts_title_toggle', 'Title', '')
+			->text('recent_posts_title', '', '')
 		->tab("Carousel Options")
 			->select('carousel_category', 'Carousel Category', '', array('options' => $carouseloptions) )
 			->text('carousel_speed', 'Carousel Animation Speed (ms)', '', array('std' => '750'))

@@ -94,6 +94,14 @@ jQuery(document).ready(function($) {
       toShow.hide();
     }
   }).change();	
+     $("#ec_recent_posts_title_toggle").change(function() {
+    var toShow = $("#section-ec_recent_posts_title");
+    if($(this).is(':checked')) {
+      toShow.show();
+    } else {
+      toShow.hide();
+    }
+  }).change();
   $("#ec_show_featured_images").change(function() {
     var toShow = $("#section-ec_featured_image_align, #section-ec_featured_image_height, #section-ec_featured_image_width");
     if($(this).is(':checked')) {
