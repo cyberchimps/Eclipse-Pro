@@ -180,7 +180,7 @@ $options
 			->checkbox($themeslug."_recent_posts_title_toggle", "Title")
 			->text($themeslug."_recent_posts_title", "Title")
 			->select($themeslug.'_recent_posts_category', 'Post Category', array( 'options' => $blogoptions ))
-			->checkbox($themeslug."_recent_posts_images", "Images")
+			->checkbox($themeslug."_recent_posts_image_toggle", "Images")
 		->subsection_end()
 		->subsection("Portfolio Options")
 			->select($themeslug."_portfolio_number", "Images Per Row", array( 'options' => array("key1" => "Four (default)", "key2" => "Three", "key3" => "Two")))

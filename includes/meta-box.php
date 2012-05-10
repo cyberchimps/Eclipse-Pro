@@ -134,6 +134,8 @@ function initialize_the_meta_boxes() {
 		->tab("Recent Posts Options")
 			->checkbox('recent_posts_title_toggle', 'Title', '')
 			->text('recent_posts_title', '', '')
+			->select('recent_posts_category', 'Post Category', '', array('options' => $blogoptions, 'all') )
+			->checkbox('recent_posts_images_toggle', 'Images', '')
 		->tab("Carousel Options")
 			->select('carousel_category', 'Carousel Category', '', array('options' => $carouseloptions) )
 			->text('carousel_speed', 'Carousel Animation Speed (ms)', '', array('std' => '750'))
