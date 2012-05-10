@@ -198,7 +198,7 @@ a:hover {color: #aaa;}
     width: 8px;
     display: inline-block;
     position: relative;
-    margin: 0 10px 0 15px;
+    margin: 0 10px 0 5px;
     top: -1px;
 }
 #nav #nav_menu > li > .sub-menu .nav_arrow {
