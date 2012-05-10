@@ -19,7 +19,7 @@ function response_recent_posts_element_content() {
 		<div id="recent-posts-container" class="three columns">
 		
 			<h5 style="font-size: 15px;color: #fff;"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
-			<h6 style="color:#646464;font-size: 11px;"><?php the_time( 'd/m/y');?> - <?php the_category(', ') ?> - <?php comments_popup_link( __('No Comments', 'response' ), __('1 Comment', 'response' ), __('% Comments' , 'response' )); //need a filer here ?></h6>
+			<h6 style="color:#646464;font-size: 11px;padding-bottom: 10px;"><?php the_time( 'd/m/y');?> - <?php the_category(', ') ?> - <?php comments_popup_link( __('No Comments', 'response' ), __('1 Comment', 'response' ), __('% Comments' , 'response' )); //need a filer here ?></h6>
 			<?php
 				if ( has_post_thumbnail()) {
  		 			echo '<div class="recent-posts-image">';
@@ -30,7 +30,7 @@ function response_recent_posts_element_content() {
 				}
 			?>	
 			
-			<h6 style="color:#9a9a9a;font-size:13px;"><?php the_excerpt(); ?></h6>
+			<h6 style="color:#9a9a9a;font-size:13px;padding-top: 10px;"><?php the_excerpt(); ?></h6>
 	
 		</div>
 	
