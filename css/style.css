@@ -154,11 +154,13 @@ a:hover {color: #aaa;}
 #banner {margin-bottom: 10px;}
 
 /* Nav  */
+
 #nav {
     float: right;
     margin-top: 32px;
     position: relative;
 }
+
 #nav ul {
 	list-style: none;
 	margin: 0;
@@ -166,6 +168,7 @@ a:hover {color: #aaa;}
 #nav li {
 	position: relative;
 }
+
 #nav li a {
 	display: block;
 	padding: 5px 10px;
@@ -173,11 +176,12 @@ a:hover {color: #aaa;}
 	text-decoration:none;
 	color: whitesmoke;
 }
-#nav_menu > li {
 
+#nav_menu > li {
     float: left;
     margin: 0 13px;
 }
+
 #nav #nav_menu > li > .sub-menu {
     display: none;
 	background-color: #242424;
@@ -191,6 +195,7 @@ a:hover {color: #aaa;}
     z-index: 9999;
     opacity: .75;
 }
+
 #nav #nav_menu > li .main_nav_arrow {
     background: url(../images/down-arrow.png) no-repeat center center;
     height: 5px;
@@ -200,6 +205,7 @@ a:hover {color: #aaa;}
     margin: 0 10px 0 10px;
     top: -1px;
 }
+
 #nav #nav_menu > li > .sub-menu .nav_arrow {
     background: url(../images/nav_arrow.png);
     height: 11px;
@@ -224,6 +230,7 @@ a:hover {color: #aaa;}
     width: 180px;
     z-index: 9999;
 }
+
 #nav #nav_menu > li > .children .nav_arrow {
     background: url(../images/nav_arrow.png);
     height: 11px;
@@ -231,7 +238,6 @@ a:hover {color: #aaa;}
     position: absolute;
     top: -10px;
     width: 14px;
-
 }
 
 #nav #nav_menu > li > a {
@@ -243,41 +249,51 @@ a:hover {color: #aaa;}
     padding: 5px;
     position: relative;
 }
+
 #nav #nav_menu > li:hover > a {
 	background: transparent;
-	opacity: .75;
 	padding: 5px;
 	font-weight: 500;
 	color: #fff;
 }
+
 #nav #nav_menu li:hover > ul {
 	display: block;
 }
+
 #nav ul ul > a {
 	color: #555555;
 }
+
 #nav ul ul a:hover {
 	background-color: #666666;
     color: #FFFFFF;
 }
+
 #nav .parent-menu {
 	background: url(../images/down-menu-arrow.png) no-repeat right center;
 }
+
 #nav .parent-menu:hover {
 	background: #666666 url(../images/down-menu-arrow-hover.png) no-repeat right center;
 }
+
 #nav ul ul ul a {
 	background: url(../images/indent-menu-arrow.png) no-repeat left center;
 }
+
 #nav ul ul ul a:hover {
 	background: #666666 url(../images/indent-menu-arrow-hover.png) no-repeat left center;
 }
+
 #nav ul ul ul a {
 	text-indent: 10px;
 }
+
 #nav ul ul ul ul a {
 	text-indent: 20px;
 }
+
 #nav ul ul ul ul ul a {
 	text-indent: 30px;
 }
