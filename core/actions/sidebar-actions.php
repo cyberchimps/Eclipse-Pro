@@ -77,7 +77,7 @@ function response_before_content_sidebar_markup() {
 	<?php endif; ?>
 	
 	<?php if ($sidebar == 'left' OR $sidebar == "1"): ?>
-	<div id="sidebar_left" class="four columns">
+	<div id="sidebar_left" class="three columns">
 		<?php get_sidebar(); ?>
 	</div>
 	<?php endif;
