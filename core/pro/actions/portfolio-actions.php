@@ -19,83 +19,58 @@
 * response Portfolio Section actions
 */
 add_action( 'response_portfolio_element', 'response_portfolio_element_content' );
-	
+
 function response_portfolio_element_content() {	
 	global $options, $post, $themeslug, $root, $wp_query;
 	$tmp_query = $wp_query; 
 	$image = get_post_meta($post->ID, 'portfolio_image' , true);
-	
+
 	if (is_page()){
 		$category = get_post_meta($post->ID, 'portfolio_category' , true);
 		$num = get_post_meta($post->ID, 'portfolio_row_number' , true);
 		$title_enable = get_post_meta($post->ID, 'portfolio_title_toggle' , true);
 		$title = get_post_meta($post->ID, 'portfolio_title' , true);;
-	}
-	
-	else {
+	} else {
 		$category = $options->get($themeslug.'_portfolio_category');
 		$num = $options->get($themeslug.'_portfolio_number');
 		$title_enable = $options->get($themeslug.'_portfolio_title_toggle');
 		$title = $options->get($themeslug.'_portfolio_title');
 	}
-	
+
 	if ($num == '1' OR $num == 'key2') {
 		$number = 'four';
-	}
-	elseif ($num == '2' OR $num == 'key3') {
+		$numb = '3';
+	} else if ($num == '2' OR $num == 'key3') {
 		$number = 'six';
-	}
-	else {
+		$numb = '2';
+	} else {
 		$number = 'three';
+		$numb = '4';
 	}
-	
-	if ($title == '') {
-		$title = 'Portfolio';
-	}
-	else {
-		$title = $title;
-	}
-	if ($title_enable == 'on' OR $title_enable == '1') {
-		$title_output = "<h1 class='portfolio_title'>$title</h1>";
-	}
-	
-	else {
-		$title_output = '';
-	}
-	
+
+	$title = ($title != '') ? $title : 'Portfolio';	
+	$title_output = ($title_enable == 'on' OR $title_enable == '1') ? "<h1 class='portfolio_title'>$title</h1>" : '';
 	?>
 
 <div id="portfolio" class="container">
 	<div class="row">
-	
-	<?php query_posts( array ('post_type' => $themeslug.'_portfolio_images', 'showposts' => 50, 'portfolio_categories' => $category ));
-			
-	if (have_posts()) :
-	  	 $out = " <div id='gallery' class='twelve columns'>$title_output<ul>"; 
-
-	  	$i = 0;
-	  	$counter = 0;
-		$no = '50';
-
-		while (have_posts() && $i<$no) : 
-
-		the_post(); 
 		
-			if ($counter == 4) {
-				$class = 'fourth-image';
-				$counter = 0;
-			}
-			else {
-				$class = '';
-			}
+	<?php query_posts( array ('post_type' => $themeslug.'_portfolio_images', 'portfolio_categories' => $category ));
+
+	if (have_posts()) :
+		$out = " <div id='gallery' class='twelve columns'>$title_output<ul>"; 
+
+		$counter = 1;
+
+		while (have_posts()) : the_post();
+
+			$class = ( $counter % $numb == 1 ) ? 'first-row' : '';
 
 	    	/* Post-specific variables */	
-
 	    	$image = get_post_meta($post->ID, 'portfolio_image' , true);
 	    	$title = get_the_title() ;	    	
-	    	
-	     	/* Markup for portfolio */
 
+	     	/* Markup for portfolio */
 	    	$out .= "
 				<li id='portfolio_wrap' class='$number columns $class'>
 	    			<a href='$image' title='$title'><img src='$image'  alt='$title'/>
@@ -106,13 +81,12 @@ function response_portfolio_element_content() {
 
 	    	/* End slide markup */	
 
-	      	$i++;
 	      	$counter++;
 	      	endwhile;
 	      	$out .= "</ul></div>";	 
-	      	
+
 	      	else:
-	      
+
 	      	$out .= "	
 	    		<div id='gallery' class='twelve columns'><ul>
 	      			<li id='portfolio_wrap' class='four columns'>
@@ -142,7 +116,7 @@ function response_portfolio_element_content() {
 /* End slide creation */		
 
 	wp_reset_query(); /* Reset post query */ 
-	
+
 /* Begin Portfolio javascript */ 
     
     $out .= <<<OUT
@@ -170,7 +144,6 @@ echo $out;
 	
 	</div>
 </div>
-
 
 <?php
 }
