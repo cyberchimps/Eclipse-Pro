@@ -39,7 +39,7 @@ function response_box_section_content() {
 <div class="container">
 <div class="row">
 <?php if ($toggle == '1' OR $toggle == 'on'): ?>
-	<h4 style="color:white; margin-top: 10px; margin-bottom:15px; font-weight: bold;"><?php echo $title; ?></h4>
+	<h4 class="box_element_title"><?php echo $title; ?></h4>
 <?php endif; ?>
 </div>
 <div class="row boxes">
