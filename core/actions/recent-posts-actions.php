@@ -31,10 +31,14 @@ function response_recent_posts_element_content() {
 			?>	
 			
 <<<<<<< HEAD
+<<<<<<< HEAD
 			<h6 style="color:#9a9a9a;font-size:13px;padding-top: 10px;"><?php the_excerpt(); ?></h6>
 =======
 			<?php the_excerpt(); ?>
 >>>>>>> a212a5134bf0ea59dc5a42fc5a8441a12c638bde
+=======
+			<h6 style="color:#9a9a9a;font-size:13px;"><?php the_excerpt(); ?></h6>
+>>>>>>> parent of a212a51... continue reading
 	
 		</div>
 	
