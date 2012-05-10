@@ -510,16 +510,25 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 	font-size:14px;color:#fff;font-weight: 600;text-transform:uppercase;
 }
 
+.footer-text {
+	color: #5b5b5b;
+	font-size: 13px;
+}
+
+
 .footer-widgets ul{padding:5px 0px 5px 0px; margin-left: 0px;}
 
 .footer-widgets li{
 	list-style-type: none;
 	padding-left: 0;
-	color: #ccc;
+	color: #5b5b5b;
+	font-size: 13px;
+	border-bottom: 1px solid #3d3d3d;
 }
 
 .footer-widgets li a{
-	color: #ccc;
+	color: #d4d4d4;
+	line-height: 2em;
 }
 
 .footer-widgets li a:hover{

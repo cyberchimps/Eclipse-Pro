@@ -34,9 +34,7 @@ function response_footer_widgets() {
 		
 		<div class="three columns footer-widgets">
 			<h3 class="footer-widget-title"><?php printf( __( 'Footer Widgets', 'response' )); ?></h3>
-			<ul>
-				<li>To customize this widget area login to your admin account, go to Appearance, then Widgets and drag new widgets into Footer Widgets</li>
-			</ul>
+				<p class="footer-text">To customize this widget area login to your admin account, go to Appearance, then Widgets and drag new widgets into Footer Widgets</p>
 		</div>
 
 		<div class="three columns footer-widgets">
