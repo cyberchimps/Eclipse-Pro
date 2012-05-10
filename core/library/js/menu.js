@@ -47,6 +47,8 @@ jQuery(document).ready(function($) {
 	$('#nav_menu > li > .sub-menu').append('<span class="nav_arrow"/>');
 	$("#nav_menu ul").find(".sub-menu").prev().addClass("parent-menu");
 	
+	$('#nav_menu > li').children('.sub-menu').prev().append('<span class="main_nav_arrow"/>');
+	
 	$("#nav_menu > li").hover( function() {
 		$(this).children(".sub-menu").fadeIn("fast");
 	}, function () {

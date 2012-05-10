@@ -192,6 +192,15 @@ a:hover {color: #aaa;}
     z-index: 9999;
     opacity: .75;
 }
+#nav #nav_menu > li .main_nav_arrow {
+    background: url(../images/down-arrow.png) no-repeat center center;
+    height: 5px;
+    width: 8px;
+    display: inline-block;
+    position: relative;
+    margin: 0 10px 0 15px;
+    top: -1px;
+}
 #nav #nav_menu > li > .sub-menu .nav_arrow {
     background: url(../images/nav_arrow.png);
     height: 11px;
@@ -199,7 +208,7 @@ a:hover {color: #aaa;}
     position: absolute;
     top: -10px;
     width: 14px;
-        display: none;
+    display: none;
 }
 
 #nav #nav_menu > li > .children {
