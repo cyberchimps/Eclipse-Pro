@@ -346,7 +346,7 @@ li.ui-state-default  {
 
 #portfolio_wrap.three.columns:first-child, #portfolio_wrap.four.columns:first-child, #portfolio_wrap.six.columns:first-child {margin-left: 0%;}
 
-#portfolio_wrap.three.columns.fourth-image {margin-left: 0%;}
+#portfolio_wrap.three.columns.first-row, #portfolio_wrap.four.columns.first-row, #portfolio_wrap.six.columns.first-row {margin-left: 0%;}
 
 #gallery ul { list-style: none; margin: 0px; }
 
