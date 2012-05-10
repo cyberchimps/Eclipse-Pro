@@ -1,6 +1,6 @@
 <?php
 /**
-* Box section actions used by response Pro
+* Box section actions used by response 
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -26,10 +26,22 @@ add_action( 'response_box_section', 'response_box_section_content' );
 * @since 1.0
 */
 function response_box_section_content() { 
-	global $post; //call globals
+	global $options, $themeslug, $post, $root; //call globals
 	
-	$root = get_template_directory_uri(); ?>
+	if (is_page()){
+		$title = get_post_meta($post->ID, 'box_title' , true);;
+		$toggle = get_post_meta($post->ID, 'box_title_toggle' , true);;
+	} else {
+		$title = $options->get($themeslug.'_box_title');
+		$toggle = $options->get($themeslug.'_box_title_toggle');
+	}
+?>
 <div class="container">
+<div class="row">
+<?php if ($toggle == '1' OR $toggle == 'on'): ?>
+	<h4 style="color:white; margin-top: 10px; margin-bottom:15px; font-weight: bold;"><?php echo $title; ?></h4>
+<?php endif; ?>
+</div>
 <div class="row boxes">
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box 1") ) : ?>
 		<div id="box1" class="three columns">

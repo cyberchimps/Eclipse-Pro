@@ -23,9 +23,10 @@ require_once ( get_template_directory() . '/core/core-hooks.php' );
 
 //Call the action files
 
-require_once ( get_template_directory() . '/core/actions/sidebar-actions.php' );
+
 require_once ( get_template_directory() . '/core/actions/404-actions.php' );
 require_once ( get_template_directory() . '/core/actions/archive-actions.php' ); 
+require_once ( get_template_directory() . '/core/actions/box-actions.php' );
 require_once ( get_template_directory() . '/core/actions/comments-actions.php' );
 require_once ( get_template_directory() . '/core/actions/post-actions.php' );
 require_once ( get_template_directory() . '/core/actions/global-actions.php' );
@@ -36,6 +37,7 @@ require_once ( get_template_directory() . '/core/actions/twitterbar-actions.php'
 require_once ( get_template_directory() . '/core/actions/page-actions.php' );
 require_once ( get_template_directory() . '/core/actions/recent-posts-actions.php' );
 require_once ( get_template_directory() . '/core/actions/search-actions.php' );
+require_once ( get_template_directory() . '/core/actions/sidebar-actions.php' );
 require_once ( get_template_directory() . '/core/actions/slider-actions.php' );
 
 

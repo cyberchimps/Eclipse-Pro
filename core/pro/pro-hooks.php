@@ -15,12 +15,7 @@
 * @since 1.0
 */
 
-/** 
-* Box Section
-*/
-function response_box_section() {
-	do_action ('response_box_section');
-}
+
 
 /** 
 * Callout Section

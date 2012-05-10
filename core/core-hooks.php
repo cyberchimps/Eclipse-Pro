@@ -487,6 +487,13 @@ function response_recent_posts_element() {
 	do_action('response_recent_posts_element');
 }
 
+/** 
+* Box Section
+*/
+function response_box_section() {
+	do_action ('response_box_section');
+}
+
 /**
 * End
 */
