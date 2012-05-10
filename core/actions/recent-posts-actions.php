@@ -11,7 +11,7 @@ function response_recent_posts_element_content() {
 ?>
 <div class="container">
 <div class="row">
-	<h4 style="color:white; margin-top: 10px; margin-bottom:15px;">Recent Blog Posts</h4>
+	<h4 style="color:white; margin-top: 10px; margin-bottom:15px; font-weight: bold;">Recent Blog Posts</h4>
 	<div id="recent_posts_wrap">
 	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
