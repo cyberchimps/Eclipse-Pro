@@ -4,14 +4,25 @@ add_action( 'response_recent_posts_element', 'response_recent_posts_element_cont
 
 function response_recent_posts_element_content() {
 
-	global $wp_query, $custom_excerpt, $post;
+	global $options, $themeslug, $wp_query, $custom_excerpt, $post;
 	$custom_excerpt = 'recent';
+	
+	if (is_page()){
+		$title = get_post_meta($post->ID, 'recent_posts_title' , true);;
+		$toggle = get_post_meta($post->ID, 'recent_posts_title_toggle' , true);;
+	} else {
+		$title = $options->get($themeslug.'_recent_posts_title');
+		$toggle = $options->get($themeslug.'_recent_posts_title_toggle');
+	}
+	
 	$args = array_merge( $wp_query->query, array( 'showposts' => 4, 'ignore_sticky_posts' => 1  ));
 	query_posts( $args );
 ?>
 <div class="container">
 <div class="row">
-	<h4 style="color:white; margin-top: 10px; margin-bottom:15px; font-weight: bold;">Recent Blog Posts</h4>
+	<?php if ($toggle == '1' OR $toggle == 'on'): ?>
+		<h4 style="color:white; margin-top: 10px; margin-bottom:15px; font-weight: bold;"><?php echo $title; ?></h4>
+	<?php endif; ?>
 	<div id="recent_posts_wrap">
 	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
