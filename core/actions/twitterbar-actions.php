@@ -56,7 +56,7 @@ function response_display_latest_tweets( $username, $show_replies = 0 ) {
 	<div class="row">
 		<div id="twitterbar" class="twelve columns"><!--id="twitterbar"-->
 			<div id="bird">
-				 <img src="'.get_template_directory_uri().'/images/twitterbird.png" />
+				 <img class="twitter_bird" src="<?php echo get_template_directory_uri().'/images/twitterbird.png';?>" />
 			</div>
 			<div id="twittertext">
 				<?php
