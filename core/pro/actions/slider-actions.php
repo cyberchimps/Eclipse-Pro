@@ -68,8 +68,8 @@ function response_slider_content() {
 	}
 
 	
-	$openrow = '<div class="row">';
-	$closerow = '</div>';
+	$openrow = '<div class="container"><div class="row">';
+	$closerow = '</div></div>';
 
 ?>	
 
