@@ -86,7 +86,14 @@ jQuery(document).ready(function($) {
       toShow.hide();
     }
   }).change();
-
+   $("#ec_box_title_toggle").change(function() {
+    var toShow = $("#section-ec_box_title");
+    if($(this).is(':checked')) {
+      toShow.show();
+    } else {
+      toShow.hide();
+    }
+  }).change();	
   $("#ec_show_featured_images").change(function() {
     var toShow = $("#section-ec_featured_image_align, #section-ec_featured_image_height, #section-ec_featured_image_width");
     if($(this).is(':checked')) {
@@ -197,6 +204,7 @@ jQuery(function($) {
 			response_page_slider: "subsection-blogslider",
 			response_callout_section: "subsection-calloutoptions",
 			response_portfolio_element: "subsection-portfoliooptions",
+			response_box_section: "subsection-boxoptions",
 			response_twitterbar_section: "subsection-twtterbaroptions",
 			response_index_carousel_section: "subsection-carouseloptions",
 			response_product_element: "subsection-productoptions"
