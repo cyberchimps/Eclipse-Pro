@@ -282,7 +282,7 @@ a:hover {color: #aaa;}
 	color: #fff;
 }
 
-#nav #nav_menu > .dropdown_hover > a:hover {
+#nav #nav_menu > .dropdown_hover:hover > a {
 	background: #232323;
 	padding: 5px;
 	font-weight: 500;
