@@ -81,7 +81,7 @@ function response_loop_content($content) {
 						the_excerpt();
 						}
 						else {
-							the_content(__('<img src="' .get_bloginfo('template_directory'). '/images/continue.png"> Continue Reading', 'response'));
+							the_content(__('<img class="continue_img" src="' .get_bloginfo('template_directory'). '/images/continue.png"> Continue Reading', 'response'));
 						}
 					 ?>
 				<!--Begin @response link pages hook-->
