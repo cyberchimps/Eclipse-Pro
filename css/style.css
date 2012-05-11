@@ -348,13 +348,12 @@ a:hover {color: #aaa;}
 /* Search Bar */
 
 .searchform {
-	-moz-border-radius: 15px; 
-	-webkit-border-radius: 15px;
-	border-radius: 15px;
-	width: 160px;
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	width: 250px;
 	padding: 0;
-	height: 20px;
-	box-shadow:inset 0 0 1px #222;
+	height: 32px;
 	background: #fff;
 }
 
@@ -365,15 +364,15 @@ a:hover {color: #aaa;}
 .searchform .s{
 	margin:0;
 	border: none;
-	margin: 3px 2px 2px 20px;
+	margin: 10px 2px 2px 10px;
 	font-size: 12px;
 	height: 14px;
-	width:	130px;
+	width:	200px;
 	color: #333;
 	overflow: hidden;
 }
 
-#magnify {float:left;position:absolute;margin: 2px 0 0 5px;}
+#magnify {float:right;position:relative;margin: 8px 10px 0 0px;}
 
 #magnify {margin: 0 0 0 5px\0/IE8+9; /* IE8+9  */}
 
