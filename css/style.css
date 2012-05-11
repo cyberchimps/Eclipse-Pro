@@ -112,8 +112,8 @@ color:#fff;
 	padding-bottom: 10px;
 	margin-top: 25px;
 	padding-right:34px;
-	text-align:right;
 }
+.meta-mobile ul {margin-left: 0px !important;}
 
 .meta-mobile a{color: #e6e6e6;text-decoration:none;}
 
