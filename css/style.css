@@ -184,7 +184,7 @@ a:hover {color: #aaa;}
 
 #nav #nav_menu > li > .sub-menu {
     display: none;
-	background-color: #242424;
+	background-color: #232323;
    	margin-top: 5px;
     padding: 8px 0 0;
     position: absolute;
@@ -258,10 +258,10 @@ a:hover {color: #aaa;}
 }
 
 #nav #nav_menu > .dropdown_hover > a:hover {
-	background: blue !important;
+	background: #232323;
 	padding: 5px;
 	font-weight: 500;
-	color: pink;
+	color: #fff;
 }
 
 #nav #nav_menu li:hover > ul {
