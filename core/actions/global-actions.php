@@ -21,6 +21,7 @@
 
 add_action( 'response_loop', 'response_loop_content' );
 add_action( 'response_post_byline', 'response_post_byline_content' );
+add_action( 'response_mobile_post_byline', 'response_mobile_post_byline_content' );
 add_action( 'response_edit_link', 'response_edit_link_content' );
 add_action( 'response_post_tags', 'response_post_tags_content' );
 add_action( 'response_post_bar', 'response_post_bar_content' );
@@ -74,6 +75,7 @@ function response_loop_content($content) {
   					echo '</div>';
 				}
 			?>	
+			<?php response_mobile_post_byline(); ?>
 					<?php 
 						if ($excerpts == '1' && !is_single() ) {
 						the_excerpt();
@@ -140,6 +142,49 @@ function response_post_byline_content() {
 	</ul>
 	</div> <?php
 }
+
+/**
+* Sets the responsive post byline information (author, date, category). 
+*
+* @since 1.0
+*/
+function response_mobile_post_byline_content() {
+	global $options, $themeslug; //call globals.  
+	if (is_single()) {
+		$hidden = $options->get($themeslug.'_single_hide_byline'); 
+		 $post_formats = $options->get($themeslug.'_single_post_formats');
+	}
+	elseif (is_archive()) {
+		$hidden = $options->get($themeslug.'_archive_hide_byline'); 
+		 $post_formats = $options->get($themeslug.'_archive_post_formats');
+	}
+	else {
+		$hidden = $options->get($themeslug.'_hide_byline'); 
+		$post_formats = $options->get($themeslug.'_post_formats');
+	}
+	if (get_post_format() == '') {
+		$format = "default";
+	}
+	else {
+		$format = get_post_format();
+	}?>
+	
+	<?php if ($post_formats != '0') : ?>
+		<div class="postformats hide-on-desktops"><!--begin format icon-->
+			<img src="<?php echo get_template_directory_uri(); ?>/images/formats/<?php echo $format ;?>.png" alt="formats" />
+		</div><!--end format-icon-->
+	<?php endif; ?>
+	<div class="meta-mobile hide-on-desktops">
+	<ul>
+		<li class="metadate"><?php if (($hidden[$themeslug.'_hide_date']) != '0'):?><?php printf( __( '', 'response' )); ?><a href="<?php the_permalink() ?>"><?php echo get_the_date(); ?></a><?php endif;?></li>
+		<li class="metacomments"><?php if (($hidden[$themeslug.'_hide_comments']) != '0'):?><?php comments_popup_link( __('No Comments', 'response' ), __('1 Comment', 'response' ), __('% Comments' , 'response' )); //need a filer here ?><?php endif;?></li>
+		<li class="metaauthor"><?php if (($hidden[$themeslug.'_hide_author']) != '0'):?><?php printf( __( '', 'response' )); ?><?php the_author_posts_link(); ?><?php endif;?></li>
+		<li class="metacat"><?php if (($hidden[$themeslug.'_hide_categories']) != '0'):?><?php printf( __( '', 'response' )); ?> <?php the_category(', ') ?><?php endif;?></li>
+		<li class="metatags"><?php response_post_tags(); ?></li>
+	</ul>
+	</div> <?php
+}
+
 
 /**
 * Sets up the WP edit link

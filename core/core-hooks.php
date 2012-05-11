@@ -251,6 +251,15 @@ function response_post_byline() {
 }
 
 /**
+* Post byline content. 
+*
+* @since 1.0
+*/
+function response_mobile_post_byline() {
+	do_action('response_mobile_post_byline');
+}
+
+/**
 * Calls post tags. 
 *
 * @since 1.0

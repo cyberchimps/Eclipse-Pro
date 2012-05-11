@@ -104,6 +104,23 @@ color:#fff;
 
 .meta li {line-height: 24px;padding-right: 25px;} 
 
+.meta-mobile {
+	color: #e6e6e6;
+	font-family: Helvetica, Arial;
+	font-weight:400;
+	font-size: 13px;
+	padding-bottom: 10px;
+	margin-top: 65px;
+	padding-right:45px;
+	text-align:right;
+}
+
+.meta-mobile a{color: #e6e6e6;text-decoration:none;}
+
+.meta-mobile a:hover{color: #aaa;}
+
+.meta-mobile li {line-height: 24px;padding-right: 25px;} 
+
 .metadate {
 	background: url(../images/icons/cal.png) no-repeat right center;
 }
@@ -906,7 +923,8 @@ figure {
     right: 0px; }
 	div.slider-nav span.left {
     margin-left: 0px; }
-    .meta ul li {display: inline; margin-right:15px;}
+     .meta ul li {display: inline; margin-right:15px;}
+    .meta-mobile ul li {display: inline; margin-right:15px;}
     #product_media.six.columns {margin-left: 0%; float: none;}
     #image_container.six.columns {float: none !important;}
     #text_container {margin-bottom: 20px;}
