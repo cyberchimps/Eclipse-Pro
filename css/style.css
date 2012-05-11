@@ -925,7 +925,7 @@ figure {
     margin-left: 0px; }
      .meta ul li {display: inline; margin-right:15px;}
     .meta-mobile ul li {display: inline; margin-right:15px;}
-    .postformats {height: 20px; width: 20px;}
+    .postformats {height: 20px; width: 20px; float: left; margin-right: -10px !important;}
     #product_media.six.columns {margin-left: 0%; float: none;}
     #image_container.six.columns {float: none !important;}
     #text_container {margin-bottom: 20px;}
