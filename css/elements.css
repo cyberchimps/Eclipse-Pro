@@ -18,8 +18,8 @@
 /*============================*/
 #product_text {color: white; padding: 20px 0 20px 0;}
 .product_text_wrap {}
-#product_text.six.columns {margin-left: 1%;}
-#product_media.six.columns {margin-left: 0%; float: right;}
+#product_text.six.columns {}
+#product_media.six.columns {margin-left: 0%;}
 .product_text_title {font-size: 24px;}
 .product_text_text {font-size: 14px;color:#9a9a9a;}
 

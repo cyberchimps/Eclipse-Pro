@@ -60,6 +60,12 @@ function response_product_element_content(){
 		$media ="<div class='flex-video'>$video</div>";
 	}
 	
+	if ($align == "0" or $align == "key1"){
+		echo '<style type="text/css">';
+		echo "#product_media.six.columns img {float: right;} ";
+		echo '</style>';
+	}
+	
 	if ($align == "0" OR $align =="key1") {
 		$output =   "
 					<div id='product_text' class='six columns'>
