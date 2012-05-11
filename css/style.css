@@ -429,6 +429,12 @@ a:hover {color: #aaa;}
 
 .meta ul{list-style: none;margin-left:0px;}
 
+.continue_img {
+	margin-right: 2px;
+	margin-top: 20px;
+	margin-bottom: -1px;
+}
+
 a.more-link {
 	color: #fff;
 	font-size:14px;
