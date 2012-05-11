@@ -387,6 +387,7 @@ a:hover {color: #aaa;}
 .post_container {
 	background: transparent;
 	margin-bottom: 40px;
+	border-bottom: 1px solid #393939;
 }
 
 .post_container ul {list-style: disc;margin-left: 21px;list-style-position: inside;}
