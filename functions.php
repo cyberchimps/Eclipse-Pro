@@ -312,8 +312,8 @@ add_action( 'save_post', 'custom_taxonomy_default', 100, 2 );
 /**
 * Edit columns for portfolio post type.
 */ 
-add_filter('manage_edit-ec_portfolio_columns', 'portfolio_edit_columns');
-add_action('manage_ec_portfolio_posts_custom_column',  'portfolio_columns_display', 10, 2);
+add_filter('manage_edit-ec_portfolio_images_columns', 'portfolio_edit_columns');
+add_action('manage_ec_portfolio_images_posts_custom_column',  'portfolio_columns_display', 10, 2);
 
 function portfolio_edit_columns($portfolio_columns){
     $portfolio_columns = array(
