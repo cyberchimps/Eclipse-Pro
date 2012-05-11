@@ -28,7 +28,16 @@ add_action( 'response_post', 'response_post_content');
 */
 function response_post_content() { 
 
-	global $options, $themeslug, $post, $sidebar, $content_grid; // call globals ?>
+	global $options, $themeslug, $post, $sidebar, $content_grid; // call globals 
+	
+	if (is_single()) {
+		$class = 'single';
+	}
+	else {
+		$class = '';
+	}
+	
+	?>
 	
 	<!--Begin @response sidebar init-->
 		<?php response_sidebar_init(); ?>
@@ -43,7 +52,7 @@ function response_post_content() {
 		
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			
-			<div class="post_container">
+			<div class="post_container <?php echo $class; ?>">
 				<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 		
 				<!--Begin @response index loop hook-->

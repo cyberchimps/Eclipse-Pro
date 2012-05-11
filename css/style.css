@@ -395,6 +395,8 @@ a:hover {color: #aaa;}
 	padding-bottom: 20px;
 }
 
+.post_container.single {border-bottom: none;}
+
 .post_container ul {list-style: disc;margin-left: 21px;list-style-position: inside;}
 
 .postformats {
@@ -444,6 +446,7 @@ a.more-link {
 	font-size:14px;
 	font-family: Helvetica, Arial;
 	font-weight:600;
+	text-decoration: none;
 }
 
 a.more-link:hover{
