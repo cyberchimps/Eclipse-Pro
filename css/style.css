@@ -941,6 +941,8 @@ figure {
     #gallery li.three.columns {margin-right:0px; margin-left: 0% !important;}
 	#gallery li.four.columns {margin-right:0px; margin-left: 0% !important;}
 	#gallery li.six.columns {margin-right:0px; margin-left: 0% !important;} 
+	#recent-posts-container.three.columns {margin-left: 0px;}
+	#recent-posts-container.three.columns:last-child {float: left;}
 }
 
 @media handheld, only screen and (max-width: 400px) {
