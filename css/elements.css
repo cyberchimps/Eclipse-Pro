@@ -127,7 +127,7 @@ div.orbit-wrapper {
 	overflow: hidden;
 	margin: auto;
 	background: url(../images/twitterbarbg.png);	
-	height: 42px;
+	min-height: 42px;
 	margin-top: 15px;
 	margin-bottom: 35px;
 }

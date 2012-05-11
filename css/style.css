@@ -958,6 +958,8 @@ figure {
 	#gallery li.six.columns {margin-right:0px; margin-left: 0% !important;} 
 	#recent-posts-container.three.columns {margin-left: 0px;}
 	#recent-posts-container.three.columns:last-child {float: left;}
+	#callout_text {font-size: 18px;}
+	#bird {width: 15px; margin-top: 25px;}
 }
 
 @media handheld, only screen and (max-width: 400px) {
