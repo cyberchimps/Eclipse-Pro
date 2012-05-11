@@ -110,8 +110,8 @@ color:#fff;
 	font-weight:400;
 	font-size: 13px;
 	padding-bottom: 10px;
-	margin-top: 65px;
-	padding-right:45px;
+	margin-top: 25px;
+	padding-right:34px;
 	text-align:right;
 }
 
@@ -925,6 +925,7 @@ figure {
     margin-left: 0px; }
      .meta ul li {display: inline; margin-right:15px;}
     .meta-mobile ul li {display: inline; margin-right:15px;}
+    .postformats {height: 20px; width: 20px;}
     #product_media.six.columns {margin-left: 0%; float: none;}
     #image_container.six.columns {float: none !important;}
     #text_container {margin-bottom: 20px;}

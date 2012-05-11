@@ -169,13 +169,10 @@ function response_mobile_post_byline_content() {
 		$format = get_post_format();
 	}?>
 	
-	<?php if ($post_formats != '0') : ?>
-		<div class="postformats hide-on-desktops"><!--begin format icon-->
-			<img src="<?php echo get_template_directory_uri(); ?>/images/formats/<?php echo $format ;?>.png" alt="formats" />
-		</div><!--end format-icon-->
-	<?php endif; ?>
-	<div class="meta-mobile hide-on-desktops">
-	<ul>
+		<div class="meta-mobile hide-on-desktops">
+	<ul><?php if ($post_formats != '0') : ?>
+		<li class="postformats hide-on-desktops"><img src="<?php echo get_template_directory_uri(); ?>/images/formats/<?php echo $format ;?>.png" alt="formats" />
+</li><?php endif; ?>
 		<li class="metadate"><?php if (($hidden[$themeslug.'_hide_date']) != '0'):?><?php printf( __( '', 'response' )); ?><a href="<?php the_permalink() ?>"><?php echo get_the_date(); ?></a><?php endif;?></li>
 		<li class="metacomments"><?php if (($hidden[$themeslug.'_hide_comments']) != '0'):?><?php comments_popup_link( __('No Comments', 'response' ), __('1 Comment', 'response' ), __('% Comments' , 'response' )); //need a filer here ?><?php endif;?></li>
 		<li class="metaauthor"><?php if (($hidden[$themeslug.'_hide_author']) != '0'):?><?php printf( __( '', 'response' )); ?><?php the_author_posts_link(); ?><?php endif;?></li>
