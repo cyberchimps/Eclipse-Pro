@@ -493,7 +493,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 .widget-container li {list-style: none;list-style-type: none;list-style-position: inside;}
 
-.textwidget {padding-top: 10px;font-size: 13px;}
+.textwidget {padding-top: 10px;font-size: 13px;color: #5b5b5b;}
 
 #sidebar, #sidebar_left, #sidebar_right {margin-top: 40px;}
 
