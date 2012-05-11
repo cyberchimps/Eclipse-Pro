@@ -67,14 +67,17 @@ jQuery(document).ready(function($) {
 	$('#nav_menu > li > .children').append('<span class="nav_arrow"/>');
 	$("#nav_menu ul").find(".children").prev().addClass("parent-menu");
 	
+	$('#nav_menu > li').children('.children').parent().addClass("dropdown_hover");
+	$('#nav_menu > li').children('.children').prev().append('<span class="main_nav_arrow"/>');
+	
 	$("#nav_menu > li").hover( function() {
-		$(this).children(".children").fadeIn("slow");
+		$(this).children(".children").show();
 	}, function () {
 		$(this).find(".children").hide();
 	});
 	
 	$("#nav_menu > li > .children li").hover( function() {
-		$(this).children(".children").slideDown("slow");
+		$(this).children(".children").slideDown("fast");
 	}, function () {
 	});
 });

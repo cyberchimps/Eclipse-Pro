@@ -243,17 +243,16 @@ a:hover {color: #aaa;}
 
 #nav #nav_menu > li > .children {
     display: none;
-	background-color: #FFF;
-    border: 1px solid #E6E6E6;
-    box-shadow: 0 1px 1px 0 #eee;
-    margin: 20px 0 0;
+	background-color: #232323;
+   	margin-top: 5px;
     padding: 8px 0 0;
     position: absolute;
     left: 0;
     top: 25px;
     float: left;
-    width: 180px;
+    width: 200px;
     z-index: 9999;
+    opacity: .75;
 }
 
 #nav #nav_menu > li > .children .nav_arrow {
@@ -263,6 +262,7 @@ a:hover {color: #aaa;}
     position: absolute;
     top: -10px;
     width: 14px;
+       display: none;
 }
 
 #nav #nav_menu > li > a {
