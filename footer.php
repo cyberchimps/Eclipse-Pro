@@ -36,8 +36,7 @@ global $options, $themeslug;
 	</div><!--end footer-->
 </div> 
 
-<?php if ($options->get($themeslug.'_disable_afterfooter') != "0"):?>
-
+<?php if ($options->get($themeslug.'_hide_link') == "1"):?>
 	<div id="afterfooter">
 		<div id="afterfooterwrap">
 		<div class="container">
