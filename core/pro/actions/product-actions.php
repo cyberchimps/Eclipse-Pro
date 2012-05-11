@@ -69,7 +69,7 @@ function response_product_element_content(){
 	if ($align == "0" OR $align =="key1") {
 		$output =   "
 					<div id='product_text' class='six columns'>
-						<span class='product_text_title'>$title</span> <br /> <span class='product_text_text'>$text </span><br /><br />
+						<div class='product_text_title'>$title</div> <br /> <span class='product_text_text'>$text </span><br /><br />
 							$button
 					</div>
 					<div id='product_media' class='six columns'>
