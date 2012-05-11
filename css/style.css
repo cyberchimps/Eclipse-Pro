@@ -23,6 +23,8 @@ a{outline:none}
 	width: 77.1%;
 }
 
+#sidebar.three.columns {width: 22%; margin-left: 4.2%}
+
 .pagination {
 clear:both;
 padding:20px 0;
