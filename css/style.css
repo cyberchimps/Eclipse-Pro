@@ -223,6 +223,10 @@ a:hover {color: #aaa;}
     width: 200px;
     z-index: 9999;
     opacity: .75;
+    border-radius: 0 3px 3px 3px;
+	-moz-border-radius: 0 3px 3px 3px;
+    -webkit-border-radius: 0 3px 3px 3px;
+    -khtml-border-radius: 0 3px 3px 3px;
 }
 
 #nav #nav_menu > li .main_nav_arrow {
@@ -266,7 +270,7 @@ a:hover {color: #aaa;}
     position: absolute;
     top: -10px;
     width: 14px;
-       display: none; f
+    display: none;
 }
 
 #nav #nav_menu > li > a {
@@ -279,6 +283,10 @@ a:hover {color: #aaa;}
     position: relative;
 }
 
+#nav #nav_menu > .current_page_item > a {
+	color: #FFF;
+}
+
 #nav #nav_menu > li:hover > a {
 	background: transparent;
 	padding: 5px;
@@ -288,9 +296,14 @@ a:hover {color: #aaa;}
 
 #nav #nav_menu > .dropdown_hover:hover > a {
 	background: #232323;
+	opacity: .75;
 	padding: 5px;
 	font-weight: 500;
 	color: #fff;
+	border-radius: 3px 3px 0 0;
+	-moz-border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    -khtml-border-radius: 3px 3px 0 0;
 }
 
 #nav #nav_menu li:hover > ul {
