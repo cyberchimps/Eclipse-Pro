@@ -159,7 +159,7 @@ a:hover {color: #aaa;}
 /* Header  */
 
 #header {
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid #3D3D3D;
 	min-height: 95px;
 	background: #000;
 }
@@ -169,6 +169,12 @@ a:hover {color: #aaa;}
 #logo {margin-bottom: 5px;margin-top:18px;line-height: 40px;}
 
 #banner {margin-bottom: 10px;}
+
+#subheader {
+	background:url(../images/footer.png);
+	padding-bottom: 5px;
+	border-bottom: 1px solid #3D3D3D;
+}
 
 /* Nav  */
 
