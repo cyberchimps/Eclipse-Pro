@@ -210,6 +210,7 @@ jQuery(function($) {
 		var show = $(this).val().split(",");
 		var map = {
 			response_page_slider: "subsection-featureslider",
+			response_post: "subsection-blogoptions",
 			response_callout_section: "subsection-calloutoptions",
 			response_portfolio_element: "subsection-portfoliooptions",
 			response_box_section: "subsection-boxoptions",
