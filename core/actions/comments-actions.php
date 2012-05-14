@@ -44,8 +44,10 @@ function response_comments_password_required() {
 */
 function response_comments_loop() { 
 	global $post; 
+	
 	$comments_args = array(
-		 'comment_notes_before' => ''
+		 'comment_notes_before' => '',
+		 'comment_notes_after' => ''
 	);?>
 <?php if ( have_comments() ) : ?>
 	<div class="comments_container">

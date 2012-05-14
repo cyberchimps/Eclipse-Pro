@@ -23,6 +23,8 @@ a{outline:none}
 	width: 76.1%;
 }
 
+.required {display: none;}
+
 #sidebar.three.columns {width: 22%; margin-left: 4.2%}
 
 .pagination {
