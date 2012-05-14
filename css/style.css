@@ -215,7 +215,7 @@ a:hover {color: #aaa;}
 
 #nav #nav_menu > li > .sub-menu {
     display: none;
-	background: rgba(35,35,35,0.85) none;
+	background: rgba(35,35,35,0.75) none;
    	margin-top: 5px;
     padding: 8px 10px 5px;
     position: absolute;
@@ -299,7 +299,7 @@ a:hover {color: #aaa;}
 
 #nav #nav_menu > .dropdown_hover:hover > a {
 	color: #b3b3b3;
-	background: rgba(35,35,35,0.85) none;
+	background: rgba(35,35,35,0.75) none;
 	padding: 5px;
 	font-weight: 500;
 	border-radius: 3px 3px 0 0;
