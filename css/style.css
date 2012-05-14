@@ -215,7 +215,7 @@ a:hover {color: #aaa;}
     display: none;
 	background-color: #232323;
    	margin-top: 5px;
-    padding: 8px 0 0;
+    padding: 8px 10px 5px;
     position: absolute;
     left: 0;
     top: 25px;
@@ -288,18 +288,18 @@ a:hover {color: #aaa;}
 }
 
 #nav #nav_menu > li:hover > a {
+	color: #FFF;
 	background: transparent;
 	padding: 5px;
 	font-weight: 500;
-	color: #fff;
 }
 
 #nav #nav_menu > .dropdown_hover:hover > a {
+	color: #FFF;
 	background: #232323;
 	opacity: .75;
 	padding: 5px;
 	font-weight: 500;
-	color: #fff;
 	border-radius: 3px 3px 0 0;
 	-moz-border-radius: 3px 3px 0 0;
     -webkit-border-radius: 3px 3px 0 0;
@@ -310,39 +310,33 @@ a:hover {color: #aaa;}
 	display: block;
 }
 
-#nav ul ul > a {
-	color: #555555;
+#nav ul ul a {
+	color: #5b5b5b;
+	font-size: 14px;
+	border-bottom: 1px solid #3D3D3D;
 }
-
 #nav ul ul a:hover {
-	background-color: #666666;
-    color: #FFFFFF;
+	color: #FFF;
 }
 
 #nav .parent-menu {
 	background: url(../images/down-menu-arrow.png) no-repeat right center;
 }
-
 #nav .parent-menu:hover {
-	background: #666666 url(../images/down-menu-arrow-hover.png) no-repeat right center;
+	background: url(../images/down-menu-arrow-hover.png) no-repeat right center;
 }
-
 #nav ul ul ul a {
 	background: url(../images/indent-menu-arrow.png) no-repeat left center;
 }
-
 #nav ul ul ul a:hover {
-	background: #666666 url(../images/indent-menu-arrow-hover.png) no-repeat left center;
+	background: url(../images/indent-menu-arrow-hover.png) no-repeat left center;
 }
-
 #nav ul ul ul a {
 	text-indent: 10px;
 }
-
 #nav ul ul ul ul a {
 	text-indent: 20px;
 }
-
 #nav ul ul ul ul ul a {
 	text-indent: 30px;
 }
