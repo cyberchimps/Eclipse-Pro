@@ -996,3 +996,20 @@ figure {
 	
 	#nav {right: 140px; width: 100px;}
 }
+
+/* style for recent_post and popular_post widget  */
+
+.widget-post {
+	clear: both;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.widget-img {
+	border: 0px !important;
+}
+
+.widget-main-div {
+	margin-top: 40px;
+	margin-bottom : 20px;
+}
