@@ -21,7 +21,7 @@
 #product_text.six.columns {}
 #product_media.six.columns {margin-left: 0%;}
 .product_text_title {font-size: 24px;}
-.product_text_text {font-size: 14px;color:#9a9a9a;}
+.product_text_text {font-size: 14px;color:#fff; line-height: 1.5;}
 
 #product_media {padding: 20px 0 20px 0;}
 
