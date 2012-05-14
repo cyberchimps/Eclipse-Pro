@@ -471,6 +471,8 @@ a.more-link:hover{
 	color: #eee;
 }
 
+.more-link p a {border-bottom: none !important;}
+
 /* Posts Navigation */
 
 .next-posts {float: left;padding: 5px 0 5px 0; }
