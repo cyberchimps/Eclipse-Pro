@@ -213,7 +213,7 @@ a:hover {color: #aaa;}
 
 #nav #nav_menu > li > .sub-menu {
     display: none;
-	background-color: #232323;
+	background: rgba(35,35,35,0.75) none;
    	margin-top: 5px;
     padding: 8px 10px 5px;
     position: absolute;
@@ -222,7 +222,7 @@ a:hover {color: #aaa;}
     float: left;
     width: 200px;
     z-index: 9999;
-    opacity: .75;
+
     border-radius: 0 3px 3px 3px;
 	-moz-border-radius: 0 3px 3px 3px;
     -webkit-border-radius: 0 3px 3px 3px;
