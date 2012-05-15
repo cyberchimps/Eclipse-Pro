@@ -82,6 +82,7 @@ $options
 		->subsection_end()
 			->open_outersection()
 				->checkbox($themeslug."_lazy_load", "Lazy Load Image Effect", array('default' => true))
+				->checkbox($themeslug."_responsive_video", "Responsive Videos")
 			->close_outersection()
 			->open_outersection()
 				->textarea($themeslug."_css_options", "Custom CSS")
