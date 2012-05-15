@@ -300,7 +300,7 @@ a:hover {color: #aaa;}
 #nav #nav_menu > .dropdown_hover:hover > a {
 	color: #b3b3b3;
 	background: rgba(35,35,35,0.75) none;
-	padding: 5px;
+	padding: 5px 0px 5px 10px;
 	font-weight: 500;
 	border-radius: 3px 3px 0 0;
 	-moz-border-radius: 3px 3px 0 0;
