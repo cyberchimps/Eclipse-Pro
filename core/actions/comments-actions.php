@@ -43,7 +43,12 @@ function response_comments_password_required() {
 * @since 1.0
 */
 function response_comments_loop() { 
-	global $post; ?>
+	global $post; 
+	
+	$comments_args = array(
+		 'comment_notes_before' => '',
+		 'comment_notes_after' => ''
+	);?>
 <?php if ( have_comments() ) : ?>
 	<div class="comments_container">
 		<h2 class="commentsh2"><?php comments_number( __('No Responses', 'response' ), __( 'One Response', 'response' ), __('% Responses', 'response' ));?></h2>
@@ -89,7 +94,7 @@ function response_comments_loop() {
 		<p><?php printf (__( 'You must be', 'response' )); ?><a href="<?php echo wp_login_url( get_permalink() ); ?>"> <?php printf( __( 'logged in', 'response' ), '</a>', __('to post a comment.', 'response' )); ?></p>
 	<?php else : ?>
 	
-	<?php comment_form(); ?>
+	<?php comment_form($comments_args); ?>
 	
 		<?php endif; ?>
 		

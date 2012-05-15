@@ -23,6 +23,8 @@ a{outline:none}
 	width: 76.1%;
 }
 
+.required {display: none;}
+
 #sidebar.three.columns {width: 22%; margin-left: 4.2%}
 
 .pagination {
@@ -213,7 +215,7 @@ a:hover {color: #aaa;}
 
 #nav #nav_menu > li > .sub-menu {
     display: none;
-	background-color: #232323;
+	background: rgba(35,35,35,0.75) none;
    	margin-top: 5px;
     padding: 8px 10px 5px;
     position: absolute;
@@ -222,7 +224,6 @@ a:hover {color: #aaa;}
     float: left;
     width: 200px;
     z-index: 9999;
-    opacity: .75;
     border-radius: 0 3px 3px 3px;
 	-moz-border-radius: 0 3px 3px 3px;
     -webkit-border-radius: 0 3px 3px 3px;
@@ -250,18 +251,20 @@ a:hover {color: #aaa;}
 }
 
 #nav #nav_menu > li > .children {
-    display: none;
-	background-color: #232323;
+      display: none;
+	background: rgba(35,35,35,0.85) none;
    	margin-top: 5px;
-    padding: 8px 0 0;
+    padding: 8px 10px 5px;
     position: absolute;
     left: 0;
     top: 25px;
     float: left;
     width: 200px;
     z-index: 9999;
-    opacity: .75;
-}
+    border-radius: 0 3px 3px 3px;
+	-moz-border-radius: 0 3px 3px 3px;
+    -webkit-border-radius: 0 3px 3px 3px;
+    -khtml-border-radius: 0 3px 3px 3px;}
 
 #nav #nav_menu > li > .children .nav_arrow {
     background: url(../images/nav_arrow.png);
@@ -295,9 +298,8 @@ a:hover {color: #aaa;}
 }
 
 #nav #nav_menu > .dropdown_hover:hover > a {
-	color: #FFF;
-	background: #232323;
-	opacity: .75;
+	color: #b3b3b3;
+	background: rgba(35,35,35,0.75) none;
 	padding: 5px;
 	font-weight: 500;
 	border-radius: 3px 3px 0 0;
@@ -311,7 +313,7 @@ a:hover {color: #aaa;}
 }
 
 #nav ul ul a {
-	color: #5b5b5b;
+	color: #B3B3B3;
 	font-size: 14px;
 	border-bottom: 1px solid #3D3D3D;
 }
@@ -470,6 +472,8 @@ a.more-link:hover{
 .more-link a:hover{
 	color: #eee;
 }
+
+.more-link p a {border-bottom: none !important;}
 
 /* Posts Navigation */
 
@@ -967,6 +971,9 @@ figure {
 	#recent-posts-container.three.columns:last-child {float: left;}
 	#callout_text {font-size: 18px;}
 	#bird {width: 15px; margin-top: 25px;}
+	#sidebar.three.columns {margin-left:0;}
+	#sidebar.three.columns:last-child {float: left;}
+	
 }
 
 @media handheld, only screen and (max-width: 400px) {
