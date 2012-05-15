@@ -338,13 +338,13 @@ function portfolio_edit_columns($portfolio_columns){
     return $portfolio_columns;
 }
 function portfolio_columns_display($portfolio_columns, $post_id){
-	global $post;
+	global $themeslug, $post;
 	$cat = get_the_terms($post->ID, 'portfolio_categories');
 	
     switch ($portfolio_columns)
     {
         case "image":
-        	$images = get_post_meta($post->ID, 'portfolio_image' , true);
+        	$images = get_post_meta($post->ID, $themeslug.'portfolio_image' , true);
         	echo '<img src="';
         	echo $images;
         	echo '"style="height: 50px; width: 50px;">';
@@ -382,9 +382,9 @@ function slider_edit_columns($portfolio_columns){
     return $portfolio_columns;
 }
 function slides_columns_display($portfolio_columns, $post_id){
-	global $post;
+	global $themeslug, $post;
 	$cat = get_the_terms($post->ID, 'slide_categories');
-	$images = get_post_meta($post->ID, 'slider_image' , true);
+	$images = get_post_meta($post->ID, $themeslug.'_slider_image' , true);
 	
     switch ($portfolio_columns)
     {
@@ -428,9 +428,9 @@ function carousel_edit_columns($portfolio_columns){
     return $portfolio_columns;
 }
 function carousel_columns_display($portfolio_columns, $post_id){
-	global $post;
+	global $themeslug, $post;
 	$cat = get_the_terms($post->ID, 'carousel_categories');
-	$images = get_post_meta($post->ID, 'post_image' , true);
+	$images = get_post_meta($post->ID, $themeslug.'_post_image' , true);
 	
     switch ($portfolio_columns)
     {
