@@ -148,7 +148,7 @@ $options
 			->text($themeslug."_slider_height", "Slider height", array('default' => '430'))
 			->text($themeslug."_slider_delay", "Slider Delay", array('default' => '3500'))
 			->select($themeslug."_slider_animation", "Sidebar Animation", array( 'options' => array("key1" => "Horizontal-Push", "key2" => "Fade", "key3" => "Horizontal-Slide", "key4" => "Vertical-Slide")))
-			->select($themeslug."_caption_style", "Caption Style", array( 'options' => array("key4" => "None (default)", "key2" => "Right", "key3" => "Left", "key4" => "Bottom")))	
+			->select($themeslug."_caption_style", "Caption Style", array( 'options' => array("key4" => "None (default)", "key2" => "Right", "key3" => "Left", "key1" => "Bottom")))	
 			->select($themeslug."_caption_animation", "Caption Animation", array( 'options' => array("key1" => "Fade", "key2" => "Slide Open", "key3" => "None")))
 			->select($themeslug."_slider_nav", "Slider Navigation", array( 'options' => array("key1" => "Dots", "key3" => "none")))
 			->checkbox($themeslug."_hide_slider_arrows", "Slider Arrows", array('default' => true))
