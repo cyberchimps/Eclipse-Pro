@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
 
 	// show by default
 	
-	$("#subsection-Custom-Slide-Options > h4").click();
+	$("#subsection-Feature-Slide-Options > h4").click();
 	$("#subsection-Featured-Post-Carousel-Options > h4").click();
 	$("#subsection-Slider-Options > h4").click();
 	$("#subsection-Portfolio-Element > h4").click();
@@ -56,7 +56,7 @@ jQuery(document).ready(function($) {
 		product_element: "subsection-Product-Options",
 		twitterbar_section: "subsection-Twitter-Options"
 	};
-	$("#page_section_order").change(function(){
+	$("#ec_page_section_order").change(function(){
 		var array = $(this).val().split(",");
 		$.each(page_subsection_map, function(key, value) {
 			if($.inArray(key, array) != -1) {
