@@ -48,25 +48,25 @@ function response_box_section_content() {
 			<img src="<?php echo $root ; ?>/images/icons/widget.png" alt="slider" class="alignleft" />
 			<h2 class="box-widget-title">Responsive Design</h2>	
 				<p class="boxtext">
-					Response Pro’s Modern Responsive Design automatically adjusts to any mobile device including the iPhone, iPad, and Android devices.
+					With Responsive Design, and Eclipse Pro your website will magically adjust to mobile devices such as the iPhone, iPad, and Android.
 				</p>
 			</div><!--end box1-->
 		<?php endif; ?>
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box 2") ) : ?>
 		<div id="box2" class="three columns">
 			<img src="<?php echo $root ; ?>/images/icons/widget.png" alt="slider" class="alignleft" />
-			<h2 class="box-widget-title">Content Feature Slider </h2>
+			<h2 class="box-widget-title">Drag and Drop Elements</h2>
 				<p class="boxtext">
-					response Pro comes with a SEO and iOS friendly Responsive Content Feature Slider that displays content professionally and beautifully on any device.
+					Eclipse Pro includes a variety of Drag and Drop Page Elements that make mananaging content easy on a per-page basis.
 				</p>
 		</div><!--end box2-->
 		<?php endif; ?>
 	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box 3") ) : ?>
 		<div id="box3" class="three columns">
 			<img src="<?php echo $root ; ?>/images/icons/widget.png" alt="slider" class="alignleft" />
-			<h2 class="box-widget-title">Drag and Drop Elements</h2>
+			<h2 class="box-widget-title">Portfolio Element</h2>
 				<p class="boxtext">
-					response Pro includes a variety of Drag and Drop Page Elements make mananaging content easy and can be used on a per-page basis.
+					Eclipse Pro includes a Portfolio Drag and Drop Element that you can use on any page to beautifully display photos, screenshots, or portfolio items.
 				</p>
 		</div><!--end box3-->
 		<?php endif; ?>
@@ -75,7 +75,7 @@ function response_box_section_content() {
 			<img src="<?php echo $root ; ?>/images/icons/widget.png" alt="slider" class="alignleft" />
 			<h2 class="box-widget-title">Excellent Support</h2>
 				<p class="boxtext">
-					response Pro is built for any response, and offers intuitive theme options. If you do run into trouble we provide a <a href="http://cyberchimps.com/forum/pro/">Support Forum</a>, and precise <a title="response Pro Docs" href="http://cyberchimps.com/responsepro/docs/">Documentation</a>.
+					Eclipse Pro provides intuitive theme options that function just like using an iPhone. If you do run into trouble we provide a <a href="http://cyberchimps.com/forum/pro/">Support Forum</a>, and precise <a title="Eclipse Pro Docs" href="http://cyberchimps.com/eclipsepro/docs/">Documentation</a>.
 				</p>
 		</div><!--end box3-->
 		<?php endif; ?>
