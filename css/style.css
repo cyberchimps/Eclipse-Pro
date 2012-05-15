@@ -971,6 +971,9 @@ figure {
 	#recent-posts-container.three.columns:last-child {float: left;}
 	#callout_text {font-size: 18px;}
 	#bird {width: 15px; margin-top: 25px;}
+	#sidebar.three.columns {margin-left:0;}
+	#sidebar.three.columns:last-child {float: left;}
+	
 }
 
 @media handheld, only screen and (max-width: 400px) {
