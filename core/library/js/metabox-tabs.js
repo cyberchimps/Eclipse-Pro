@@ -119,18 +119,18 @@ jQuery(document).ready(function($) {
      e.preventDefault();
     });
 
-    $('#checkbox-extra_callout_options').change(function(){
-	    var items = $(" tr.custom_callout_text_color, tr.custom_callout_link_color");
+    $('#checkbox-ec_extra_callout_options').change(function(){
+	    var items = $(" tr.ec_custom_callout_text_color, tr.ec_custom_callout_link_color");
 		if($(this).is(':checked')) {
 			items.show();
 		} else {
 			items.hide();
 		}
-		$("#checkbox-disable_callout_button").trigger("change");
+		$("#checkbox-ec_disable_callout_button").trigger("change");
     }).trigger('change');
 
-    $('#checkbox-disable_callout_button').change(function(){
-	    var items = $("tr.callout_button_text, tr.callout_url");
+    $('#checkbox-ec_disable_callout_button').change(function(){
+	    var items = $("tr.ec_callout_button_text, tr.ec_callout_url");
 		if($(this).is(':checked')) {
 			items.show();
 		} else {
@@ -138,32 +138,32 @@ jQuery(document).ready(function($) {
 		}
     }).trigger('change');
     
-    $('#checkbox-portfolio_title_toggle').change(function(){
-	    var items = $("tr.portfolio_title,");
+    $('#checkbox-ec_portfolio_title_toggle').change(function(){
+	    var items = $("tr.ec_portfolio_title,");
 		if($(this).is(':checked')) {
 			items.show();
 		} else {
 			items.hide();
 		}
 	 }).trigger('change');
-	$('#checkbox-box_title_toggle').change(function(){
-	    var items = $("tr.box_title,");
+	$('#checkbox-ec_box_title_toggle').change(function(){
+	    var items = $("tr.ec_box_title,");
 		if($(this).is(':checked')) {
 			items.show();
 		} else {
 			items.hide();
 		}
     }).trigger('change');
-    $('#checkbox-recent_posts_title_toggle').change(function(){
-	    var items = $("tr.recent_posts_title,");
+    $('#checkbox-ec_recent_posts_title_toggle').change(function(){
+	    var items = $("tr.ec_recent_posts_title,");
 		if($(this).is(':checked')) {
 			items.show();
 		} else {
 			items.hide();
 		}
     }).trigger('change');
-        $('#checkbox-product_link_toggle').change(function(){
-	    var items = $("tr.product_link_url, tr.product_link_text");
+        $('#checkbox-ec_product_link_toggle').change(function(){
+	    var items = $("tr.ec_product_link_url, tr.ec_product_link_text");
 		if($(this).is(':checked')) {
 			items.show();
 		} else {
