@@ -343,6 +343,7 @@ li.ui-state-default  {
 	padding-top: 10px; padding-bottom: 10px;
 }
 
+#portfolio_wrap {}
 
 #portfolio_wrap.three.columns:last-child, #portfolio_wrap.four.columns:last-child, #portfolio_wrap.six.columns:last-child {float:left;}
 
@@ -363,8 +364,7 @@ li.ui-state-default  {
 #gallery ul li { display: inline; }
 
 #gallery ul img {
-
-	margin-bottom: 44px;
+border: 2px solid #3D3D3D;
 }
 	
 #gallery ul a:hover img {
