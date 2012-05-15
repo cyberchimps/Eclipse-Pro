@@ -34,8 +34,8 @@ function response_callout_section_content() {
 
 	
 	if (is_page()) {
-		$tcolor = get_post_meta($post->ID, 'custom_callout_text_color' , true);
-		$text = get_post_meta($post->ID, 'callout_text' , true);
+		$tcolor = get_post_meta($post->ID, $themeslug.'_custom_callout_text_color' , true);
+		$text = get_post_meta($post->ID, $themeslug.'_callout_text' , true);
 	}
 	
 	else {

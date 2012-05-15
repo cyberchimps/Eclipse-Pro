@@ -26,10 +26,10 @@ function response_portfolio_element_content() {
 	$image = get_post_meta($post->ID, 'portfolio_image' , true);
 
 	if (is_page()){
-		$category = get_post_meta($post->ID, 'portfolio_category' , true);
-		$num = get_post_meta($post->ID, 'portfolio_row_number' , true);
-		$title_enable = get_post_meta($post->ID, 'portfolio_title_toggle' , true);
-		$title = get_post_meta($post->ID, 'portfolio_title' , true);;
+		$category = get_post_meta($post->ID, $themeslug.'_portfolio_category' , true);
+		$num = get_post_meta($post->ID, $themeslug.'_portfolio_row_number' , true);
+		$title_enable = get_post_meta($post->ID, $themeslug.'_portfolio_title_toggle' , true);
+		$title = get_post_meta($post->ID, $themeslug.'_portfolio_title' , true);;
 	} else {
 		$category = $options->get($themeslug.'_portfolio_category');
 		$num = $options->get($themeslug.'_portfolio_number');

@@ -29,8 +29,8 @@ function response_box_section_content() {
 	global $options, $themeslug, $post, $root; //call globals
 	
 	if (is_page()){
-		$title = get_post_meta($post->ID, 'box_title' , true);;
-		$toggle = get_post_meta($post->ID, 'box_title_toggle' , true);;
+		$title = get_post_meta($post->ID, $themeslug.'_box_title' , true);;
+		$toggle = get_post_meta($post->ID, $themeslug.'_box_title_toggle' , true);;
 	} else {
 		$title = $options->get($themeslug.'_box_title');
 		$toggle = $options->get($themeslug.'_box_title_toggle');
