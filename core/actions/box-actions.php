@@ -48,7 +48,7 @@ function response_box_section_content() {
 			<img src="<?php echo $root ; ?>/images/icons/widget.png" alt="slider" class="alignleft" />
 			<h2 class="box-widget-title">Responsive Design</h2>	
 				<p class="boxtext">
-					With Responsive Design, and Eclipse Pro your website will magically adjust to mobile devices such as the iPhone, iPad, and Android.
+					Eclipse Pro will magically adjust to mobile devices such as the iPhone, and Android.
 				</p>
 			</div><!--end box1-->
 		<?php endif; ?>
@@ -57,7 +57,7 @@ function response_box_section_content() {
 			<img src="<?php echo $root ; ?>/images/icons/widget.png" alt="slider" class="alignleft" />
 			<h2 class="box-widget-title">Drag and Drop Elements</h2>
 				<p class="boxtext">
-					Eclipse Pro includes a variety of Drag and Drop Page Elements that make mananaging content easy on a per-page basis.
+					Drag and Drop Elements make managing content easy on a per-page basis.
 				</p>
 		</div><!--end box2-->
 		<?php endif; ?>
@@ -66,7 +66,7 @@ function response_box_section_content() {
 			<img src="<?php echo $root ; ?>/images/icons/widget.png" alt="slider" class="alignleft" />
 			<h2 class="box-widget-title">Portfolio Element</h2>
 				<p class="boxtext">
-					Eclipse Pro includes a Portfolio Drag and Drop Element that you can use on any page to beautifully display photos, screenshots, or portfolio items.
+					The Portfolio Element beautifully display photos, screenshots, or portfolio items.
 				</p>
 		</div><!--end box3-->
 		<?php endif; ?>
@@ -75,7 +75,7 @@ function response_box_section_content() {
 			<img src="<?php echo $root ; ?>/images/icons/widget.png" alt="slider" class="alignleft" />
 			<h2 class="box-widget-title">Excellent Support</h2>
 				<p class="boxtext">
-					Eclipse Pro provides intuitive theme options that function just like using an iPhone. If you do run into trouble we provide a <a href="http://cyberchimps.com/forum/pro/">Support Forum</a>, and precise <a title="Eclipse Pro Docs" href="http://cyberchimps.com/eclipsepro/docs/">Documentation</a>.
+					Need Help? Read the <a title="Eclipse Pro Docs" href="http://cyberchimps.com/eclipsepro/docs/">Docs</a>, visit the <a href="http://cyberchimps.com/forum/pro/">Support Forum</a>.
 				</p>
 		</div><!--end box3-->
 		<?php endif; ?>
