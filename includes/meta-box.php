@@ -72,11 +72,10 @@ function initialize_the_meta_boxes() {
 	$mb = new Chimps_Metabox('slides', 'Feature Slides', array('pages' => array($themeslug.'_custom_slides')));
 	$mb
 		->tab("Feature Slide Options")
-			->text($themeslug.'_slider_caption', 'Custom Slide Caption', '')
-			->text($themeslug.'_slider_url', 'Custom Slide Link', '')
-			->single_image($themeslug.'_slider_image', 'Custom Slide Image', '')
+			->text($themeslug.'_slider_caption', 'Slide Caption', '')
+			->text($themeslug.'_slider_url', 'Slide Link', '')
+			->single_image($themeslug.'_slider_image', 'Slide Image', '')
 			->checkbox($themeslug.'_slider_hidetitle', 'Slide Title Bar', '', array('std' => 'on'))
-			->single_image($themeslug.'_slider_custom_thumb', 'Custom Thumbnail', '')
 			->sliderhelp('', 'Need Help?', '')
 			->reorder('reorder_id', 'Reorder Name', 'Reorder Desc' )
 		->end();
@@ -108,7 +107,7 @@ function initialize_the_meta_boxes() {
 			->text($themeslug.'_slider_height', 'Slider Height', '', array('std' => '430'))
 			->text($themeslug.'_slider_delay', 'Slider Delay Time (MS)', '', array('std' => '3500'))
 			->select($themeslug.'_page_slider_animation', 'Slider Animation Type', '', array('options' => array('Horizontal-Push (default)', 'Fade', 'Horizontal-Slide', 'Vertical-Slide')) )
-			->select($themeslug.'_page_slider_navigation_style', 'Slider Navigation Style', '', array('options' => array('Dots (default)', 'Thumbnails', 'None')) )
+			->select($themeslug.'_page_slider_navigation_style', 'Slider Navigation Style', '', array('options' => array('Dots (default)', 'None')) )
 			->select($themeslug.'_page_slider_caption_style', 'Slider Caption Style', '', array('options' => array('None (default)', 'Bottom', 'Left', 'Right')) )
 			->checkbox($themeslug.'_hide_arrows', 'Navigation Arrows', '', array('std' => 'on'))
 			->checkbox($themeslug.'_enable_wordthumb', 'WordThumb Image Resizing', '', array('std' => 'off'))
