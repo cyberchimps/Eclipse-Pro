@@ -1,6 +1,6 @@
 <?php
 /**
-* Footer actions used by response Pro
+* Footer actions used by Response Pro
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012

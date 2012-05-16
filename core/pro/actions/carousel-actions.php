@@ -1,6 +1,6 @@
 <?php
 /**
-* Carousel section actions used by response Pro
+* Carousel section actions used by Response Pro
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
