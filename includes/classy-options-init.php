@@ -204,8 +204,6 @@ $options
 			->checkbox($themeslug."_single_show_featured_images", "Featured Images")
 			->checkbox($themeslug."_single_post_formats", "Post Format Icons",  array('default' => true))
 			->multicheck($themeslug."_single_hide_byline", "Post Byline Elements", array( 'options' => array($themeslug."_hide_author" => "Author" , $themeslug."_hide_categories" => "Categories", $themeslug."_hide_date" => "Date", $themeslug."_hide_comments" => "Comments",  $themeslug."_hide_tags" => "Tags"), 'default' => array( $themeslug."_hide_tags" => true, $themeslug."_hide_author" => true, $themeslug."_hide_date" => true, $themeslug."_hide_comments" => true, $themeslug."_hide_categories" => true ) ) )
-			->checkbox($themeslug."_single_show_fb_like", "Facebook Like Button")
-			->checkbox($themeslug."_single_show_gplus", "Google Plus One Button")
 			->checkbox($themeslug."_post_pagination", "Post Pagination Links",  array('default' => true))
 		->subsection_end()	
 		->subsection("Archive")
@@ -214,9 +212,6 @@ $options
 			->checkbox($themeslug."_archive_show_excerpts", "Post Excerpts", array('default' => true))
 			->checkbox($themeslug."_archive_post_formats", "Post Format Icons",  array('default' => true))
 			->multicheck($themeslug."_archive_hide_byline", "Post Byline Elements", array( 'options' => array($themeslug."_hide_author" => "Author" , $themeslug."_hide_categories" => "Categories", $themeslug."_hide_date" => "Date", $themeslug."_hide_comments" => "Comments", $themeslug."_hide_tags" => "Tags"), 'default' => array( $themeslug."_hide_tags" => true, $themeslug."_hide_author" => true, $themeslug."_hide_date" => true, $themeslug."_hide_comments" => true, $themeslug."_hide_categories" => true ) ) )
-			->checkbox($themeslug."_archive_show_fb_like", "Facebook Like Button")
-			->checkbox($themeslug."_archive_show_gplus", "Google Plus One Button")
-
 			->subsection_end()
 		->subsection("Search")
 			->images($themeslug."_search_sidebar", "Sidebar Options", array( 'options' => array("none" => TEMPLATE_URL . '/images/options/none.png', "left" => TEMPLATE_URL . '/images/options/left.png',  "right" => TEMPLATE_URL . '/images/options/right.png'), 'default' => 'right'))
