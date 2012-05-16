@@ -67,7 +67,7 @@ function response_portfolio_element_content() {
 			$class = ( $counter % $numb == 1 ) ? 'first-row' : '';
 
 	    	/* Post-specific variables */	
-	    	$image = get_post_meta($post->ID, 'portfolio_image' , true);
+	    	$image = get_post_meta($post->ID, $themeslug.'_portfolio_image' , true);
 	    	$title = get_the_title() ;	    	
 
 	     	/* Markup for portfolio */

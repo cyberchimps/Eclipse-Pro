@@ -339,11 +339,11 @@ li.ui-state-default  {
  
 #gallery {
 	margin-top: 20px;
-	margin-bottom:20px;
+	margin-bottom: -25px;
 	padding-top: 10px; padding-bottom: 10px;
 }
 
-#portfolio_wrap {}
+#portfolio_wrap { margin-bottom: 45px;}
 
 #portfolio_wrap.three.columns:last-child, #portfolio_wrap.four.columns:last-child, #portfolio_wrap.six.columns:last-child {float:left;}
 
@@ -365,6 +365,7 @@ li.ui-state-default  {
 
 #gallery ul img {
 border: 2px solid #3D3D3D;
+
 }
 	
 #gallery ul a:hover img {
