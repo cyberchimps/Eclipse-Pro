@@ -93,7 +93,7 @@ function response_product_element_content(){
 
 <div id="productbg">
 	<div class="container">
-		<div class="row">
+		<div id="product" class="row">
 			<?php echo $output; ?>
 		</div>
 	</div>
