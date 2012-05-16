@@ -1,6 +1,8 @@
 /*============================*/
 /*===== Recent Posts Styles ======*/
 /*============================*/
+
+#recent-posts-container {padding-bottom: 45px;border-bottom: 2px solid #3d3d3d;}
 .recent-posts-image {margin-top:8px; margin-bottom: 8px;}
 #recent-posts-container.three.columns {width: 22.4%; margin-left: 3.4%; margin-right:0%;}
 #recent-posts-container.columns:first-child {margin-left: 0%;}
@@ -36,7 +38,8 @@
 /* Page Elements */
 
 div.orbit-wrapper {
-	margin-top: 25px;	
+	margin-top: 25px;
+	padding-bottom: 45px;border-bottom: 2px solid #3d3d3d;	
 }
 
 .slider_content {
@@ -157,7 +160,7 @@ div.orbit-wrapper {
 	font-size: 25px;
 	font-weight: 300;
 	color: #fff;
-	padding: 25px 0px 45px 0px;
+	padding: 45px 0px 45px 0px;
 	text-align: center;
 	border-bottom: 2px solid #3d3d3d;
 	line-height: 36px;
@@ -338,10 +341,11 @@ li.ui-state-default  {
  */
  
 #gallery {
-	margin-top: 20px;
-	margin-bottom: -25px;
-	padding-top: 10px; padding-bottom: 10px;
+	margin-top: 45px;
+
 }
+
+#gallery {border-bottom: 2px solid #3d3d3d;}
 
 #portfolio_wrap { margin-bottom: 45px;}
 
