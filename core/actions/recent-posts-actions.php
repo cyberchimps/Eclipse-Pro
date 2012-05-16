@@ -32,7 +32,7 @@ function response_recent_posts_element_content() {
 	
 ?>
 <div class="container">
-<div class="row">
+<div id="recent_posts" class="row">
 	<?php if ($toggle == '1' OR $toggle == 'on'): ?>
 		<h4 class="recent_posts_element_title"><?php echo $title; ?></h4>
 	<?php endif; ?>

@@ -2,7 +2,7 @@
 /*===== Recent Posts Styles ======*/
 /*============================*/
 
-#recent-posts-container {padding-bottom: 45px;border-bottom: 2px solid #3d3d3d;}
+#recent_posts {padding-bottom: 45px;border-bottom: 2px solid #3d3d3d;}
 .recent-posts-image {margin-top:8px; margin-bottom: 8px;}
 #recent-posts-container.three.columns {width: 22.4%; margin-left: 3.4%; margin-right:0%;}
 #recent-posts-container.columns:first-child {margin-left: 0%;}
@@ -11,7 +11,7 @@
 #recent-posts-container a {color: white;}
 #recent-posts-container a:hover {color: #DDD;}
 
-.recent_posts_element_title {color:white; margin-top: 10px; margin-bottom:15px; font-weight: bold;}
+.recent_posts_element_title {color:white; margin-top: 45px; margin-bottom:15px; font-weight: bold;}
 .recent_posts_post_title {font-size: 15px;color: #fff;}
 .recent_posts_byline {color:#646464;font-size: 11px;padding-bottom: 10px;}
 
@@ -38,7 +38,7 @@
 /* Page Elements */
 
 div.orbit-wrapper {
-	margin-top: 25px;
+	margin-top: 45px;
 	padding-bottom: 45px;border-bottom: 2px solid #3d3d3d;	
 }
 
@@ -131,8 +131,8 @@ div.orbit-wrapper {
 	margin: auto;
 	background: url(../images/twitterbarbg.png);	
 	min-height: 42px;
-	margin-top: 15px;
-	margin-bottom: 35px;
+	margin-top: 25px;
+	margin-bottom: 45px;
 }
 
 #bird {

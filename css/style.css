@@ -555,6 +555,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 #footer {
 	background:url(../images/footer.png);
+	margin-top: 45px;
 }
 
 .footer-widgets {

@@ -595,7 +595,7 @@
 #orbitDemo img, #orbitDemo div { display: none; }
 #orbitDemo.orbit img, #orbitDemo.orbit div { display: block;}
 
-.slider-nav {background: url(../../images/orbit/shadow.png) no-repeat; height: 30px; margin-top: -27px; margin-left: -10px;}
+.slider-nav {background: url(../../images/orbit/shadow.png) no-repeat; height: 30px; margin-top: -17px; margin-left: -10px;}
 
 @media handheld, only screen and (max-width: 767px) {
 
@@ -621,7 +621,7 @@ div.orbit {
     overflow: hidden }
     
 div.orbit.with-bullets {
-    margin-bottom: 10px;
+
 }
 
 div.orbit>img {
