@@ -53,6 +53,7 @@ function response_twitterbar_section_content() {
 function response_display_latest_tweets( $username, $show_replies = 0 ) {
 	$latest_tweet = response_get_latest_tweets( $username, $show_replies );
 ?>
+<div class="container">
 	<div class="row">
 		<div id="twitterbar" class="twelve columns"><!--id="twitterbar"-->
 			<div id="bird">
@@ -73,6 +74,7 @@ function response_display_latest_tweets( $username, $show_replies = 0 ) {
 		</div><!--end twitterbar-->
 		<hr />
 	</div>	
+</div>
 <?php
 }
 
