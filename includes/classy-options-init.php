@@ -126,7 +126,7 @@ $options
 			->textarea($themeslug."_ga_code", "Google Analytics Code")
 		->subsection_end()
 		->section("Front Page")
-		->info("<p>The front-page template has been removed in favor of being able to use either a traditional static page or the blog page as the homepage.<br/><br/> For more information  visit our updated documentation page <a href='http://cyberchimps.com/question/using-the-front-page-and-posts-page-in-response-pro/' target='_blank'>here.</a></p>")		
+		->info("<p>The front-page template has been removed in favor of being able to use either a traditional static page or the blog page as the homepage.<br/><br/> For more information  visit our documentation page <a href='http://cyberchimps.com/question/using-the-front-page-and-posts-page-in-eclipse-pro/' target='_blank'>here.</a></p>")		
 		->section("Blog")
 		->open_outersection()
 			->section_order($themeslug."_blog_section_order", "Drag & Drop Elements", array('options' => array("response_post" => "Post Page", "response_page_slider" => "Feature Slider","response_callout_section" => "Callout Section", "response_twitterbar_section" => "Twitter Bar", "response_index_carousel_section" => "Carousel", "response_portfolio_element" => "Portfolio", "response_product_element" => "Product","response_box_section" => "Boxes", "response_recent_posts_element" => "Recent Posts"), "default" => 'response_post'))
