@@ -6,6 +6,7 @@ Eclipse Pro Changelog
 -Sidebar CSS tweak for Firefox. 
 -Removed limit on number of images allowed in Portfolio Element.
 -Style tweaks for Recent Posts and Popular Posts widgets. 
+-Removed notice about Front Page template. 
 
 1.0 (05-16-12)
 -Initial release.
