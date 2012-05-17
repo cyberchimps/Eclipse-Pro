@@ -1,6 +1,6 @@
 <?php
 /**
-* Product element actions used by response Pro
+* Product element actions used by Response Pro
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -11,7 +11,7 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package response Pro
+* @package Response Pro
 * @since 1.0
 */
 
@@ -21,15 +21,15 @@ function response_product_element_content(){
 	global $options, $themeslug, $root, $post;
 	
 	if (is_page()) {
-		$title = get_post_meta($post->ID, 'product_title' , true);
-		$text  = get_post_meta($post->ID, 'product_text' , true);
-		$type  = get_post_meta($post->ID, 'product_type' , true);
-		$image = get_post_meta($post->ID, 'product_image' , true);
-		$video = get_post_meta($post->ID, 'product_video' , true);	
-		$align = get_post_meta($post->ID, 'product_text_align' , true);
-		$link_enable  = get_post_meta($post->ID, 'product_link_toggle' , true);
-		$link  = get_post_meta($post->ID, 'product_link_url' , true);
-		$link_text  = get_post_meta($post->ID, 'product_link_text' , true);
+		$title = get_post_meta($post->ID, $themeslug.'_product_title' , true);
+		$text  = get_post_meta($post->ID, $themeslug.'_product_text' , true);
+		$type  = get_post_meta($post->ID, $themeslug.'_product_type' , true);
+		$image = get_post_meta($post->ID, $themeslug.'_product_image' , true);
+		$video = get_post_meta($post->ID, $themeslug.'_product_video' , true);	
+		$align = get_post_meta($post->ID, $themeslug.'_product_text_align' , true);
+		$link_enable  = get_post_meta($post->ID, $themeslug.'_product_link_toggle' , true);
+		$link  = get_post_meta($post->ID, $themeslug.'_product_link_url' , true);
+		$link_text  = get_post_meta($post->ID, $themeslug.'_product_link_text' , true);
 	}
 	else {
 		$text  = $options->get($themeslug.'_blog_product_text');
@@ -93,7 +93,7 @@ function response_product_element_content(){
 
 <div id="productbg">
 	<div class="container">
-		<div class="row">
+		<div id="product" class="row">
 			<?php echo $output; ?>
 		</div>
 	</div>

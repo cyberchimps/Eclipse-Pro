@@ -1,6 +1,6 @@
 <?php
 /**
-* Header section actions used by response Pro.
+* Header section actions used by Response Pro.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -11,7 +11,7 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package response Pro
+* @package Response Pro
 * @since 1.0
 */
 

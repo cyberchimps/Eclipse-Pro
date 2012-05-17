@@ -1,6 +1,8 @@
 /*============================*/
 /*===== Recent Posts Styles ======*/
 /*============================*/
+
+#recent_posts {padding-bottom: 45px;border-bottom: 2px solid #3d3d3d;}
 .recent-posts-image {margin-top:8px; margin-bottom: 8px;}
 #recent-posts-container.three.columns {width: 22.4%; margin-left: 3.4%; margin-right:0%;}
 #recent-posts-container.columns:first-child {margin-left: 0%;}
@@ -9,21 +11,22 @@
 #recent-posts-container a {color: white;}
 #recent-posts-container a:hover {color: #DDD;}
 
-.recent_posts_element_title {color:white; margin-top: 10px; margin-bottom:15px; font-weight: bold;}
+.recent_posts_element_title {color:white; margin-top: 45px; margin-bottom:15px; font-weight: bold;}
 .recent_posts_post_title {font-size: 15px;color: #fff;}
 .recent_posts_byline {color:#646464;font-size: 11px;padding-bottom: 10px;}
 
 /*============================*/
 /*===== Product Styles ======*/
 /*============================*/
-#product_text {color: white; padding: 20px 0 20px 0;}
+#product {margin-top: 45px; padding-bottom: 45px;border-bottom: 2px solid #3d3d3d;}
+#product_text {color: white; padding: 0px 0 0px 0;}
 .product_text_wrap {}
-#product_text.six.columns {}
-#product_media.six.columns {margin-left: 0%;}
+#product_text.six.columns {width:48%;}
+#product_media.six.columns {width: 48%; margin-left: 0%;}
 .product_text_title {font-size: 24px;}
-.product_text_text {font-size: 14px;color:#9a9a9a;}
+.product_text_text {font-size: 14px;color:#fff; line-height: 1.5;}
 
-#product_media {padding: 20px 0 20px 0;}
+#product_media {padding: 0px 0 0px 0;}
 
 #image_container.six.columns {margin-left: 2%;}
 
@@ -36,7 +39,8 @@
 /* Page Elements */
 
 div.orbit-wrapper {
-	margin-top: 25px;	
+	margin-top: 45px;
+	padding-bottom: 45px;border-bottom: 2px solid #3d3d3d;	
 }
 
 .slider_content {
@@ -65,12 +69,12 @@ div.orbit-wrapper {
 /*============================*/
 /* Elastislide Style */
 .es-carousel-wrapper{
-	padding:20px 0px 20px 0px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
+	padding:45px 0px 45px 0px;
+	
+
 	position:relative;
-	margin-bottom: 10px;
+
+	border-bottom: 2px solid #3d3d3d;
 }
 .es-carousel{
 	overflow:hidden;
@@ -128,8 +132,8 @@ div.orbit-wrapper {
 	margin: auto;
 	background: url(../images/twitterbarbg.png);	
 	min-height: 42px;
-	margin-top: 15px;
-	margin-bottom: 35px;
+	margin-top: 25px;
+	margin-bottom: 45px;
 }
 
 #bird {
@@ -157,7 +161,7 @@ div.orbit-wrapper {
 	font-size: 25px;
 	font-weight: 300;
 	color: #fff;
-	padding: 25px 0px 45px 0px;
+	padding: 45px 0px 45px 0px;
 	text-align: center;
 	border-bottom: 2px solid #3d3d3d;
 	line-height: 36px;
@@ -211,7 +215,7 @@ div.orbit-wrapper {
 .boxes {margin-top:45px;margin-bottom:20px;padding-bottom: 45px;border-bottom: 2px solid #3d3d3d;
 }
 
-.box_element_title{color:white; margin-top: 25px; font-weight: bold; margin-bottom: -35px;}
+.box_element_title{color:white; margin-top: 45px; font-weight: bold; margin-bottom: -35px;}
 
 #box_container {
 	min-height: 240px;
@@ -338,11 +342,13 @@ li.ui-state-default  {
  */
  
 #gallery {
-	margin-top: 20px;
-	margin-bottom:20px;
-	padding-top: 10px; padding-bottom: 10px;
+	margin-top: 45px;
+
 }
 
+#gallery {border-bottom: 2px solid #3d3d3d;}
+
+#portfolio_wrap { margin-bottom: 45px;}
 
 #portfolio_wrap.three.columns:last-child, #portfolio_wrap.four.columns:last-child, #portfolio_wrap.six.columns:last-child {float:left;}
 
@@ -363,8 +369,8 @@ li.ui-state-default  {
 #gallery ul li { display: inline; }
 
 #gallery ul img {
+border: 2px solid #3D3D3D;
 
-	margin-bottom: 44px;
 }
 	
 #gallery ul a:hover img {

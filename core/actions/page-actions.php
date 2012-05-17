@@ -29,7 +29,7 @@ add_action('response_page_section', 'response_page_section_content' );
 function response_page_section_content() { 
 	global $options, $themeslug, $post, $sidebar, $content_grid;
 	response_sidebar_init();
-	$hidetitle = get_post_meta($post->ID, 'hide_page_title' , true);
+	$hidetitle = get_post_meta($post->ID, $themeslug.'_hide_page_title' , true);
 ?>
 <div class="row">
 	<!--Begin @response before content sidebar hook-->

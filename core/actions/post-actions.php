@@ -33,6 +33,9 @@ function response_post_content() {
 	if (is_single()) {
 		$class = 'single';
 	}
+	elseif (is_archive()) {
+		$class = 'archive';
+	}
 	else {
 		$class = '';
 	}

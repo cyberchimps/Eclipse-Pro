@@ -51,27 +51,27 @@ $terms2 = get_terms('category', 'hide_empty=0');
 
 $options
 	->section("Welcome")
-		->info("<h1>response Pro 3</h1>
+		->info("<h1>Eclipse Pro</h1>
 		
-<p><strong>response Pro Professional Responsive WordPress Theme</strong></p>
+<p><strong>Eclipse Pro Professional Responsive WordPress Theme</strong></p>
 
-<p>response Pro 3 from CyberChimps WordPress Themes is a Professional Responsive WordPress Theme perfect for any response on any device. It gives your company the tools to turn WordPress into a modern Drag and Drop Content Management System (CMS).</p>
+<p>Eclipse Pro from CyberChimps WordPress Themes is a Professional Responsive WordPress Theme with Drag and Drop Header and Page Elements. It gives you the tools to turn WordPress into a modern Drag and Drop Content Management System (CMS).</p>
 
 <p>To get started simply work your way through the menus to the left, select your options, add your content, and always remember to hit save after making any changes.</p>
 
-<p>The Content Feature Slider options are under the response Pro Page Options which are available below the Page content entry area in WP-Admin when you edit a page. This way you can configure each page individually. You will also find the Drag & Drop Page Elements editor within the response Pro Page Options as well.</p>
+<p>The Responsive Feature Slider options are under the Eclipse Pro Page Options which are available below the Page content entry area in WP-Admin when you edit a page. This way you can configure each page individually. You will also find the Drag & Drop Page Elements editor within the Eclipse Pro Page Options as well.</p>
 
-<p>If you are using the Content Feature Slider, Image Carousel, or Portfolio on a Page you can edit your slides from the Content Slides menu available in the WP-Admin menu to the far left. Look for the CyberChimps logo.</p>
+<p>If you are using the Responsive Feature Slider, Image Carousel, or Portfolio Element on a Page you can edit your slides from the menu available in the WP-Admin menu to the far left.</p>
 
-<p>We tried to make response Pro as easy to use as possible, but if you still need help please read the <a href='http://cyberchimps.com/responsepro/docs/' target='_blank'>documentation</a>, and visit our <a href='http://cyberchimps.com/forum/pro/' target='_blank'>support forum</a>.</p>
+<p>We tried to make Eclipse Pro as easy to use as possible, but if you still need help please read the <a href='http://cyberchimps.com/eclipsepro/docs/' target='_blank'>documentation</a>, and visit our <a href='http://cyberchimps.com/forum/pro/' target='_blank'>support forum</a>.</p>
 
-<p>Thank you for using response Pro.</p>
+<p>Thank you for using Eclipse Pro.</p>
 
-<p><strong>A Professional response WordPress Theme</strong></p>
+<p><strong>A Professional Responsive WordPress Theme</strong></p>
 ")
 	->section("Design")
 		->subsection("Typography")
-			->select($themeslug."_font", "Choose a Font", array( 'options' => array("Arial" => "Arial (default)", "Courier New" => "Courier New", "Georgia" => "Georgia", "Helvetica" => "Helvetica", "Lucida Grande" => "Lucida Grande", "Tahoma" => "Tahoma", "Times New Roman" => "Times New Roman", "Verdana" => "Verdana", "Actor" => "Actor", "Coda" => "Coda", "Maven+Pro" => "Maven Pro", "Metrophobic" => "Metrophobic", "News+Cycle" => "News Cycle", "Nobile" => "Nobile", "Tenor+Sans" => "Tenor Sans", "Quicksand" => "Quicksand", "Ubuntu" => "Ubuntu", 'custom' => "Custom")))
+			->select($themeslug."_font", "Choose a Font", array( 'options' => array("Helvetica" => "Helvetica (default)", "Arial" => "Arial", "Courier New" => "Courier New", "Georgia" => "Georgia", "Lucida Grande" => "Lucida Grande", "Tahoma" => "Tahoma", "Times New Roman" => "Times New Roman", "Verdana" => "Verdana", "Actor" => "Actor", "Coda" => "Coda", "Maven+Pro" => "Maven Pro", "Metrophobic" => "Metrophobic", "News+Cycle" => "News Cycle", "Nobile" => "Nobile", "Tenor+Sans" => "Tenor Sans", "Quicksand" => "Quicksand", "Ubuntu" => "Ubuntu", 'custom' => "Custom")))
 			->text($themeslug."_custom_font", "Enter a Custom Font")
 		->textarea($themeslug."_typekit", "TypeKit Code")
 		->subsection_end()
@@ -82,6 +82,7 @@ $options
 		->subsection_end()
 			->open_outersection()
 				->checkbox($themeslug."_lazy_load", "Lazy Load Image Effect", array('default' => true))
+				->checkbox($themeslug."_responsive_video", "Responsive Videos")
 			->close_outersection()
 			->open_outersection()
 				->textarea($themeslug."_css_options", "Custom CSS")
@@ -97,8 +98,7 @@ $options
 			->upload($themeslug."_apple_touch", "Apple Touch Icon", array('default' => array('url' => TEMPLATE_URL . '/images/apple-icon.png')))
 		->subsection_end()
 		->subsection("Menu Options")
-			->select($themeslug."_menu_font", "Choose a Menu Font", array( 'options' => array("Arial" => "Arial (default)", "Courier New" => "Courier New", "Georgia" => "Georgia", "Helvetica" => "Helvetica", "Lucida Grande" => "Lucida Grande", "Tahoma" => "Tahoma", "Times New Roman" => "Times New Roman", "Verdana" => "Verdana", "Actor" => "Actor", "Coda" => "Coda", "Maven+Pro" => "Maven Pro", "Metrophobic" => "Metrophobic", "News+Cycle" => "News Cycle", "Nobile" => "Nobile", "Tenor+Sans" => "Tenor Sans", "Quicksand" => "Quicksand", "Ubuntu" => "Ubuntu", 'custom' => "Custom")))
-			->text($themeslug."_custom_font", "Enter a Custom Font")
+			->select($themeslug."_font", "Choose a Font", array( 'options' => array("Helvetica" => "Helvetica (default)", "Arial" => "Arial", "Courier New" => "Courier New", "Georgia" => "Georgia", "Lucida Grande" => "Lucida Grande", "Tahoma" => "Tahoma", "Times New Roman" => "Times New Roman", "Verdana" => "Verdana", "Actor" => "Actor", "Coda" => "Coda", "Maven+Pro" => "Maven Pro", "Metrophobic" => "Metrophobic", "News+Cycle" => "News Cycle", "Nobile" => "Nobile", "Tenor+Sans" => "Tenor Sans", "Quicksand" => "Quicksand", "Ubuntu" => "Ubuntu", 'custom' => "Custom")))			->text($themeslug."_custom_font", "Enter a Custom Font")
 		->subsection_end()
 		->subsection("Social")
 			->text($themeslug."_twitter", "Twitter Icon URL", array('default' => 'http://twitter.com'))
@@ -126,7 +126,7 @@ $options
 			->textarea($themeslug."_ga_code", "Google Analytics Code")
 		->subsection_end()
 		->section("Front Page")
-		->info("<p>The front-page template has been removed in favor of being able to use either a traditional static page or the blog page as the homepage.<br/><br/> For more information  visit our updated documentation page <a href='http://cyberchimps.com/question/using-the-front-page-and-posts-page-in-response-pro/' target='_blank'>here.</a></p>")		
+		->info("<p>The front-page template has been removed in favor of being able to use either a traditional static page or the blog page as the homepage.<br/><br/> For more information  visit our documentation page <a href='http://cyberchimps.com/question/using-the-front-page-and-posts-page-in-eclipse-pro/' target='_blank'>here.</a></p>")		
 		->section("Blog")
 		->open_outersection()
 			->section_order($themeslug."_blog_section_order", "Drag & Drop Elements", array('options' => array("response_post" => "Post Page", "response_page_slider" => "Feature Slider","response_callout_section" => "Callout Section", "response_twitterbar_section" => "Twitter Bar", "response_index_carousel_section" => "Carousel", "response_portfolio_element" => "Portfolio", "response_product_element" => "Product","response_box_section" => "Boxes", "response_recent_posts_element" => "Recent Posts"), "default" => 'response_post'))
@@ -148,9 +148,9 @@ $options
 			->text($themeslug."_slider_height", "Slider height", array('default' => '430'))
 			->text($themeslug."_slider_delay", "Slider Delay", array('default' => '3500'))
 			->select($themeslug."_slider_animation", "Sidebar Animation", array( 'options' => array("key1" => "Horizontal-Push", "key2" => "Fade", "key3" => "Horizontal-Slide", "key4" => "Vertical-Slide")))
-			->select($themeslug."_caption_style", "Caption Style", array( 'options' => array("key1" => "Bottom", "key2" => "Right", "key3" => "Left", "key4" => "None")))	
+			->select($themeslug."_caption_style", "Caption Style", array( 'options' => array("key4" => "None (default)", "key2" => "Right", "key3" => "Left", "key1" => "Bottom")))	
 			->select($themeslug."_caption_animation", "Caption Animation", array( 'options' => array("key1" => "Fade", "key2" => "Slide Open", "key3" => "None")))
-			->select($themeslug."_slider_nav", "Slider Navigation", array( 'options' => array("key1" => "Dots", "key2" => "Thumbnails", "key3" => "none")))
+			->select($themeslug."_slider_nav", "Slider Navigation", array( 'options' => array("key1" => "Dots", "key3" => "none")))
 			->checkbox($themeslug."_hide_slider_arrows", "Slider Arrows", array('default' => true))
 			->checkbox($themeslug."_enable_wordthumb", "WordThumb Image Resizing")
 		->subsection_end()
@@ -204,8 +204,6 @@ $options
 			->checkbox($themeslug."_single_show_featured_images", "Featured Images")
 			->checkbox($themeslug."_single_post_formats", "Post Format Icons",  array('default' => true))
 			->multicheck($themeslug."_single_hide_byline", "Post Byline Elements", array( 'options' => array($themeslug."_hide_author" => "Author" , $themeslug."_hide_categories" => "Categories", $themeslug."_hide_date" => "Date", $themeslug."_hide_comments" => "Comments",  $themeslug."_hide_tags" => "Tags"), 'default' => array( $themeslug."_hide_tags" => true, $themeslug."_hide_author" => true, $themeslug."_hide_date" => true, $themeslug."_hide_comments" => true, $themeslug."_hide_categories" => true ) ) )
-			->checkbox($themeslug."_single_show_fb_like", "Facebook Like Button")
-			->checkbox($themeslug."_single_show_gplus", "Google Plus One Button")
 			->checkbox($themeslug."_post_pagination", "Post Pagination Links",  array('default' => true))
 		->subsection_end()	
 		->subsection("Archive")
@@ -214,9 +212,6 @@ $options
 			->checkbox($themeslug."_archive_show_excerpts", "Post Excerpts", array('default' => true))
 			->checkbox($themeslug."_archive_post_formats", "Post Format Icons",  array('default' => true))
 			->multicheck($themeslug."_archive_hide_byline", "Post Byline Elements", array( 'options' => array($themeslug."_hide_author" => "Author" , $themeslug."_hide_categories" => "Categories", $themeslug."_hide_date" => "Date", $themeslug."_hide_comments" => "Comments", $themeslug."_hide_tags" => "Tags"), 'default' => array( $themeslug."_hide_tags" => true, $themeslug."_hide_author" => true, $themeslug."_hide_date" => true, $themeslug."_hide_comments" => true, $themeslug."_hide_categories" => true ) ) )
-			->checkbox($themeslug."_archive_show_fb_like", "Facebook Like Button")
-			->checkbox($themeslug."_archive_show_gplus", "Google Plus One Button")
-
 			->subsection_end()
 		->subsection("Search")
 			->images($themeslug."_search_sidebar", "Sidebar Options", array( 'options' => array("none" => TEMPLATE_URL . '/images/options/none.png', "left" => TEMPLATE_URL . '/images/options/left.png',  "right" => TEMPLATE_URL . '/images/options/right.png'), 'default' => 'right'))

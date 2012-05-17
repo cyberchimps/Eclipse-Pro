@@ -1,6 +1,6 @@
 <?php
 /**
-* Callout section actions used by response Pro.
+* Callout section actions used by Response Pro.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -11,7 +11,7 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package response Pro
+* @package Response Pro
 * @since 1.0
 */
 
@@ -34,8 +34,8 @@ function response_callout_section_content() {
 
 	
 	if (is_page()) {
-		$tcolor = get_post_meta($post->ID, 'custom_callout_text_color' , true);
-		$text = get_post_meta($post->ID, 'callout_text' , true);
+		$tcolor = get_post_meta($post->ID, $themeslug.'_custom_callout_text_color' , true);
+		$text = get_post_meta($post->ID, $themeslug.'_callout_text' , true);
 	}
 	
 	else {
@@ -58,7 +58,7 @@ function response_callout_section_content() {
 /* Define Callout text. */	
 
 	if ($text == '') {
-		$callouttext = '<div style="margin-bottom:10px; font-size:20px;"><i>"response Pro from CyberChimps WordPress Themes is a Professional Responsive WordPress Theme perfect for any response on any device."</i><br /></div> Learn more about <a href="http://cyberchimps.com/responsepro">response Pro</a>.';
+		$callouttext = '<div style="margin-bottom:10px; font-size:20px;"><i>"Eclipse Pro from CyberChimps WordPress Themes is a Professional Responsive WordPress Theme perfect for any website on any device."</i><br /></div> Learn more about <a href="http://cyberchimps.com/eclipsepro">Eclipse Pro</a>.';
 	}
 	else {
 		$callouttext = $text;

@@ -1,6 +1,6 @@
 <?php
 /**
-* Portfolio element actions used by response Pro.
+* Portfolio element actions used by Response Pro.
 *
 * Author: Tyler Cunningham
 * Copyright: © 2012
@@ -11,7 +11,7 @@
 * along with this software. In the main directory, see: /licensing/
 * If not, see: {@link http://www.gnu.org/licenses/}.
 *
-* @package response Pro
+* @package Response Pro
 * @since 1.0
 */
 
@@ -22,14 +22,14 @@ add_action( 'response_portfolio_element', 'response_portfolio_element_content' )
 
 function response_portfolio_element_content() {	
 	global $options, $post, $themeslug, $root, $wp_query;
-	$tmp_query = $wp_query; 
+
 	$image = get_post_meta($post->ID, 'portfolio_image' , true);
 
 	if (is_page()){
-		$category = get_post_meta($post->ID, 'portfolio_category' , true);
-		$num = get_post_meta($post->ID, 'portfolio_row_number' , true);
-		$title_enable = get_post_meta($post->ID, 'portfolio_title_toggle' , true);
-		$title = get_post_meta($post->ID, 'portfolio_title' , true);;
+		$category = get_post_meta($post->ID, $themeslug.'_portfolio_category' , true);
+		$num = get_post_meta($post->ID, $themeslug.'_portfolio_row_number' , true);
+		$title_enable = get_post_meta($post->ID, $themeslug.'_portfolio_title_toggle' , true);
+		$title = get_post_meta($post->ID, $themeslug.'_portfolio_title' , true);;
 	} else {
 		$category = $options->get($themeslug.'_portfolio_category');
 		$num = $options->get($themeslug.'_portfolio_number');
@@ -55,39 +55,38 @@ function response_portfolio_element_content() {
 <div id="portfolio" class="container">
 	<div class="row">
 		
-	<?php query_posts( array ('post_type' => $themeslug.'_portfolio_images', 'portfolio_categories' => $category ));
-
-	if (have_posts()) :
+	<?php 
+	$args = array( 'numberposts' => -1, 'post_type' => $themeslug.'_portfolio_images', 'portfolio_categories' => $category );
+	$portfolio_posts = get_posts( $args );
+	
+	if ( !empty($portfolio_posts) ) :
 		$out = " <div id='gallery' class='twelve columns'>$title_output<ul>"; 
 
 		$counter = 1;
-
-		while (have_posts()) : the_post();
-
+		
+		foreach( $portfolio_posts as $post ) : setup_postdata($post);
+		
 			$class = ( $counter % $numb == 1 ) ? 'first-row' : '';
-
-	    	/* Post-specific variables */	
-	    	$image = get_post_meta($post->ID, 'portfolio_image' , true);
+			
+			/* Post-specific variables */	
+	    	$image = get_post_meta($post->ID, $themeslug.'_portfolio_image' , true);
 	    	$title = get_the_title() ;	    	
 
 	     	/* Markup for portfolio */
 	    	$out .= "
-				<li id='portfolio_wrap' class='$number columns $class'>
-	    			<a href='$image' title='$title'><img src='$image'  alt='$title'/>
-	    				<div class='portfolio_caption'>$title</div>
-	    			</a>	
-	  	    	</li>
-	    			";
-
+	    		<li id='portfolio_wrap' class='$number columns $class'>
+	    			<a href='$image' title='$title'><img src='$image'  alt='$title'/><div class='portfolio_caption'>$title</div></a>
+	    		</li>";
 	    	/* End slide markup */	
-
-	      	$counter++;
-	      	endwhile;
-	      	$out .= "</ul></div>";	 
-
-	      	else:
-
-	      	$out .= "	
+	    	
+	    	$counter++;
+	    endforeach; wp_reset_postdata();
+	    
+	    $out .= "</ul></div>";
+	    	
+	else:
+	
+		$out .= "	
 	    		<div id='gallery' class='twelve columns'><ul>
 	      			<li id='portfolio_wrap' class='three columns'>
 	    				<a href='$root/images/pro/portfolio.jpg' title='Image 1'><img src='$root/images/pro/portfolio.jpg'  alt='Image 1'/>
@@ -111,16 +110,9 @@ function response_portfolio_element_content() {
 	    					<div class='portfolio_caption'>Image 3</div>
 	    				</a>
 	    			</li>
-	    	 	</ul></div>	
-	    				
-	    			";
-     
-	endif; 	    
-	$wp_query = $tmp_query;    
-
-/* End slide creation */		
-
-	wp_reset_query(); /* Reset post query */ 
+	    	 	</ul></div>";
+	endif;
+/* End slide creation */
 
 /* Begin Portfolio javascript */ 
     
