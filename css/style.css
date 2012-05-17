@@ -972,7 +972,7 @@ figure {
 	#callout_text {font-size: 18px;}
 	#bird {width: 15px; margin-top: 25px;}
 	#sidebar.three.columns {margin-left:0;}
-	#sidebar.three.columns:last-child {float: left;}
+	#sidebar.three.columns:last-child {float: left !important;}
 	
 }
 
@@ -989,7 +989,7 @@ figure {
 	#header_contact {text-align: center;}
 	#halfnav {text-align: center; float: none;}
 	#afterfootermenu {display:none;}
-	#credit {float:left;margin-left:15px;margin-top:-2px;}
+	#credit {margin-left:15px;margin-top:-2px;}
 	#afterfootercopyright {float: right;margin-right:15px;margin-bottom:2px;}
 	#mobileMenu_nav_menu {margin-top: 10px; margin-right: 10px; text-align:center;}
 	.content_title {font-size: 14px;}

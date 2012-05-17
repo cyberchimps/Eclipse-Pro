@@ -9,6 +9,7 @@ Eclipse Pro Changelog
 -Removed notice about Front Page template. 
 -Container around Twitterbar Element for responsive margins.
 -Added a couple image elements to the Lazy Load ignore list.
+-General CSS tweaks.
 
 1.0 (05-16-12)
 -Initial release.
