@@ -22,7 +22,7 @@ add_action( 'response_portfolio_element', 'response_portfolio_element_content' )
 
 function response_portfolio_element_content() {	
 	global $options, $post, $themeslug, $root, $wp_query;
-	$tmp_query = $wp_query; 
+
 	$image = get_post_meta($post->ID, 'portfolio_image' , true);
 
 	if (is_page()){
