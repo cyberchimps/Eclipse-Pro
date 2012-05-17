@@ -26,6 +26,7 @@ a{outline:none}
 .required {display: none;}
 
 #sidebar.three.columns {width: 22%; margin-left: 4.2%}
+@-moz-document url-prefix() {#sidebar.three.columns {width: 22%; margin-left: 4.1%}}
 
 .pagination {
 clear:both;
