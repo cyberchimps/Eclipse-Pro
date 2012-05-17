@@ -36,6 +36,8 @@ line-height:13px;
 
 }
 
+.clear {clear: both; margin-bottom: -20px;}
+
 .pagination span, .pagination a {
 display:block;
 float:left;

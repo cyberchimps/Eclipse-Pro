@@ -86,6 +86,8 @@ function response_post_content() {
 			<!--Begin @response pagination hook-->
 			<?php ec_custom_pagination(); ?>
 			<!--End @response pagination loop hook-->
+			
+			<div class='clear'>&nbsp;</div>
 		
 		</div><!--end row-->
 		

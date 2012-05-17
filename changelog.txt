@@ -10,6 +10,7 @@ Eclipse Pro Changelog
 -Container around Twitterbar Element for responsive margins.
 -Added a couple image elements to the Lazy Load ignore list.
 -General CSS tweaks.
+-Clear after pagination for responsive sidebar. 
 
 1.0 (05-16-12)
 -Initial release.
