@@ -135,12 +135,12 @@ function response_slider_content() {
 
 	if ($captionstyle == 'key2' OR $captionstyle == '3') { ?>
 		<style type="text/css">
-		.orbit-caption {height: <?php echo $height ?>px; width: 30% !important;}
+		.orbit-caption {height: <?php echo $height ?>px; width: 30% !important; top: 0px;}
 		</style> <?php
 	}
 	elseif ($captionstyle == 'key3' OR $captionstyle == '2') { ?>
 		<style type="text/css">
-		.orbit-caption {position: relative !important; float: left; height: <?php echo $height ?>px; width: 30% !important; top: -375px;}
+		.orbit-caption {position: relative !important; float: left; height: <?php echo $height ?>px; width: 30% !important; top: -<?php echo $height ?>px; margin-bottom:-<?php echo $height ?>px;}
 		</style><?php
 	}    
 	elseif ($captionstyle == '0') { ?>
@@ -204,7 +204,7 @@ function response_slider_content() {
 	    	/* Post-specific variables */	
 
 	    	$customimage 		= get_post_meta($post->ID, $themeslug.'_slider_image' , true);  /* Gets slide custom image from page/post meta option */
-	    	$customtext 		=  $post->post_content; /* Gets slide caption from custom slide meta option */
+	    	$customtext 		= get_post_meta($post->ID, $themeslug.'_slider_caption' , true);
 	    	$customlink 		= get_post_meta($post->ID, $themeslug.'_slider_url' , true); /* Gets link from custom slide meta option */
 	    	$permalink 			= get_permalink(); /* Gets post URL for blog post slides */
 	   		$blogtext 			= get_post_meta($post->ID, $themeslug.'_slider_text' , true); /* Gets slide caption from post meta option */  		
@@ -291,7 +291,7 @@ function response_slider_content() {
 	    $out .= "
 	    	<a href='$link' $caption data-thumb='$thumbnail'>
 	    				<img src='$image'  alt='Slider' />
-	    						<span class='orbit-caption' id='htmlCaption$i'><span class='caption_title'>$title</span> <br /> <span class='caption_text'>$text</span></span>
+	    						<span class='orbit-caption' id='htmlCaption$i'><div class='caption_title'>$title</div> <br /> <span class='caption_text'>$text</span></span>
 	    				</a>
 	  	    	";
 

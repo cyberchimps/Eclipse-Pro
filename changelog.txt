@@ -2,6 +2,10 @@ Eclipse Pro Changelog
 
 ****************************
 
+1.0.2 (05-18-12)
+-Fixed Popular Posts widget not ordering based on number of comments.
+-Fixed captions on Feature Slider.
+
 1.0.1 (05-17-12)
 -Sidebar CSS tweak for Firefox. 
 -Removed limit on number of images allowed in Portfolio Element.
