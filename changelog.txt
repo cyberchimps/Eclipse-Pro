@@ -5,6 +5,7 @@ Eclipse Pro Changelog
 1.0.2 (05-18-12)
 -Fixed Popular Posts widget not ordering based on number of comments.
 -Several fixes for Feature Slider.
+-Fixed Typography options, added secondary fold option for post, widget and element titles. 
 
 1.0.1 (05-17-12)
 -Sidebar CSS tweak for Firefox. 

@@ -198,6 +198,34 @@ function add_menu_font() {
 }
 add_action( 'wp_head', 'add_menu_font'); 
 
+/* Menu Font */
+ 
+function add_secondary_font() {
+		
+	global $themename, $themeslug, $options;	
+		
+	if ($options->get($themeslug.'_secondary_font') == "") {
+		$font = 'Open Sans';
+	}		
+		
+	elseif ($options->get($themeslug.'_secondary_font') == 'custom' && $options->get($themeslug.'_custom_secondary_font') != "") {
+		$font = $options->get($themeslug.'_custom_secondary_font');	
+	}
+	
+	else {
+		$font = $options->get($themeslug.'_secondary_font'); 
+	}
+	
+		$fontstrip =  ereg_replace("[^A-Za-z0-9]", " ", $font );
+	
+		echo "<link href='http://fonts.googleapis.com/css?family=$font' rel='stylesheet' type='text/css' />";
+		echo '<style type="text/css">';
+		echo "#twittertext, #callout_text, .posts_title a, .sitename, .widget-title {font-family: '$fontstrip', sans-serif;}";
+		echo '</style>';
+}
+add_action( 'wp_head', 'add_secondary_font'); 
+
+
 /* Custom CSS */
 
 function custom_css() {

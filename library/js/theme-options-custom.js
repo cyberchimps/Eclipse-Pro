@@ -27,6 +27,13 @@ jQuery(document).ready(function($) {
       $('#section-ec_custom_menu_font').hide();
     }
   }).change();
+  $("#section-ec_secondary_font").change(function() {
+    if($(this).find(":selected").val() == 'custom') {
+      $('#section-ec_custom_secondary_font').fadeIn();
+    } else {
+      $('#section-ec_custom_secondary_font').hide();
+    }
+  }).change();
     $("#section-ec_front_product_type").change(function() {
     if($(this).find(":selected").val() == 'key1') {
       $('#section-ec_front_product_image').fadeIn();
