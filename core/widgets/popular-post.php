@@ -18,15 +18,18 @@ class cyberchimps_popular_posts extends WP_Widget {
                         echo $before_title . $title . $after_title; ?>
 							<ul class="widget-popular-posts clearfix">
                                 <?php
+                                /* fix - override any filters already applied on 'posts_orderby' hook by some other plugins */
+                                add_filter('posts_orderby', 'cyberchimps_posts_orderby_commentscount', 99);
+                                
                                 $args = array(
                                 'posts_per_page' => 5,
                                 'orderby' => 'comment_count',
                                 'ignore_sticky_posts' => 1,
                                 'order' => 'DESC'
                                 );
-                                $cyberchimps_popular_posts = new WP_Query($args);								
-                                while($cyberchimps_popular_posts->have_posts()): $cyberchimps_popular_posts->the_post();
+                                $cyberchimps_popular_posts = new WP_Query($args);
                                 
+                                while($cyberchimps_popular_posts->have_posts()): $cyberchimps_popular_posts->the_post();                     
                                 ?>
                                     <li class="widget-post">
                                         <div class="tab-image widget-img" >
@@ -58,6 +61,8 @@ class cyberchimps_popular_posts extends WP_Widget {
 							</ul>
               <?php echo $after_widget; ?>
         <?php
+        /* fix - override any filters already applied on 'posts_orderby' hook by some other plugins */
+        remove_filter('posts_orderby', 'cyberchimps_posts_orderby_commentscount');        
     }
 
     /** @see WP_Widget::update */
@@ -79,10 +84,24 @@ class cyberchimps_popular_posts extends WP_Widget {
         
         <?php 
     }
+} /* end of class cyberchimps_popular_posts */
 
-
-} // class cyberchimps_popular_posts
-// register Popular Posts widget
+/* register Popular Posts widget */
 add_action('widgets_init', create_function('', 'return register_widget("cyberchimps_popular_posts");'));
-add_image_size('ifeature-tabbed', 45, 45, true);	
+
+/* add image size for widget thumb use */
+add_image_size('ifeature-tabbed', 45, 45, true);
+
+/* To override any filters applied to the 'posts_orderby' hook */
+if(!function_exists('cyberchimps_posts_orderby_commentscount')) {
+    function cyberchimps_posts_orderby_commentscount($orderBy) 
+    {
+        global $wpdb;
+        if(!is_admin())
+        {
+            $orderBy = "{$wpdb->posts}.comment_count DESC, {$wpdb->posts}.post_date DESC";
+        }
+        return($orderBy);
+    }
+}	
 ?>

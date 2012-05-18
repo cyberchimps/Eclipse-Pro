@@ -18,6 +18,9 @@ class cyberchimps_recent_posts extends WP_Widget {
                         echo $before_title . $title . $after_title; ?>
 							<ul class="widget-recent-posts clearfix">
                                 <?php
+                                /* fix - override any filters already applied on 'posts_orderby' hook by some other plugins */
+                                add_filter('posts_orderby', 'cyberchimps_posts_orderby_date', 99);
+                                
                                 $args = array(
                                     'posts_per_page' => 5,
                                     'orderby' => 'date',
@@ -59,6 +62,8 @@ class cyberchimps_recent_posts extends WP_Widget {
 							</ul>
               <?php echo $after_widget; ?>
         <?php
+        /* fix - override any filters already applied on 'posts_orderby' hook by some other plugins */
+        remove_filter('posts_orderby', 'cyberchimps_posts_orderby_date');        
     }
 
     /** @see WP_Widget::update */
@@ -80,10 +85,24 @@ class cyberchimps_recent_posts extends WP_Widget {
         
         <?php 
     }
+} /* end of class cyberchimps_recent_posts */
 
-
-} // class cyberchimps_recent_posts
-// register Recent Posts widget
+/* register Recent Posts widget */
 add_action('widgets_init', create_function('', 'return register_widget("cyberchimps_recent_posts");'));
+
+/* add image size for widget thumb use */
 add_image_size('ifeature-tabbed', 45, 45, true);
+
+/* To override any filters applied to the 'posts_orderby' hook */
+if(!function_exists('cyberchimps_posts_orderby_date')) {
+    function cyberchimps_posts_orderby_date($orderBy) 
+    {
+        global $wpdb;
+        if(!is_admin())
+        {
+            $orderBy = "{$wpdb->posts}.post_date DESC";
+        }
+        return($orderBy);
+    }
+}
 ?>
