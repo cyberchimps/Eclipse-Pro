@@ -185,6 +185,7 @@ a:hover {color: #aaa;}
 	border-bottom: 1px solid #3D3D3D;
 }
 
+
 /* Nav  */
 
 #nav {
@@ -975,6 +976,7 @@ figure {
 	#bird {width: 15px; margin-top: 25px;}
 	#sidebar.three.columns {margin-left:0;}
 	#sidebar.three.columns:last-child {float: left !important;}
+	#icons.seven.columns:last-child {float: none !important;}
 	
 }
 

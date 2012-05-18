@@ -268,7 +268,7 @@ function response_description_icons_content() {
 				
 			</div>	
 			
-			<div class="seven columns">
+			<div id="icons" class="seven columns">
 			
 			<!-- Begin @Core header social icon hook -->
 				<?php response_header_social_icons(); ?> 
