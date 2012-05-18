@@ -133,6 +133,12 @@ function response_slider_content() {
 
 /* Define slider caption style */      
 
+	if ($captionstyle == 'key1' OR $captionstyle == '1') { ?>
+		<style type="text/css">
+		.orbit-caption {height: 100px; margin-bottom:58px;}
+		</style> <?php
+	}
+	
 	if ($captionstyle == 'key2' OR $captionstyle == '3') { ?>
 		<style type="text/css">
 		.orbit-caption {height: <?php echo $height ?>px; width: 30% !important; top: 0px;}
@@ -229,7 +235,7 @@ function response_slider_content() {
 	    	/* Controls slide link */
 
 	    	if ( $type == 'custom' OR $type == '0') {
-	    		$link = get_post_meta($post->ID, 'slider_url' , true);
+	    		$link = get_post_meta($post->ID, $themeslug.'_slider_url' , true);
 	    	}
 	    	else {
 	    		$link = get_permalink();
@@ -330,22 +336,15 @@ To create a Custom Slide please go to the Custom Slides tab in WP-Admin. Once yo
 
 /* Define slider navigation variable */ 
   	
-	if ($navigationstyle == 'key1' OR $navigationstyle == 'key2' OR $navigationstyle == '0'  OR $navigationstyle == '1' OR $navigationstyle == '') {
+	if ($navigationstyle == 'key1' OR $navigationstyle == '0' ) {
 	    $dots = 'true';
+	    $thumbs = 'false';
 	}
 	else {
 		$dots = 'false';
-	}
-	if ($navigationstyle == 'key2' OR $navigationstyle == '1') {
-	    $thumbs = 'true'; ?>
-	    
-	    <style type="text/css">
-		.orbit-bullets {bottom: -50px !important;}
-		</style> <?php
-	}
-	else {
 		$thumbs = 'false';
 	}
+			
 
 /* End slider navigation variable */ 
 

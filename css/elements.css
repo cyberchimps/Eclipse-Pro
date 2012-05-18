@@ -64,7 +64,7 @@ div.orbit-wrapper {
 #sliderbg, #productbg {
 }
 
-.caption_title {margin-top: 15px;}
+.caption_title {margin-top: 10px; margin-bottom: -5px;}
 
 /*============================*/
 /*===== Carousel Styles ======*/
