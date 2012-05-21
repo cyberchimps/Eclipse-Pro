@@ -57,9 +57,11 @@ add_action( 'after_setup_theme', 'ec_theme_setup' );
 /**
 * Redirect user to theme options page after activation.
 */ 
-if ( is_admin() && isset($_GET['activated'] ) && $pagenow =="themes.php" ) {
+if ( is_admin() && ( ( isset($_GET['activated'] ) && $pagenow == 'themes.php') || $pagenow == 'update-core.php?action=do-theme-upgrade') ) {
+
 	wp_redirect( 'themes.php?page=eclipse' );
 }
+
 
 /**
 * Add link to theme options in Admin bar.
