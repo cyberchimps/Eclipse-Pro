@@ -977,6 +977,7 @@ figure {
 	#sidebar.three.columns {margin-left:0;}
 	#sidebar.three.columns:last-child {float: left !important;}
 	#icons.seven.columns:last-child {float: none !important;}
+	#box4.three.columns:last-child {float:left !important;}
 	
 }
 

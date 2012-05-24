@@ -31,6 +31,7 @@ function response_page_section_content() {
 	response_sidebar_init();
 	$hidetitle = get_post_meta($post->ID, $themeslug.'_hide_page_title' , true);
 ?>
+<div class="container">
 <div class="row">
 	<!--Begin @response before content sidebar hook-->
 		<?php response_before_content_sidebar(); ?>
@@ -73,6 +74,7 @@ function response_page_section_content() {
 	<!--Begin @response after content sidebar hook-->
 		<?php response_after_content_sidebar(); ?>
 	<!--End @response after content sidebar hook-->
+</div>
 </div>
 <?php
 }
