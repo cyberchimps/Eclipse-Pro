@@ -1,9 +1,11 @@
-#Copyright (C) 2011 
 msgid ""
 msgstr ""
-"Project-Id-Version: Core 1.0 \n"
+"Project-Id-Version: Core 1.0\n"
 "Report-Msgid-Bugs-To: http://cyberchimps.com/forum\n"
-"POT-Creation-Date: 10-17-11 \n"
+"POT-Creation-Date: 10-17-11\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,17 +22,17 @@ msgstr ""
 #: core/actions/archive-actions.php:36
 #@ response
 msgid "Archive for the &#8216;"
-msgstr "&#8216 arşivi"
+msgstr "Archiwum dla &#8216;"
 
 #: core/actions/archive-actions.php:36
 #@ response
 msgid "&#8217; Category:"
-msgstr "&#8217; Kategorisi"
+msgstr "&#8217; Kategoria:"
 
 #: core/actions/archive-actions.php:39
 #@ response
 msgid "Posts Tagged &#8216;"
-msgstr "&#8216 Etiketli Mesajlar"
+msgstr "Posty Oznaczone &#8216;"
 
 #: core/actions/archive-actions.php:39
 #@ response
@@ -41,155 +43,182 @@ msgstr "&#8217;:"
 #: core/actions/archive-actions.php:45
 #@ response
 msgid "Archive for"
-msgstr "Arşivi"
+msgstr "Archiwum"
 
 #: core/actions/archive-actions.php:48
 #@ response
 msgid "Archive for:"
-msgstr "Arşivi"
+msgstr "Archiwum"
 
 #: core/actions/archive-actions.php:51
 #@ response
 msgid "Author Archive:"
-msgstr "Yazar Arşivi"
+msgstr "Archiwum Autor:"
 
 #: core/actions/archive-actions.php:54
 #@ response
 msgid "Blog Archives:"
-msgstr "Blog Arşivi"
+msgstr "Blog Archiwum"
 
 #: core/actions/comments-actions.php:49
 #@ response
 msgid "No Responses"
-msgstr "Cevap Yok"
+msgstr "Nie Odpowiedzi"
 
 #: core/actions/comments-actions.php:49
 #@ response
 msgid "One Response"
-msgstr "Bir Cevap"
+msgstr "Jeden Odpowiedź"
 
 #: core/actions/comments-actions.php:49
 #@ response
 msgid "% Responses"
-msgstr "% Cevap"
+msgstr "% Odpowiedzi"
 
 #: core/actions/comments-actions.php:88
 #@ response
 msgid "You must be"
-msgstr "Adınız"
+msgstr "Musisz być"
 
 #: core/actions/comments-actions.php:88
 #@ response
 msgid "logged in"
-msgstr "giriş yapıldı"
+msgstr "zalogowany"
 
 #: core/actions/comments-actions.php:88
 #@ ifeture
 msgid "to post a comment."
-msgstr "yorum yazmak için"
+msgstr ""
 
 #: core/actions/footer-actions.php:39
 #@ response
 msgid "Recent Posts"
-msgstr "Son Mesajlar"
+msgstr "Najnowsze posty"
 
 #: core/actions/footer-actions.php:46
 #: sidebar.php:26
 #@ response
+#@ ifeature
 msgid "Archives"
-msgstr "Arşiv"
+msgstr "Archiwum"
 
 #: core/actions/footer-actions.php:53
 #@ response
 msgid "Links"
-msgstr "Bağlantılar"
+msgstr "Linki"
 
 #: core/actions/footer-actions.php:60
 #: core/actions/footer-actions.php:64
 #: sidebar.php:40
 #: sidebar.php:44
 #@ response
+#@ ifeature
 msgid "WordPress"
-msgstr ""
+msgstr "WordPress"
 
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
 #@ response
+#@ ifeature
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
 #: core/actions/footer-actions.php:64
 #: sidebar.php:44
 #@ response
+#@ ifeature
 msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
-msgstr "Son teknoloji semantik yayıncılık platformu WordPress ile güçlendirilmiştir."
+msgstr "Powered by WordPress, state-of-the-art semantic personal publishing platform."
 
-#: core/actions/global-actions.php:43
+#: core/actions/footer-actions.php:38
 #@ response
-msgid "Published on"
-msgstr "Tarih"
-
-#: core/actions/global-actions.php:44
-#@ response
-msgid "by"
-msgstr "yazar"
-
-#: core/actions/global-actions.php:45
-#@ response
-msgid "in"
-msgstr "içinde"
-
-#: core/actions/global-actions.php:70
-#@ response
-msgid "No Comments &#187;"
-msgstr "Yorum yok"
-
-#: core/actions/global-actions.php:70
-#@ response
-msgid "1 Comment &#187;"
-msgstr "1 Yorum &#187"
-
-#: core/actions/global-actions.php:70
-#@ response
-msgid "% Comments &#187;"
-msgstr ""
+msgid "Footer Widgets"
+msgstr "Stopki Widgety"
 
 #: core/actions/global-actions.php:86
 #@ response
 msgid "Read more…"
-msgstr "Devamını oku..."
+msgstr "Przeczytaj więcej ..."
+
+#: core/actions/global-actions.php:128
+#@ response
+msgid "No Comments"
+msgstr "Brak komentarzy"
+
+#: core/actions/global-actions.php:128
+#@ response
+msgid "1 Comment"
+msgstr "1 komentarz"
+
+#: core/actions/global-actions.php:128
+#@ response
+msgid "% Comments"
+msgstr "% komentarz"
 
 #: core/actions/global-actions.php:187
 #@ response
 msgid "Tags: "
-msgstr "Etiketler: "
+msgstr "Tagi:"
 
-#: searchform.php:15
+#: core/actions/pagination-actions.php:49
 #@ response
-msgid "Search"
-msgstr "Arama"
+msgid "of"
+msgstr "z"
+
+#: core/actions/pagination-actions.php:49
+#: core/core-functions.php:241
+#@ response
+#@ default
+msgid "Page"
+msgstr "Strona"
+
+#: core/actions/pagination-actions.php:50
+#@ response
+msgid "&laquo; First"
+msgstr "&laquo; Pierwszy"
+
+#: core/actions/pagination-actions.php:51
+#@ response
+msgid "&lsaquo; Previous"
+msgstr "&lsaquo; Poprzedni"
+
+#: core/actions/pagination-actions.php:61
+#@ response
+msgid "Next &rsaquo;"
+msgstr "Następny &rsaquo;"
+
+#: core/actions/pagination-actions.php:62
+#@ response
+msgid "Last &raquo;"
+msgstr "Ostatni &raquo;"
+
+#: core/actions/pagination-actions.php:99
+#@ response
+msgid "Pages:"
+msgstr "Strony:"
 
 #: sidebar.php:19
 #@ response
 msgid "Pages"
-msgstr "Sayfalar"
+msgstr "Strony"
 
 #: sidebar.php:33
 #@ response
 msgid "Categories"
-msgstr "Kategoriler"
+msgstr "Kategorie"
 
 #: sidebar.php:50
 #@ response
 msgid "Subscribe"
-msgstr "Kayıt Ol"
+msgstr "Subskrybować"
 
 #: sidebar.php:52
 #@ response
 msgid "Entries (RSS)"
-msgstr "Kayıtlar (RSS)"
+msgstr "Wpisy (RSS)"
 
 #: sidebar.php:53
 #@ response
 msgid "Comments (RSS)"
-msgstr "Yorumlar (RSS)"
+msgstr "Komentarze (RSS)"
+

@@ -56,6 +56,16 @@ function initialize_the_meta_boxes() {
 	
 	$meta_boxes = array();
 		
+	$mb = new Chimps_Metabox('post_slide_options', $themenamefull.' Slider Options', array('pages' => array('post')));
+	$mb
+		->tab("Slider Options")
+			->single_image($themeslug.'_slider_image', 'Slider Image', '')
+			->text($themeslug.'_slider_text', 'Slider Text', 'Enter your slider text here')
+			->checkbox($themeslug.'_slider_hidetitle', 'Title Bar', '', array('std' => 'on'))
+			->sliderhelp('', 'Need Help?', '')
+		->end();
+
+	
 	$mb = new Chimps_Metabox('Carousel', 'Featured Post Carousel', array('pages' => array($themeslug.'_carousel_images')));
 	$mb
 		->tab("Featured Post Carousel Options")

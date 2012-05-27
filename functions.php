@@ -33,7 +33,7 @@ add_filter('comment_form_default_fields', 'url_filtered');
 	$themeslug = 'ec';
 	$root = get_template_directory_uri(); 
 	$pagedocs = 'http://cyberchimps.com/question/using-the-eclipse-pro-page-options/';
-	$sliderdocs = 'http://cyberchimps.com/question/eclipse-pro-content-slider/';
+	$sliderdocs = 'http://cyberchimps.com/question/using-the-eclipse-pro-feature-slider/';
 
 /**
 * Basic theme setup.
