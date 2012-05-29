@@ -2,7 +2,7 @@ Eclipse Pro Changelog
 
 ****************************
 
-1.0.3 (05-27-12)
+1.0.3 (05-29-12)
 -Added missing container around page content for responsive margins.
 -Responsive fix for Widgetized Box Element.
 -Added missing Feature Slider meta options for blog posts. 
