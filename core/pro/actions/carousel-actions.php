@@ -77,9 +77,9 @@ query_posts( array ('post_type' => $themeslug.'_carousel_images', 'showposts' =>
 
 	    	/* Post-specific variables */	
 
-	    	$image 		= get_post_meta($post->ID, 'post_image' , true);  
+	    	$image 		= get_post_meta($post->ID, $themeslug.'_post_image' , true);  
 	    	$realtitle 		= get_the_title();  
-	    	$link 		= get_post_meta($post->ID, 'post_url' , true);
+	    	$link 		= get_post_meta($post->ID, $themeslug.'_post_url' , true);
 	    	
 	    	if ($realtitle != "Untitled") {
 				$title = get_the_title();
