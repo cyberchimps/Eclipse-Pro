@@ -4,6 +4,7 @@ Eclipse Pro Changelog
 
 1.0.4 (05-31-12)
 -Fix for image carousel. 
+-Added Hindi language files.
 
 1.0.3 (05-29-12)
 -Added missing container around page content for responsive margins.
