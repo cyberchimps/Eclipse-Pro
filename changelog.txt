@@ -2,6 +2,9 @@ Eclipse Pro Changelog
 
 ****************************
 
+1.0.5 (06-02-12)
+-Removed searchbar width causing responsive issues.
+
 1.0.4 (05-31-12)
 -Fix for image carousel. 
 -Added Hindi language files.
