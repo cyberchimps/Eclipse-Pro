@@ -65,7 +65,7 @@ function response_display_latest_tweets( $username, $show_replies = 0 ) {
 						$screen_name = $latest_tweet['user']['screen_name'];
 						$user_permalink = 'http://twitter.com/#!/'.$screen_name;
 						$tweet_permalink = 'http://twitter.com/#!/'.$screen_name.'/status/'.$latest_tweet['id_str'];
-						echo '<a href="'.$user_permalink.'"> '. $screen_name .' - </a>'.$latest_tweet['text'].' <small><a href="'.$tweet_permalink.'">' .human_time_diff(strtotime($latest_tweet['created_at']), current_time('timestamp')).' ago</a></small>';
+						echo '<a href="'.$user_permalink.'"> '. $screen_name .' - </a>'.$latest_tweet['text'].' <small><a href="'.$tweet_permalink.'">' .human_time_diff(strtotime($latest_tweet['created_at']), current_time('timestamp', 1)).' ago</a></small>';
 					} else {
 						echo '<p>No tweets to display</p>';
 					}
@@ -91,6 +91,7 @@ function response_get_latest_tweets( $username, $show_replies = 0 ) {
 		$latest_tweet = '';
 		$exclude_replies = ( $show_replies == 0 ) ? '&exclude_replies=true' : '';
 		$data = wp_remote_get('https://api.twitter.com/1/statuses/user_timeline.json?screen_name='.$username.$exclude_replies, array('sslverify' => false) );
+		
 		if (!is_wp_error($data)) {
 			$value = json_decode($data['body'],true);
 			$latest_tweet = $value[0]; // Array key 0 pulls the most recent Tweet
