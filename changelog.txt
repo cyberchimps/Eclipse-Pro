@@ -2,8 +2,10 @@ Eclipse Pro Changelog
 
 ****************************
 
-1.0.5 (06-02-12)
+1.0.5 (06-12-12)
 -Removed searchbar width causing responsive issues.
+-Style tweak in Portfolio Element.
+-Fix for random "tweets will not display" message in Twitterbar. 
 
 1.0.4 (05-31-12)
 -Fix for image carousel. 
