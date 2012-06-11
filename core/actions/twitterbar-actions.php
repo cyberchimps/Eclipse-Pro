@@ -65,7 +65,7 @@ function response_display_latest_tweets( $username, $show_replies = 0 ) {
 						$screen_name = $latest_tweet['user']['screen_name'];
 						$user_permalink = 'http://twitter.com/#!/'.$screen_name;
 						$tweet_permalink = 'http://twitter.com/#!/'.$screen_name.'/status/'.$latest_tweet['id_str'];
-						echo '<a href="'.$user_permalink.'"> '. $screen_name .' - </a>'.$latest_tweet['text'].' <small><a href="'.$tweet_permalink.'">' .human_time_diff(strtotime($latest_tweet['created_at']), current_time('timestamp', 1)).' ago</a></small>';
+						echo '<a href="'.$user_permalink.'"> '. $screen_name .' - </a>'.$latest_tweet['text'].' <small><a href="'.$tweet_permalink.'">' .human_time_diff(strtotime($latest_tweet['created_at']), current_time('timestamp')).' ago</a></small>';
 					} else {
 						echo '<p>No tweets to display</p>';
 					}
@@ -85,7 +85,7 @@ function response_get_latest_tweets( $username, $show_replies = 0 ) {
 	if ( $username ) :
 		// Check to see if Latest Tweet is Saved in Transient and settings have not changed
 		$cached_latest_tweet = get_transient('response_latest_tweet');
-		if ($cached_latest_tweet !== false && ($cached_latest_tweet['show_replies'] == $show_replies) && ($cached_latest_tweet['username'] == $username) ) return $cached_latest_tweet['latest_tweet'];
+		if (@trim($cached_latest_tweet['latest_tweet']) !== '' && ($cached_latest_tweet['show_replies'] == $show_replies) && ($cached_latest_tweet['username'] == $username) ) return $cached_latest_tweet['latest_tweet'];
 
 		// Latest Tweet not set create it now
 		$latest_tweet = '';
