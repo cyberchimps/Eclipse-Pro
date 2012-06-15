@@ -2,10 +2,12 @@ Eclipse Pro Changelog
 
 ****************************
 
-1.0.5 (06-12-12)
+1.0.5 (06-15-12)
+-Replaced wp_theme_data() (deprecated) with wp_get_theme().
 -Removed searchbar width causing responsive issues.
 -Style tweak in Portfolio Element.
 -Fix for random "tweets will not display" message in Twitterbar. 
+-Added Czech language files.
 
 1.0.4 (05-31-12)
 -Fix for image carousel. 
