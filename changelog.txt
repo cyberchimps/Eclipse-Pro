@@ -4,6 +4,11 @@ Eclipse Pro Changelog
 
 1.0.6 (06-22-12)
 -3.4 Update API Fix.
+-Fixed date format issue in recent post element.
+-Added img { wdith: auto; } to foundation.css.
+-Fixed the validation issue with read more link.
+-Added .wp-caption p.wp-caption-text.
+-Removed #sidebar.three.columns
 
 1.0.5 (06-15-12)
 -Replaced wp_theme_data() (deprecated) with wp_get_theme().
