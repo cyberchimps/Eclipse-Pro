@@ -147,7 +147,7 @@ function new_excerpt_more($more) {
     		$linktext = $options->get($themeslug.'_excerpt_link_text');
    		}
 
-	return '&hellip;<div class="more-link"><br /><br /> <span class="continue-arrow"><img class="continue_img" src="'.$root.'/images/continue.png"></span><a href="'. get_permalink($post->ID) . '">  '.$linktext.'</a></div>';
+	return '&hellip;</p><div class="more-link"><span class="continue-arrow"><img class="continue_img" src="'.$root.'/images/continue.png"></span><a href="'. get_permalink($post->ID) . '">  '.$linktext.'</a></div>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
