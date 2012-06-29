@@ -554,7 +554,6 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 #footer {
 	background:url(../images/footer.png);
-	margin-top: 45px;
 }
 
 .footer-widgets {
@@ -1016,4 +1015,26 @@ figure {
 .widget-main-div {
 	margin-top: 40px;
 	margin-bottom : 20px;
+}
+
+/* ==========================	For sticky footer =======================================	*/
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+	margin:0px !important;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0px auto -206px auto; /* the bottom margin is the negative value of the footer's height */
+}
+
+.footer, .push{
+	height: 206px;
+	clear:both;
 }
