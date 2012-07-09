@@ -70,12 +70,29 @@ function response_portfolio_element_content() {
 			
 			/* Post-specific variables */	
 	    	$image = get_post_meta($post->ID, $themeslug.'_portfolio_image' , true);
-	    	$title = get_the_title() ;	    	
+	    	$title = get_the_title() ;	    
+			$custom_portfolio_url_toggle = get_post_meta($post->ID, 'custom_portfolio_url_toggle' , true);
+			$custom_portfolio_url = get_post_meta($post->ID, 'custom_portfolio_url' , true);
+			
+			/* setting variables for custom portfolio url  */
+			if( $custom_portfolio_url_toggle == "on" && $custom_portfolio_url != "")
+			{
+				$link = $custom_portfolio_url;
+				$class = "custom_portfolio_url";
+			}	
+			else
+			{
+				$link = $image;
+				$class = "slide";
+			}
 
 	     	/* Markup for portfolio */
 	    	$out .= "
 	    		<li id='portfolio_wrap' class='$number columns $class'>
-	    			<a href='$image' title='$title'><img src='$image'  alt='$title'/><div class='portfolio_caption'>$title</div></a>
+	    			<a href='$link' title='$title' class='$class'>
+						<img src='$image'  alt='$title'/>
+						<div class='portfolio_caption'>$title</div>
+					</a>
 	    		</li>";
 	    	/* End slide markup */	
 	    	
@@ -89,19 +106,19 @@ function response_portfolio_element_content() {
 		$out .= "	
 	    		<div id='gallery' class='twelve columns'><ul>
 	      			<li id='portfolio_wrap' class='three columns'>
-	    				<a href='$root/images/pro/portfolio.jpg' title='Image 1'><img src='$root/images/pro/portfolio.jpg'  alt='Image 1'/>
+	    				<a href='$root/images/pro/portfolio.jpg' title='Image 1' class='slide'><img src='$root/images/pro/portfolio.jpg'  alt='Image 1'/>
 	    					<div class='portfolio_caption'>Image 1</div>
 	    				</a>
 	    			</li>
 	    		
 	  	    		<li id='portfolio_wrap' class='three columns'>
-	    				<a href='$root/images/pro/portfolio.jpg' title='Image 2'><img src='$root/images/pro/portfolio.jpg'  alt='Image 2'/>
+	    				<a href='$root/images/pro/portfolio.jpg' title='Image 2' class='slide'><img src='$root/images/pro/portfolio.jpg'  alt='Image 2'/>
 	    					<div class='portfolio_caption'>Image 2</div>
 	    				</a>
 	    			</li>
 	    		
 					<li id='portfolio_wrap' class='three columns'>
-	    				<a href='$root/images/pro/portfolio.jpg' title='Image 3'><img src='$root/images/pro/portfolio.jpg'  alt='Image 3'/>
+	    				<a href='$root/images/pro/portfolio.jpg' title='Image 3' class='slide'><img src='$root/images/pro/portfolio.jpg'  alt='Image 3'/>
 	    					<div class='portfolio_caption'>Image 3</div>
 	    				</a>
 	    			</li>
@@ -120,7 +137,7 @@ function response_portfolio_element_content() {
  <script type="text/javascript">
  	jQuery(document).ready(function ($) {
     $(function() {
-        $('#gallery a').lightBox({
+        $('#gallery a.slide').lightBox({
     		imageLoading:			'$root/images/portfolio/lightbox-ico-loading.gif',		
 			imageBtnPrev:			'$root/images/portfolio/lightbox-btn-prev.gif',			
 			imageBtnNext:			'$root/images/portfolio/lightbox-btn-next.gif',			
