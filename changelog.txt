@@ -2,9 +2,11 @@ Eclipse Pro Changelog
 
 ****************************
 
-1.0.7 (07-06-12)
+1.0.7 (07-09-12)
+-Added Custom URL to Portfolio items.
+-Removed lazy load.
 -Twitter embed fix.
--Sticky footer + fix.
+-Push div footer.php fix.
 
 1.0.6 (06-22-12)
 -3.4 Update API Fix.
