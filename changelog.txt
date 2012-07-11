@@ -2,6 +2,11 @@ Eclipse Pro Changelog
 
 ****************************
 
+1.0.8 (07-11-12)
+-iPad display fix.
+-Function fix.
+-German translation fix.
+
 1.0.7 (07-09-12)
 -Added Custom URL to Portfolio items.
 -Removed lazy load.
