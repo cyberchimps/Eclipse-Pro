@@ -177,6 +177,7 @@ function response_title_tag() {
 function response_link_rel() {
 	global $themeslug, $options; //Call global variables
 	$favicon = $options->get($themeslug.'_favicon'); //Calls the favicon URL from the theme options 
+	$touch = $options->get($themeslug.'_apple_touch'); //Calls the apple-touch-icon URL from the theme options 
 	
 	if ($options->get($themeslug.'_font') == "" AND $options->get($themeslug.'_custom_font') == "") {
 		$font = apply_filters( 'synapse_default_font', 'Arial' );
@@ -193,7 +194,8 @@ function response_link_rel() {
 	else {
 		$color = $options->get($themeslug.'_color_scheme');
 	}?>
-	
+
+<link rel="apple-touch-icon" href="<?php echo stripslashes($touch['url']); ?>"/>	
 <link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
 
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/foundation.css" type="text/css" />
