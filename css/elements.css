@@ -344,41 +344,35 @@ li.ui-state-default  {
  * @license CCAttribution-ShareAlike 2.5 Brazil - http://creativecommons.org/licenses/by-sa/2.5/br/deed.en_US
  * @example Visit http://leandrovieira.com/projects/jquery/lightbox/ for more informations about this jQuery plugin
  */
- 
+
+.gallery-clear {
+  clear: both;
+}
 #gallery {
 	margin-top: 45px;
-
 }
 
 #gallery {border-bottom: 2px solid #3d3d3d;}
 
 #portfolio_wrap { margin-bottom: 45px;}
 
-#portfolio_wrap.three.columns:last-child, #portfolio_wrap.four.columns:last-child, #portfolio_wrap.six.columns:last-child {float:left;}
-
 .portfolio_title {color: white;}
 
 .portfolio_caption {text-align: center; bottom: 50%; left: 5px; color: white; width: 100%; position: absolute; z-index: 2; font-size: 18px;}
 
-#gallery li.three.columns {margin-right:0px; margin-left: 4.4%;}
-#gallery li.four.columns {margin-right:0px; margin-left: 4.4%;}
-#gallery li.six.columns {margin-right:0px; margin-left: 4.4%;}
-
-#portfolio_wrap.three.columns:first-child, #portfolio_wrap.four.columns:first-child, #portfolio_wrap.six.columns:first-child {margin-left: 0%;}
-
-#portfolio_wrap.three.columns.first-row, #portfolio_wrap.four.columns.first-row, #portfolio_wrap.six.columns.first-row {margin-left: 0%;}
+#gallery li.three.columns {margin-right:0px; margin-left: 3%;}
+#gallery li.four.columns {margin-right:0px; margin-left: 2%;}
+#gallery li.six.columns {margin-right:0px; margin-left: 2%;}
 
 #gallery ul { list-style: none; margin: 0px; }
 
-#gallery ul li { display: inline; }
+#gallery ul li { float: left; }
 
 #gallery ul img {
-border: 2px solid #3D3D3D;
+	border: 2px solid #3D3D3D;
+}	
 
-}
-	
 #gallery ul a:hover img {
-
 	color: #fff;
 	opacity: .5;
 }
