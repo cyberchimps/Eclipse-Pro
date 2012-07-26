@@ -39,13 +39,13 @@ function response_portfolio_element_content() {
 
 	if ($num == '1' OR $num == 'key2') {
 		$number = 'four';
-		$numb = '3';
+		$numb = 3;
 	} else if ($num == '2' OR $num == 'key3') {
 		$number = 'six';
-		$numb = '2';
+		$numb = 2;
 	} else {
 		$number = 'three';
-		$numb = '4';
+		$numb = 4;
 	}
 
 	$title = ($title != '') ? $title : 'Portfolio';	
@@ -65,14 +65,12 @@ function response_portfolio_element_content() {
 		$counter = 1;
 		
 		foreach( $portfolio_posts as $post ) : setup_postdata($post);
-		
-			$class = ( $counter % $numb == 1 ) ? 'first-row' : '';
 			
 			/* Post-specific variables */	
 	    	$image = get_post_meta($post->ID, $themeslug.'_portfolio_image' , true);
 	    	$title = get_the_title() ;	    
-			$custom_portfolio_url_toggle = get_post_meta($post->ID, 'custom_portfolio_url_toggle' , true);
-			$custom_portfolio_url = get_post_meta($post->ID, 'custom_portfolio_url' , true);
+				$custom_portfolio_url_toggle = get_post_meta($post->ID, 'custom_portfolio_url_toggle' , true);
+				$custom_portfolio_url = get_post_meta($post->ID, 'custom_portfolio_url' , true);
 			
 			/* setting variables for custom portfolio url  */
 			if( $custom_portfolio_url_toggle == "on" && $custom_portfolio_url != "")
@@ -94,7 +92,12 @@ function response_portfolio_element_content() {
 						<div class='portfolio_caption'>$title</div>
 					</a>
 	    		</li>";
-	    	/* End slide markup */	
+	    	/* End slide markup */
+				
+				if( $counter %$numb == 0 )
+					{
+						$out .= "<div class='gallery-clear'></div>";
+					}	
 	    	
 	    	$counter++;
 	    endforeach; wp_reset_postdata();
