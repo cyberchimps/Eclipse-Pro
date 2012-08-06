@@ -48,6 +48,9 @@ div.orbit-wrapper {
 }
 
 #orbitDemo.orbit img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 	}
 
 .content_title {font-size: 20px; color: #FFF;}
