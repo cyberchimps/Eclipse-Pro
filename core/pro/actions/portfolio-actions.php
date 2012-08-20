@@ -145,7 +145,7 @@ function response_portfolio_element_content() {
 			imageBtnPrev:			'$root/images/portfolio/lightbox-btn-prev.gif',			
 			imageBtnNext:			'$root/images/portfolio/lightbox-btn-next.gif',			
 			imageBtnClose:			'$root/images/portfolio/lightbox-btn-close.gif',		
-			imageBlank:				'$root/images/portfolio/lightbox-blank.gif',			
+			imageBlank:				'$root/images/portfolio/lightbox-blank.gif'			
 	 });
     });
     });

@@ -16,7 +16,7 @@ jQuery(document).ready(function($){
 
 jQuery(document).ready(function($){
 
-	$("#gallery ul a:hover img").css("opacity", 1);
+	$("#gallery ul a img").css("opacity", 1);
 	$("#portfolio_wrap .portfolio_caption").css("opacity", 0);
 	
 	$("#portfolio_wrap a").hover(function(){
