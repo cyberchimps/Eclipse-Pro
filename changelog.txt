@@ -2,6 +2,12 @@ Eclipse Pro Changelog
 
 ****************************
 
+1.0.11 (08-21-12)
+-Changed .required call.
+-Added custom url to logo.
+-Made meta tag language dynamic.
+-Fixed slider issues in IE7,8.
+
 1.0.10 (08-13-12)
 -Sidebar -2px fix.
 -Fallback widget reference fixed.
