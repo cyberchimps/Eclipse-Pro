@@ -23,7 +23,7 @@ a{outline:none}
 	width: 76.1%;
 }
 
-.required {display: none;}
+.comments_container #commentform .required {display: none;}
 
 @-moz-document url-prefix() {#sidebar.three.columns {width: 22%; margin-left: 4.1%}}
 
