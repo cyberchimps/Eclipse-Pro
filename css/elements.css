@@ -47,12 +47,6 @@ div.orbit-wrapper {
 	background: #3c3c3c url(../images/sliderbg.png);
 }
 
-#orbitDemo.orbit img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-	}
-
 .content_title {font-size: 20px; color: #FFF;}
 
 .content_text {font-size: 16px; color: #FFF;}

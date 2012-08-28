@@ -138,8 +138,7 @@ function response_slider_content() {
 		.orbit-caption {height: 100px; margin-bottom:58px;}
 		</style> <?php
 	}
-	
-	if ($captionstyle == 'key2' OR $captionstyle == '3') { ?>
+	elseif ($captionstyle == 'key2' OR $captionstyle == '3') { ?>
 		<style type="text/css">
 		.orbit-caption {height: <?php echo $height ?>px; width: 30% !important; top: 0px;}
 		</style> <?php
@@ -353,7 +352,6 @@ To create a Custom Slide please go to the Custom Slides tab in WP-Admin. Once yo
 <!-- Apply slider CSS based on user settings -->
 
 	<style type="text/css" media="screen">
-		
 		#slider { width: <?php echo $csWidth ?>px; height: <?php echo $height ?>px !important; margin: auto; }
 		#orbitDemo {max-height: <?php echo $height ?>px !important;}
 	</style>
