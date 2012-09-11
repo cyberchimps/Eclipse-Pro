@@ -189,7 +189,7 @@ function response_link_rel() {
 		$font = $options->get($themeslug.'_font'); 
 	} 
 	if ($options->get($themeslug.'_color_scheme') == '') {
-		$color = 'blue';
+		$color = 'dark';
 	}
 	else {
 		$color = $options->get($themeslug.'_color_scheme');
