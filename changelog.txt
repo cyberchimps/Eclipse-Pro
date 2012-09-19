@@ -2,6 +2,11 @@ Eclipse Pro Changelog
 
 ****************************
 
+1.0.13 (09-19-12)
+-Disable lightbox when on mobile.
+-Fixed slider link to docs.
+-Changed default from blue to dark.
+
 1.0.12 (09-04-12)
 -Fixed comments error.
 -Fix for responsive slider in IE and Firefox.
