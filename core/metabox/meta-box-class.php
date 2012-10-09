@@ -584,6 +584,9 @@ class RW_Meta_Box {
 
 	// Save data from meta box
 	function save($post_id) {
+		
+		// check that the save is coming from the edit post page and not the quick edit
+    if( 'edit.php' == $pagenow ) {
 
 		if (isset($_POST['post_type'])) {
 			$post_type = $_POST['post_type'];
@@ -622,6 +625,7 @@ class RW_Meta_Box {
 					$this->save_field($post_id, $field, $old, $new);
 				}
 			}
+		}
 		}
 	}
 
