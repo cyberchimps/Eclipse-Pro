@@ -49,7 +49,7 @@ function response_comments_loop() {
 		 'comment_notes_before' => '',
 		 'comment_notes_after' => ''
 	);?>
-<?php if ( have_comments() ) : ?>
+<?php if ( have_comments() && ! post_password_required() ) : ?>
 	<div class="comments_container">
 		<h2 class="commentsh2"><?php comments_number( __('No Responses', 'response' ), __( 'One Response', 'response' ), __('% Responses', 'response' ));?></h2>
 
@@ -71,7 +71,7 @@ function response_comments_loop() {
 	
  <?php else : // this is displayed if there are no comments so far ?>
 
-	<?php if ( comments_open() ) : ?>
+	<?php if ( comments_open() && ! post_password_required() ) : ?>
 		<!-- If comments are open, but there are no comments. -->
 
 	 <?php else : // comments are closed ?>
@@ -80,7 +80,7 @@ function response_comments_loop() {
 	
 <?php endif; ?>
 
-<?php if ( comments_open() ) : ?>
+<?php if ( comments_open() && ! post_password_required() ) : ?>
 
 <div class="comments_container">
 
