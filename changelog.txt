@@ -2,6 +2,11 @@ Eclipse Pro Changelog
 
 ****************************
 
+1.0.15 (10-16-12)
+-Allowed \ in custom CSS.
+-Comments - password protected pages.
+-Another iFeature Slider fix.
+
 1.0.14 (10-12-12)
 -Slider posts fix.
 -Changed condition for metabox save.
