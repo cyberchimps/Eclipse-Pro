@@ -215,7 +215,20 @@ function response_link_rel() {
 
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-<link href='http://fonts.googleapis.com/css?family=<?php echo $font ; ?>' rel='stylesheet' type='text/css' /> <?php
+<?php  
+	if( $font == 'Actor' ||
+		$font == 'Coda' ||
+		$font == 'Maven Pro' ||
+		$font == 'Metrophobic' ||
+		$font == 'News Cycle' ||
+		$font == 'Nobile' ||
+		$font == 'Tenor Sans' ||
+		$font == 'Quicksand' ||
+		$font == 'Ubuntu'
+	) :
+	?>
+<link href='http://fonts.googleapis.com/css?family=<?php echo $font ; ?>' rel='stylesheet' type='text/css' />
+<?php endif;
 }
 
 
