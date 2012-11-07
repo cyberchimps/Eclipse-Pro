@@ -2,6 +2,10 @@ Eclipse Pro Changelog
 
 ****************************
 
+1.0.15 (11-07-12)
+-Google font bug fixed.
+-Added password protection for elements.
+
 1.0.15 (10-16-12)
 -Allowed \ in custom CSS.
 -Comments - password protected pages.
