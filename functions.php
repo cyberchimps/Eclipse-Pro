@@ -634,7 +634,7 @@ require_once ( get_template_directory() . '/includes/options-functions.php' ); /
 require_once ( get_template_directory() . '/includes/meta-box.php' ); // Meta options markup.
 // Notify user of theme update on "Updates" page in Dashboard.
 require_once( get_template_directory() . '/includes/update.php' );
-new WPUpdatesThemeUpdater( 'http://wp-updates.com/api/1/theme', 98, basename( get_template_directory() ) ); // Notify user of theme update on "Updates" page in Dashboard.
+new WPUpdatesThemeUpdater( 'http://wp-updates.com/api/1/theme', 104, basename( get_template_directory() ) ); // Notify user of theme update on "Updates" page in Dashboard.
 
 require_once ( get_template_directory() . '/core/widgets/recent-post.php' ); // Widget include
 require_once ( get_template_directory() . '/core/widgets/popular-post.php' ); // Widget include
