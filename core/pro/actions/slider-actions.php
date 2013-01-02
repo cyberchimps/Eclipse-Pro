@@ -35,8 +35,8 @@ function response_slider_content() {
 /* End globals. */
 
 /* Define variables. */	
-
-    $tmp_query = $wp_query; 
+	$out = '';
+  $tmp_query = $wp_query; 
 	$root = get_template_directory_uri(); 
 	
 	if (is_page()) {
