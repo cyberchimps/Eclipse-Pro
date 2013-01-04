@@ -2,6 +2,11 @@ Eclipse Pro Changelog
 
 ****************************
 
+1.1.0.0 (01-04-13)
+-Fixed menu custom fonts
+-Fixed SSL for Google fonts if available
+-Bug fix
+
 1.0.19 (12-12-12)
 -Fix for page drag and drop in WP3.5
 
