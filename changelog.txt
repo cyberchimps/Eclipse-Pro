@@ -2,6 +2,9 @@ Eclipse Pro Changelog
 
 ****************************
 
+1.1.0.1 (01-23-13)
+-Fix for page options not saving
+
 1.1.0.0 (01-04-13)
 -Fixed menu custom fonts
 -Fixed SSL for Google fonts if available
