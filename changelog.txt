@@ -2,6 +2,9 @@ Eclipse Pro Changelog
 
 ****************************
 
+1.1.0.2 (1-25-13)
+-Fix image upload
+
 1.1.0.1 (01-23-13)
 -Fix for page options not saving
 
