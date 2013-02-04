@@ -153,6 +153,23 @@ function new_excerpt_more($more) {
 add_filter('excerpt_more', 'new_excerpt_more');
 
 /**
+* Set custom post excerpt link if excerpt is supplied manually.
+*/ 
+function manual_excerpt_read_more_link($output) {
+
+	global $themeslug, $options, $post, $root;
+
+	$linktext = $options->get($themeslug.'_excerpt_link_text');
+	$linktext = $linktext == '' ? 'Continue Reading...' : $linktext;
+	
+	if(!empty($post->post_excerpt))
+		return $output . '&hellip;</p><div class="more-link"><span class="continue-arrow"><img class="continue_img" src="'.$root.'/images/continue.png"></span><a href="'. get_permalink($post->ID) . '">  '.$linktext.'</a></div>';
+	else
+		return $output;
+}
+add_filter('the_excerpt', 'manual_excerpt_read_more_link');
+
+/**
 * Set custom post excerpt length based on theme option.
 */ 
 function new_excerpt_length($length) {
