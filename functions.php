@@ -684,7 +684,13 @@ foreach($all_plugins as $plugin_file => $plugin_data) {
 $plugin_name .= $plugin_data['Name'];
 $plugin_name .= '&';}
 $posts_with_comments = $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}posts WHERE post_type='post' AND comment_count > 0");
-$comments_to_posts = number_format(($posts_with_comments / $count_posts->publish) * 100, 0, '.', '');
+
+// Checking the counts of the published post.
+if( $count_posts->publish != 0 )
+	$comments_to_posts = number_format( ( $posts_with_comments / $count_posts->publish ) * 100, 0, '.', '' );
+else
+	$comments_to_posts = 0;
+	
 $pingback_result = $wpdb->get_var('SELECT COUNT(comment_ID) FROM '.$wpdb->comments.' WHERE comment_type = "pingback"');
 $data['url'] = stripslashes(str_replace(array('http://', '/', ':' ), '', site_url()));
 $data['posts'] = $count_posts->publish;
