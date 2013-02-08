@@ -234,6 +234,28 @@ function response_breadcrumbs() {
 } 
 
 /**
+* To determine whether previous post exists or not
+**/
+function has_previous_posts() {
+	ob_start();
+	previous_post_link();
+	$result = strlen(ob_get_contents());
+	ob_end_clean();
+	return $result;
+}
+
+/**
+* To determine whether previous post exists or not
+**/
+function has_next_posts() {
+	ob_start();
+	next_post_link();
+	$result = strlen(ob_get_contents());
+	ob_end_clean();
+	return $result;
+}
+
+/**
 * End
 */
 		    
