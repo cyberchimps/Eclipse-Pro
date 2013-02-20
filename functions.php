@@ -15,16 +15,6 @@
 * @since 1.0
 */
 
-
-function url_filtered($fields){
-	if(isset($fields['url']))
-   		unset($fields['url']);
-   	
-  	return $fields;
-}
-add_filter('comment_form_default_fields', 'url_filtered');
-
-
 /**
 * Define global theme functions.
 */ 
