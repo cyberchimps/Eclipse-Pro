@@ -37,7 +37,7 @@ function response_pro_font() {
 		$font = $options->get($themeslug.'_font'); 
 	} ?>
 	
-	<body style="font-family:'<?php echo ereg_replace("[^A-Za-z0-9]", " ", $font ); ?>', <?php echo $family; ?>" <?php body_class(); ?> > <?php
+	<body style="font-family:'<?php echo ereg_replace("[^A-Za-z0-9\-]", " ", $font ); ?>', <?php echo $family; ?>" <?php body_class(); ?> > <?php
 }
 
 /**
