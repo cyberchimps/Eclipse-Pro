@@ -262,9 +262,7 @@ function custom_css() {
 }
 
 function custom_css_filter($_content) {
-echo "xx0 $_content<br>\n";
 	$_return = preg_replace ( '/@import.+;( |)|((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/))/i', '', $_content );
-echo "xx1 $_return<br>\n";
 	$_return = htmlspecialchars ( strip_tags($_return), ENT_NOQUOTES, 'UTF-8' );
 	return $_return;
 }
