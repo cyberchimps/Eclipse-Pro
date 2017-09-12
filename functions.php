@@ -24,6 +24,7 @@
 	$root = get_template_directory_uri(); 
 	$pagedocs = 'http://cyberchimps.com/question/using-the-eclipse-pro-page-options/';
 	$sliderdocs = 'http://cyberchimps.com/question/using-the-eclipse-pro-feature-slider/';
+	$sliderdocs = 'http://cyberchimps.com/guide/how-to-use-the-pro-slider/';
 
 /**
 * Basic theme setup.
