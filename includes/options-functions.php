@@ -189,7 +189,7 @@ function add_menu_font() {
 		$font = $options->get($themeslug.'_menu_font'); 
 	}
 	
-		$fontstrip =  ereg_replace("[^A-Za-z0-9\-]", " ", $font );
+		$fontstrip =  preg_replace("[^A-Za-z0-9\-]", " ", $font );
 	
 		if( $font == 'Actor' ||
 			$font == 'Coda' ||
@@ -226,7 +226,7 @@ function add_secondary_font() {
 		$font = $options->get($themeslug.'_secondary_font'); 
 	}
 	
-		$fontstrip =  ereg_replace("[^A-Za-z0-9\-]", " ", $font );
+		$fontstrip =  preg_replace("[^A-Za-z0-9\-]", " ", $font );
 	
 		if( $font == 'Actor' ||
 			$font == 'Coda' ||
@@ -262,7 +262,9 @@ function custom_css() {
 }
 
 function custom_css_filter($_content) {
+echo "xx0 $_content<br>\n";
 	$_return = preg_replace ( '/@import.+;( |)|((?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/))/i', '', $_content );
+echo "xx1 $_return<br>\n";
 	$_return = htmlspecialchars ( strip_tags($_return), ENT_NOQUOTES, 'UTF-8' );
 	return $_return;
 }
