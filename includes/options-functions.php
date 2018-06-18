@@ -189,7 +189,7 @@ function add_menu_font() {
 		$font = $options->get($themeslug.'_menu_font'); 
 	}
 	
-		$fontstrip =  ereg_replace("[^A-Za-z0-9\-]", " ", $font );
+		$fontstrip =  preg_replace("[^A-Za-z0-9\-]", " ", $font );
 	
 		if( $font == 'Actor' ||
 			$font == 'Coda' ||
@@ -226,7 +226,7 @@ function add_secondary_font() {
 		$font = $options->get($themeslug.'_secondary_font'); 
 	}
 	
-		$fontstrip =  ereg_replace("[^A-Za-z0-9\-]", " ", $font );
+		$fontstrip =  preg_replace("[^A-Za-z0-9\-]", " ", $font );
 	
 		if( $font == 'Actor' ||
 			$font == 'Coda' ||

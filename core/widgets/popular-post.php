@@ -4,8 +4,9 @@
  ******************************************/
 class cyberchimps_popular_posts extends WP_Widget {
     /** constructor */
-    function cyberchimps_popular_posts() {
-        parent::WP_Widget(false, $name = 'Popular Posts With Thumbnails');	
+//  function cyberchimps_popular_posts() {
+    function __construct() { // 2017-12-08 WRL Updated constructor name.
+        parent::__construct(false, $name = 'Popular Posts With Thumbnails'); // 2017-12-08 WRL Call generic parent constructor rather than WP_Widget()
     }
 
     /** @see WP_Widget::widget */

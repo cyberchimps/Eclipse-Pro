@@ -50,7 +50,7 @@ function response_font() {
 		$font = $options->get($themeslug.'_font'); 
 	} ?>
 	
-	<body style="font-family:'<?php echo ereg_replace("[^A-Za-z0-9\-]", " ", $font ); ?>', <?php echo $family; ?>" <?php body_class(); ?> > <?php
+	<body style="font-family:'<?php echo preg_replace("[^A-Za-z0-9\-]", " ", $font ); ?>', <?php echo $family; ?>" <?php body_class(); ?> > <?php
 }
 
 /**
@@ -87,7 +87,7 @@ function response_meta_tags() { ?>
 
 <meta name="language" content="<?php bloginfo( 'language' ); ?>" /> 
 <!-- Set the viewport width to device width for mobile -->
-<meta name="viewport" content="initial-scale=1.0; maximum-scale=3.0; width=device-width"/><?php
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=3.0, width=device-width"/><?php
 
 	if ($options->get($themeslug.'_home_title') != '' AND is_front_page()) { ?>
 <meta name='title' content='<?php echo ($options->get($themeslug.'_home_title')) ;?>'/> <?php
