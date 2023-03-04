@@ -14,7 +14,7 @@ class ClassyOptions {
 
 	function admin_menu() {
 		global $themenamefull;
-		
+
 		$page = add_theme_page( $themenamefull.' Options', $themenamefull.' Options', 'edit_theme_options', $this->id, array( $this, 'render' ) );
 
 		add_action( "admin_print_styles-$page", array($this, 'load_styles') );
@@ -36,7 +36,7 @@ class ClassyOptions {
 	function load_scripts() {
 		// Inline scripts from options-interface.php
 		add_action('admin_head', array($this, 'admin_head'));
-		
+
 		// Enqueued scripts
 		wp_enqueue_script('jquery-ui-core');
 		wp_enqueue_script('jquery-ui-sortable');
@@ -78,6 +78,7 @@ class ClassyOptions {
 		}
 		return false;
 	}
+
 	function add( $option ) {
 		$this->options[] = $option;
 	}
@@ -131,7 +132,7 @@ class ClassyOptions {
 			</div>
 			<div class="clear"></div>
 		</form>
-	</div> <!-- / #of_container -->  
+	</div> <!-- / #of_container -->
 </div> <!-- / .wrap -->
 
 <?php
@@ -205,7 +206,7 @@ class ClassyOptions {
 				if ( 'upload' == $option['type'] ) {
 					if( $_FILES ) {
 						if ($_FILES[$id]['name'] != '') {
-							$overrides = array('test_form' => false); 
+							$overrides = array('test_form' => false);
 							$file = wp_handle_upload($_FILES[$id], $overrides);
 							$clean[$id] = $file;
 						}
@@ -213,7 +214,7 @@ class ClassyOptions {
 
 					elseif(isset($_POST["{$id}_text"]) && $_POST["{$id}_text"] != '') {
 						$input['file'] = array('url' => $_POST["{$id}_text"]);
-						$clean[$id] = array('url' => $_POST["{$id}_text"]);				    } 
+						$clean[$id] = array('url' => $_POST["{$id}_text"]);				    }
 
 					else {
 						$clean[$id] = null;
@@ -272,17 +273,17 @@ class ClassyOptions {
 				$output .= '<h3 class="heading">' . esc_html( $value['name'] ) . '</h3>' . "\n";
 				$output .= '<div class="option">' . "\n" . '<div class="controls">' . "\n";
 			 }
-			
+
 			// Set default value to $val
 			if ( isset( $value['default']) ) {
 				$val = $value['default'];
 			}
-			
+
 			// If the option is already saved, ovveride $val
 			if ( ($value['type'] != "heading") && ($value['type'] != "info" && $value['type'] != "subsection" && $value['type'] != "subsection_end") && $value['type'] != "open_outersection" && $value['type'] != "close_outersection" ) {
 				if ( isset($settings[($value['id'])]) ) {
 						$val = $settings[($value['id'])];
-						
+
 						// Striping slashes of non-array options
 						if (!is_array($val) && (($value['id']) != $themeslug . "_css_options") ) {
 							$val = stripslashes($val);
@@ -294,49 +295,49 @@ class ClassyOptions {
 			if ( isset( $value['desc'] ) ) {
 				$explain_value = $value['desc'];
 			}
-									  
+
 			switch ( $value['type'] ) {
-			
+
 			// Basic text input
 			case 'text':
 				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" type="text" value="' . esc_attr( $val ) . '" />';
 			break;
-			
+
 			// Textarea
 			case 'textarea':
 				$cols = '8';
 				$ta_value = '';
-				
+
 				if(isset($value['options'])){
 					$ta_options = $value['options'];
 					if(isset($ta_options['cols'])){
 						$cols = $ta_options['cols'];
 					} else { $cols = '8'; }
 				}
-				
+
 				// Avoid stripslashes if it is custom css
 				if( $value['id'] != $themeslug . "_css_options" ) {
 					$val = stripslashes( $val );
 				}
-				
+
 				$output .= '<textarea id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" cols="'. esc_attr( $cols ) . '" rows="8">' . esc_textarea( $val ) . '</textarea>';
 			break;
-			
+
 			// Select Box
 			case 'select':
 				$output .= '<select class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" id="' . esc_attr( $value['id'] ) . '">';
-				
+
 				foreach ($value['options'] as $key => $option ) {
 					$selected = '';
 					 if( $val != '' ) {
-						 if ( $val == $key) { $selected = ' selected="selected"';} 
+						 if ( $val == $key) { $selected = ' selected="selected"';}
 					}
 					 $output .= '<option'. $selected .' value="' . esc_attr( $key ) . '">' . esc_html( $option ) . '</option>';
-				 } 
+				 }
 				 $output .= '</select>';
 			break;
 
-			
+
 			// Radio Box
 			case "radio":
 				$name = $option_name .'['. $value['id'] .']';
@@ -345,7 +346,7 @@ class ClassyOptions {
 					$output .= '<input class="of-input of-radio" type="radio" name="' . esc_attr( $name ) . '" id="' . esc_attr( $id ) . '" value="'. esc_attr( $key ) . '" '. checked( $val, $key, false) .' /><label for="' . esc_attr( $id ) . '">' . esc_html( $option ) . '</label><br />';
 				}
 			break;
-			
+
 			// Image Selectors
 			case "images":
 				$name = $option_name .'['. $value['id'] .']';
@@ -363,13 +364,13 @@ class ClassyOptions {
 					$output .= '<img src="' . esc_url( $option ) . '" alt="' . $option .'" class="of-radio-img-img' . $selected .'" onclick="document.getElementById(\''. esc_attr($value['id'] .'_'. $key) .'\').checked=true;" />';
 				}
 			break;
-			
+
 			// Checkbox
 			case "checkbox":
 				$output .= '<input id="' . esc_attr( $value['id'] ) . '" class="checkbox of-input" type="checkbox" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" '. checked( $val, 1, false) .' />';
 				$output .= '<label class="explain" for="' . esc_attr( $value['id'] ) . '">' . wp_kses( $explain_value, $allowedtags) . '</label>';
 			break;
-			
+
 			// Multicheck
 			case "multicheck":
 				foreach ($value['options'] as $key => $option) {
@@ -387,47 +388,47 @@ class ClassyOptions {
 					$output .= '<input id="' . esc_attr( $id ) . '" class="checkbox of-input" type="checkbox" name="' . esc_attr( $name ) . '" ' . $checked . ' /><label for="' . esc_attr( $id ) . '">' . esc_html( $label ) . '</label><br />';
 				}
 			break;
-			
+
 			// Color picker
 			case "color":
 				$output .= '<div id="' . esc_attr( $value['id'] . '_picker' ) . '" class="colorSelector"><div style="' . esc_attr( 'background-color:' . $val ) . '"></div></div>';
 				$output .= '<input class="of-color" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" id="' . esc_attr( $value['id'] ) . '" type="text" value="' . esc_attr( $val ) . '" />';
-			break; 
-			
+			break;
+
 			// Uploader
 			case "upload":
-				// $output .= optionsframework_medialibrary_uploader( $value['id'], $val, null ); // New AJAX Uploader using Media Library	
+				// $output .= optionsframework_medialibrary_uploader( $value['id'], $val, null ); // New AJAX Uploader using Media Library
 				if(isset($val['url'])) {
 					$output .= "Preview:<br /> " . "<img class='upload' src='{$val['url']}'/><br/>";
 				}
 				$output .= "<input type='button' class='upload_image_button' value='".__( 'Upload', 'cyberchimps' )."' />";
 				$output .= "<br/><div class='upload-text'>or enter URL</div>";
 				$output .= "<input type='text' class='upload_image_field'  name='{$value['id']}_text' size='72' value='" . (isset($val['url']) ? $val['url'] : "") . "'/>";
-				
+
 				break;
-			
+
 			// Typography
-			case 'typography':	
-			
+			case 'typography':
+
 				$typography_stored = $val;
-				
+
 				// Font Size
 				$output .= '<select class="of-typography of-typography-size" name="' . esc_attr( $option_name . '[' . $value['id'] . '][size]' ) . '" id="' . esc_attr( $value['id'] . '_size' ) . '">';
-				for ($i = 9; $i < 71; $i++) { 
+				for ($i = 9; $i < 71; $i++) {
 					$size = $i . 'px';
 					$output .= '<option value="' . esc_attr( $size ) . '" ' . selected( $typography_stored['size'], $size, false ) . '>' . esc_html( $size ) . '</option>';
 				}
 				$output .= '</select>';
-			
+
 				// Font Face
 				$output .= '<select class="of-typography of-typography-face" name="' . esc_attr( $option_name . '[' . $value['id'] . '][face]' ) . '" id="' . esc_attr( $value['id'] . '_face' ) . '">';
-				
+
 				$faces = ClassyOptionsSanitize::recognized_font_faces();
 				foreach ( $faces as $key => $face ) {
 					$output .= '<option value="' . esc_attr( $key ) . '" ' . selected( $typography_stored['face'], $key, false ) . '>' . esc_html( $face ) . '</option>';
-				}			
-				
-				$output .= '</select>';	
+				}
+
+				$output .= '</select>';
 
 				// Font Weight
 				$output .= '<select class="of-typography of-typography-style" name="'.$option_name.'['.$value['id'].'][style]" id="'. $value['id'].'_style">';
@@ -439,63 +440,63 @@ class ClassyOptions {
 				}
 				$output .= '</select>';
 
-				// Font Color		
+				// Font Color
 				$output .= '<div id="' . esc_attr( $value['id'] ) . '_color_picker" class="colorSelector"><div style="' . esc_attr( 'background-color:' . $typography_stored['color'] ) . '"></div></div>';
 				$output .= '<input class="of-color of-typography of-typography-color" name="' . esc_attr( $option_name . '[' . $value['id'] . '][color]' ) . '" id="' . esc_attr( $value['id'] . '_color' ) . '" type="text" value="' . esc_attr( $typography_stored['color'] ) . '" />';
 
 			break;
-			
+
 			// Background
 			case 'background':
-				
+
 				$background = $val;
-				
-				// Background Color		
+
+				// Background Color
 				$output .= '<div id="' . esc_attr( $value['id'] ) . '_color_picker" class="colorSelector"><div style="' . esc_attr( 'background-color:' . $background['color'] ) . '"></div></div>';
 				$output .= '<input class="of-color of-background of-background-color" name="' . esc_attr( $option_name . '[' . $value['id'] . '][color]' ) . '" id="' . esc_attr( $value['id'] . '_color' ) . '" type="text" value="' . esc_attr( $background['color'] ) . '" />';
-				
+
 				// Background Image - New AJAX Uploader using Media Library
 				if (!isset($background['image'])) {
 					$background['image'] = '';
 				}
-				
+
 				$output .= optionsframework_medialibrary_uploader( $value['id'], $background['image'], null, '',0,'image');
 				$class = 'of-background-properties';
 				if ( '' == $background['image'] ) {
 					$class .= ' hide';
 				}
 				$output .= '<div class="' . esc_attr( $class ) . '">';
-				
+
 				// Background Repeat
 				$output .= '<select class="of-background of-background-repeat" name="' . esc_attr( $option_name . '[' . $value['id'] . '][repeat]'  ) . '" id="' . esc_attr( $value['id'] . '_repeat' ) . '">';
 				$repeats = of_recognized_background_repeat();
-				
+
 				foreach ($repeats as $key => $repeat) {
 					$output .= '<option value="' . esc_attr( $key ) . '" ' . selected( $background['repeat'], $key, false ) . '>'. esc_html( $repeat ) . '</option>';
 				}
 				$output .= '</select>';
-				
+
 				// Background Position
 				$output .= '<select class="of-background of-background-position" name="' . esc_attr( $option_name . '[' . $value['id'] . '][position]' ) . '" id="' . esc_attr( $value['id'] . '_position' ) . '">';
 				$positions = of_recognized_background_position();
-				
+
 				foreach ($positions as $key=>$position) {
 					$output .= '<option value="' . esc_attr( $key ) . '" ' . selected( $background['position'], $key, false ) . '>'. esc_html( $position ) . '</option>';
 				}
 				$output .= '</select>';
-				
+
 				// Background Attachment
 				$output .= '<select class="of-background of-background-attachment" name="' . esc_attr( $option_name . '[' . $value['id'] . '][attachment]' ) . '" id="' . esc_attr( $value['id'] . '_attachment' ) . '">';
 				$attachments = of_recognized_background_attachment();
-				
+
 				foreach ($attachments as $key => $attachment) {
 					$output .= '<option value="' . esc_attr( $key ) . '" ' . selected( $background['attachment'], $key, false ) . '>' . esc_html( $attachment ) . '</option>';
 				}
 				$output .= '</select>';
 				$output .= '</div>';
-			
-			break;  
-			
+
+			break;
+
 			// Info
 			case "info":
 				$class = 'section';
@@ -514,7 +515,7 @@ class ClassyOptions {
 					$output .= wpautop( wp_kses( $value['desc'], $allowedtags) ) . "\n";
 				}
 				$output .= '<div class="clear"></div></div>' . "\n";
-			break;                       
+			break;
 
 			case "export":
 				$output .= "<textarea rows='10'>" . esc_html(serialize($settings)) . "</textarea>";
@@ -527,7 +528,7 @@ class ClassyOptions {
 				if($counter >= 2){
 				   $output .= '</div>'."\n";
 				}
-				
+
 				$jquery_click_hook = preg_replace('/\W/', '', strtolower($value['name']) );
 				$jquery_click_hook = "of-option-" . $jquery_click_hook;
 				$menu .= '<li>';
@@ -556,7 +557,7 @@ class ClassyOptions {
 			break;
 
 			case "section_order":
-				$root = get_template_directory_uri();  
+				$root = get_template_directory_uri();
 				$values = explode(",", $val);
 				$output .=  "<div class='section_order' id=" . esc_attr($value['id']) . ">";
 				$output .=  "<div class='left_list'>";

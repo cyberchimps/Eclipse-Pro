@@ -32,10 +32,10 @@ add_action( 'response_fb_like_plus_one', 'response_fb_like_plus_one_content' );
 *
 * @since 1.0
 */
-function response_loop_content($content) { 
+function response_loop_content($content) {
 
 	global $options, $themeslug, $post; //call globals
-	
+
 	if (is_single()) {
 		 $post_formats = $options->get($themeslug.'_single_post_formats');
 		 $featured_images = $options->get($themeslug.'_single_show_featured_images');
@@ -51,137 +51,138 @@ function response_loop_content($content) {
 		 $featured_images = $options->get($themeslug.'_show_featured_images');
 		 $excerpts = $options->get($themeslug.'_show_excerpts');
 	}
-	
-	if (get_post_format() == '') {
-		$format = "default";
-	}
-	else {
-		$format = get_post_format();
-	} ?>
-	<?php ob_start(); ?>
-			
-			<!--Call @response Meta hook-->
-			<div class="row">
-			<div class="byline three columns"><?php response_post_byline(); ?></div>
-				<div class="entry nine columns">
-					<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-					
-					<?php
-				if ( has_post_thumbnail() && $featured_images == '1' ) {
- 		 			echo '<div class="featured-image">';
- 		 			echo '<a href="' . get_permalink($post->ID) . '" >';
- 		 				the_post_thumbnail();
-  					echo '</a>';
-  					echo '</div>';
-				}
-			?>	
-			<?php response_mobile_post_byline(); ?>
-					<?php 
-						if ($excerpts == '1' && !is_single() ) {
-						the_excerpt();
-						}
-						else {
-							the_content(__('<img class="continue_img" src="' .get_bloginfo('template_directory'). '/images/continue.png"> Continue Reading', 'response'));
-						}
-					 ?>
-				<!--Begin @response link pages hook-->
-					<?php response_link_pages(); ?>
-				<!--End @response link pages hook-->
-			
-				<!--Begin @response post edit link hook-->
-					<?php response_edit_link(); ?>
-				<!--End @response post edit link hook-->
-				</div><!--end entry-->
-			</div><!--end row-->
-			<?php	
-		
-		$content = ob_get_clean();
-		$content = apply_filters( 'response_post_formats_'.$format.'_content', $content );
-	
-		echo $content; 
+
+	$format = (get_post_format() == '') ? "default" : get_post_format();
+
+	ob_start(); ?>
+
+		<!--Call @response Meta hook-->
+		<div class="row">
+		<div class="byline three columns"><?php response_post_byline(); ?></div>
+			<div class="entry nine columns">
+				<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+
+				<?php
+			if ( has_post_thumbnail() && $featured_images == '1' ) {
+				echo '<div class="featured-image">';
+				echo '<a href="' . get_permalink($post->ID) . '" >';
+					the_post_thumbnail();
+					echo '</a>';
+					echo '</div>';
+			}
+		?>
+		<?php response_mobile_post_byline(); ?>
+				<?php
+					if ($excerpts == '1' && !is_single() ) {
+					the_excerpt();
+					}
+					else {
+						the_content(__('<img class="continue_img" src="' .get_bloginfo('template_directory'). '/images/continue.png"> Continue Reading', 'response'));
+					}
+					?>
+			<!--Begin @response link pages hook-->
+				<?php response_link_pages(); ?>
+			<!--End @response link pages hook-->
+
+			<!--Begin @response post edit link hook-->
+				<?php response_edit_link(); ?>
+			<!--End @response post edit link hook-->
+			</div><!--end entry-->
+		</div><!--end row-->
+	<?php
+
+	$content = ob_get_clean();
+	$content = apply_filters( 'response_post_formats_'.$format.'_content', $content );
+
+	echo $content;
 }
 
 /**
-* Sets the post byline information (author, date, category). 
-*
-* @since 1.0
-*/
-function response_post_byline_content() {
-	global $options, $themeslug; //call globals.  
+ *
+ */
+function get_hide_byline_opts() {
+	global $options, $themeslug;
+
 	if (is_single()) {
-		$hidden = $options->get($themeslug.'_single_hide_byline'); 
-		 $post_formats = $options->get($themeslug.'_single_post_formats');
+		$hide_byline_id = $themeslug.'_single_hide_byline';
+		$post_formats_id = $themeslug.'_single_post_formats';
 	}
 	elseif (is_archive()) {
-		$hidden = $options->get($themeslug.'_archive_hide_byline'); 
-		 $post_formats = $options->get($themeslug.'_archive_post_formats');
+		$hide_byline_id = $themeslug.'_archive_hide_byline';
+		$post_formats_id = $themeslug.'_archive_post_formats';
 	}
 	else {
-		$hidden = $options->get($themeslug.'_hide_byline'); 
-		$post_formats = $options->get($themeslug.'_post_formats');
+		$hide_byline_id = $themeslug.'_hide_byline';
+		$post_formats_id = $themeslug.'_post_formats';
 	}
-	if (get_post_format() == '') {
-		$format = "default";
-	}
-	else {
-		$format = get_post_format();
-	}?>
-	
-	<?php if ($post_formats != '0') : ?>
+	$hidden = $options->get($hide_byline_id);
+	$hide_byline_opts = $options->find_option_by_id($hide_byline_id);
+	$hide_byline_opts = ( $hide_byline_opts && isset($hide_byline_opts['default']) ) ? $hide_byline_opts['default'] : null;
+
+	$post_formats = $options->get($post_formats_id);
+
+	return [$hide_byline_opts, $post_formats];
+}
+
+/**
+ * Sets the post byline information (author, date, category).
+ *
+ * @since 1.0
+ */
+function response_post_byline_content() {
+	global $themeslug;
+
+	[$hide_byline_opts, $post_formats] = get_hide_byline_opts();
+
+	$format = (get_post_format() == '') ? "default" : get_post_format();
+
+	if ($post_formats != '0'): ?>
 		<div class="postformats hide-on-phones"><!--begin format icon-->
 			<img src="<?php echo get_template_directory_uri(); ?>/images/formats/<?php echo $format ;?>.png" alt="formats" />
 		</div><!--end format-icon-->
 	<?php endif; ?>
 	<div class="meta hide-on-phones">
 	<ul>
-		<li class="metadate"><?php if (($hidden[$themeslug.'_hide_date']) != '0'):?><?php printf( __( '', 'response' )); ?><a href="<?php the_permalink() ?>"><?php echo get_the_date(); ?></a><?php endif;?></li>
-		<li class="metacomments"><?php if (($hidden[$themeslug.'_hide_comments']) != '0'):?><?php comments_popup_link( __('No Comments', 'response' ), __('1 Comment', 'response' ), __('% Comments' , 'response' )); //need a filer here ?><?php endif;?></li>
-		<li class="metaauthor"><?php if (($hidden[$themeslug.'_hide_author']) != '0'):?><?php printf( __( '', 'response' )); ?><?php the_author_posts_link(); ?><?php endif;?></li>
-		<li class="metacat"><?php if (($hidden[$themeslug.'_hide_categories']) != '0'):?><?php printf( __( '', 'response' )); ?> <?php the_category(', ') ?><?php endif;?></li>
+		<li class="metadate">
+			<?php if (($hide_byline_opts[$themeslug.'_hide_date']) != '0'):
+					     printf( __( '', 'response' )); ?>
+						   <a href="<?php the_permalink() ?>"><?php echo get_the_date(); ?></a>
+			<?php endif;?></li>
+		<li class="metacomments"><?php if (($hide_byline_opts[$themeslug.'_hide_comments']) != '0'):?><?php comments_popup_link( __('No Comments', 'response' ), __('1 Comment', 'response' ), __('% Comments' , 'response' )); //need a filer here ?><?php endif;?></li>
+		<li class="metaauthor"><?php if (($hide_byline_opts[$themeslug.'_hide_author']) != '0'):?><?php printf( __( '', 'response' )); ?><?php the_author_posts_link(); ?><?php endif;?></li>
+		<li class="metacat"><?php if (($hide_byline_opts[$themeslug.'_hide_categories']) != '0'):?><?php printf( __( '', 'response' )); ?> <?php the_category(', ') ?><?php endif;?></li>
 		<li class="metatags"><?php response_post_tags(); ?></li>
 	</ul>
-	</div> <?php
+	</div>
+	<?php
 }
 
 /**
-* Sets the responsive post byline information (author, date, category). 
+* Sets the responsive post byline information (author, date, category).
 *
 * @since 1.0
 */
 function response_mobile_post_byline_content() {
-	global $options, $themeslug; //call globals.  
-	if (is_single()) {
-		$hidden = $options->get($themeslug.'_single_hide_byline'); 
-		 $post_formats = $options->get($themeslug.'_single_post_formats');
-	}
-	elseif (is_archive()) {
-		$hidden = $options->get($themeslug.'_archive_hide_byline'); 
-		 $post_formats = $options->get($themeslug.'_archive_post_formats');
-	}
-	else {
-		$hidden = $options->get($themeslug.'_hide_byline'); 
-		$post_formats = $options->get($themeslug.'_post_formats');
-	}
-	if (get_post_format() == '') {
-		$format = "default";
-	}
-	else {
-		$format = get_post_format();
-	}?>
-	
-		<div class="meta-mobile show-on-phones">
-	<ul><?php if ($post_formats != '0') : ?>
-		<li class="postformats show-on-phones"><img src="<?php echo get_template_directory_uri(); ?>/images/formats/<?php echo $format ;?>.png" alt="formats" />
-</li><?php endif; ?>
-		<li class="metadate"><?php if (($hidden[$themeslug.'_hide_date']) != '0'):?><?php printf( __( '', 'response' )); ?><a href="<?php the_permalink() ?>"><?php echo get_the_date(); ?></a><?php endif;?></li>
-		<li class="metacomments"><?php if (($hidden[$themeslug.'_hide_comments']) != '0'):?><?php comments_popup_link( __('No Comments', 'response' ), __('1 Comment', 'response' ), __('% Comments' , 'response' )); //need a filer here ?><?php endif;?></li>
-		<li class="metaauthor"><?php if (($hidden[$themeslug.'_hide_author']) != '0'):?><?php printf( __( '', 'response' )); ?><?php the_author_posts_link(); ?><?php endif;?></li>
-		<li class="metacat"><?php if (($hidden[$themeslug.'_hide_categories']) != '0'):?><?php printf( __( '', 'response' )); ?> <?php the_category(', ') ?><?php endif;?></li>
-		<li class="metatags"><?php response_post_tags(); ?></li>
-	</ul>
-	</div> <?php
-}
+	global $themeslug;
 
+	[$hide_byline_opts, $post_formats] = get_hide_byline_opts();
+
+	$format = (get_post_format() == '') ? "default" : get_post_format();
+
+	?>
+		<div class="meta-mobile show-on-phones">
+		<ul><?php if ($post_formats != '0') : ?>
+			<li class="postformats show-on-phones"><img src="<?php echo get_template_directory_uri(); ?>/images/formats/<?php echo $format ;?>.png" alt="formats" />
+			</li><?php endif; ?>
+			<li class="metadate"><?php if (($hide_byline_opts[$themeslug.'_hide_date']) != '0'):?><?php printf( __( '', 'response' )); ?><a href="<?php the_permalink() ?>"><?php echo get_the_date(); ?></a><?php endif;?></li>
+			<li class="metacomments"><?php if (($hide_byline_opts[$themeslug.'_hide_comments']) != '0'):?><?php comments_popup_link( __('No Comments', 'response' ), __('1 Comment', 'response' ), __('% Comments' , 'response' )); //need a filer here ?><?php endif;?></li>
+			<li class="metaauthor"><?php if (($hide_byline_opts[$themeslug.'_hide_author']) != '0'):?><?php printf( __( '', 'response' )); ?><?php the_author_posts_link(); ?><?php endif;?></li>
+			<li class="metacat"><?php if (($hide_byline_opts[$themeslug.'_hide_categories']) != '0'):?><?php printf( __( '', 'response' )); ?> <?php the_category(', ') ?><?php endif;?></li>
+			<li class="metatags"><?php response_post_tags(); ?></li>
+		</ul>
+		</div>
+	<?php
+}
 
 /**
 * Sets up the WP edit link
@@ -198,24 +199,10 @@ function response_edit_link_content() {
 * @since 1.0
 */
 function response_post_tags_content() {
-	global $options, $themeslug; 
-	if (is_single()) {
-		$hidden = $options->get($themeslug.'_single_hide_byline'); 
-	}
-	elseif (is_archive()) {
-		$hidden = $options->get($themeslug.'_archive_hide_byline'); 
-	}
-	else {
-		$hidden = $options->get($themeslug.'_hide_byline'); 
-	}?>
+	global $themeslug;
+	[$hide_byline_opts] = get_hide_byline_opts();
 
-	<?php if (has_tag() AND ($hidden[$themeslug.'_hide_tags']) != '0'):?>
-			<?php the_tags('', ', ', ''); ?>
-	<?php endif;
+	if (has_tag() AND ($hide_byline_opts[$themeslug.'_hide_tags']) != '0'):
+		the_tags('', ', ', '');
+	endif;
 }
-
-/**
-* End
-*/
-
-?>
